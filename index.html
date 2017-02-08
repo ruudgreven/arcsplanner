@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <!-- Angular JS and plugins -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+
+    <!-- Bootstrap and jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body ng-app="arcsplannerApp">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Planner -->
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Planner</h3>
+                </div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+
+            <!-- Block selector -->
+            <div ng-controller="BlocksCtrl" class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Blokkeuze</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-7 col-md-offset-5">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        <input type="blockfilter" class="form-control" id="blockfilter" placeholder="Filter op woorden...">
+
+                                        <!-- Filter for phases -->
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default">Fase</button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Begin van de les</a></li>
+                                                <li><a href="#">Midden van de les</a></li>
+                                                <li><a href="#">Eind van de les</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Energizer</a></li>
+                                                <li><a href="#">De-energizer</a></li>
+                                                <li><a href="#">Eerste hulp bij demotivatie</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Filter for ARCS -->
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default">ARCS</button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Attention</a></li>
+                                                <li><a href="#">Relevance</a></li>
+                                                <li><a href="#">Confidence</a></li>
+                                                <li><a href="#">Satisfaction</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Filter for phases -->
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default">Groep</button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="caret"></span>
+                                                <span class="sr-only">Toggle Dropdown</span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Individueel werken</a></li>
+                                                <li><a href="#">Duo'ss</a></li>
+                                                <li><a href="#">Kleine groepjes</a></li>
+                                                <li><a href="#">Hele klas</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row" style="height: 20px;">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4" ng-repeat="block in blocks">
+                                <div class="panel" ng-class="{  'panel-success': block.phases.indexOf('S') !== -1 && block.phases.length === 1,
+                                                                'panel-warning': block.phases.indexOf('C') !== -1 && block.phases.length === 1,
+                                                                'panel-primary': block.phases.indexOf('E') !== -1 && block.phases.length === 1,
+                                                                'panel-danger' : (block.phases.indexOf('+') !== -1 || block.phases.indexOf('-') !== -1 || block.phases.indexOf('H') !== -1 ) && block.phases.length === 1,
+                                                                'panel-info'   : block.phases.length !== 1  }">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            {{block.title}}
+
+                                            <span ng-if="block.grouping=='S'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
+
+                                            <span ng-if="block.grouping=='D'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
+                                            <span ng-if="block.grouping=='D'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
+
+                                            <span ng-if="block.grouping=='G'" class="glyphicon glyphicon-plus" style="float: right;" aria-hidden="true"></span>
+                                            <span ng-if="block.grouping=='G'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
+
+                                            <span ng-if="block.grouping=='C'" class="glyphicon glyphicon-asterisk" style="float: right;" aria-hidden="true"></span>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <h5>Voorbereiding</h5>
+                                        {{block.preparation}}
+                                        <h5>Omschrijving</h5>
+                                        {{block.description}}
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            Werkvormpje
+                                            <span class="glyphicon glyphicon-plus" style="float: right;" aria-hidden="true"></span>
+                                            <span class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Panel content
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            Werkvormpje
+                                            <span class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Panel content
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            Werkvormpje
+                                            <span class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
+                                            <span class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Panel content
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">
+                                            Werkvormpje
+                                            <span class="glyphicon glyphicon-asterisk" style="float: right;" aria-hidden="true"></span>
+                                        </h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Panel content
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                    <!-- Overview selector -->
+                    <div class="btn-group btn-group-justified" role="group" aria-label="phaseselector">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-info">Voorbereiding</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-info">De les</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Planner -->
+
+
+
+
+<!-- App controllers -->
+<script src="javascripts/app.js"></script>
+<script src="javascripts/controllers/blocks.js"></script>
+</body>
+</html>
