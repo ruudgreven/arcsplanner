@@ -1,0 +1,30 @@
+{
+  "blocks": [
+    {
+      "title": "Samen iets doen",
+      "preparation": "Niets bijzonders",
+      "description": "Doe iets in de les",
+      "time": [10,20,30],
+      "arcs": {
+        "attention": {
+          "score": 2,
+          "keys": ["Perceptual Arousal"]
+        },
+        "relevance": {
+          "score": 0,
+          "keys": ["Perceptual Arousal"]
+        },
+        "confidence": {
+          "score": -1,
+          "keys": ["Perceptual Arousal"]
+        },
+        "satisfaction": {
+          "score": 3,
+          "keys": ["Perceptual Arousal"]
+        }
+      },
+      "grouping": "C",
+      "phases": ["S"]
+    }
+  ]
+}
