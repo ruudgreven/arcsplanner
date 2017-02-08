@@ -5,8 +5,3 @@ body {
 a {
   color: #00B7FF;
 }
-.panel-title a,
-.panel-title a:active,
-.panel-title a:visited {
-  text-decoration: none;
-}

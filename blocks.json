@@ -1,9 +1,9 @@
 {
   "blocks": [
     {
-      "title": "Samen iets doen",
-      "preparation": "Niets bijzonders",
-      "description": "Doe iets in de les",
+      "title": "Samen iets doen, maar dan heel erg veel. Wat gebeurd er dan? Oh dat valt reuze mee",
+      "preparation": "Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders.",
+      "description": "Doe iets in de les. Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les",
       "time": [10,20,30],
       "arcs": {
         "attention": {
