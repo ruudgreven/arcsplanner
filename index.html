@@ -10,7 +10,7 @@
     <!-- Bootstrap and jQuery -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body ng-app="arcsplannerApp">
@@ -19,11 +19,11 @@
     <div class="row">
         <div class="col-md-8">
             <!-- Planner -->
-            <div class="panel panel-info">
+            <div ng-controller="PlannerCtrl as planner" class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Planner</h3>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" ondrop="drop(event)" ondragover="planner.allowDrop(event)">
                     Panel content
                 </div>
             </div>
@@ -94,6 +94,7 @@
                         </div>
 
                         <div class="row" style="height: 20px;">
+
                         </div>
 
                         <div class="row">
@@ -102,11 +103,11 @@
                                                                 'panel-warning': block.phases.indexOf('C') !== -1 && block.phases.length === 1,
                                                                 'panel-primary': block.phases.indexOf('E') !== -1 && block.phases.length === 1,
                                                                 'panel-danger' : (block.phases.indexOf('+') !== -1 || block.phases.indexOf('-') !== -1 || block.phases.indexOf('H') !== -1 ) && block.phases.length === 1,
-                                                                'panel-info'   : block.phases.length !== 1  }">
+                                                                'panel-info'   : block.phases.length !== 1  }"
+                                    draggable="true";
+                                     >
                                     <div class="panel-heading">
                                         <h3 class="panel-title">
-                                            {{block.title}}
-
                                             <span ng-if="block.grouping=='S'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
 
                                             <span ng-if="block.grouping=='D'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
@@ -116,9 +117,44 @@
                                             <span ng-if="block.grouping=='G'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
 
                                             <span ng-if="block.grouping=='C'" class="glyphicon glyphicon-asterisk" style="float: right;" aria-hidden="true"></span>
+
+                                            {{block.title}}
                                         </h3>
                                     </div>
                                     <div class="panel-body">
+
+                                        <img ng-if="block.arcs.satisfaction.score == -3" src="images/arcsmeters/S-3.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.satisfaction.score == -2" src="images/arcsmeters/S-2.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.satisfaction.score == -1" src="images/arcsmeters/S-1.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.satisfaction.score == 0" src="images/arcsmeters/S0.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.satisfaction.score == 1" src="images/arcsmeters/S1.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.satisfaction.score == 2" src="images/arcsmeters/S2.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.satisfaction.score == 3" src="images/arcsmeters/S3.png" style="width: 12px; float: right;"/>
+
+                                        <img ng-if="block.arcs.confidence.score == -3" src="images/arcsmeters/C-3.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.confidence.score == -2" src="images/arcsmeters/C-2.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.confidence.score == -1" src="images/arcsmeters/C-1.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.confidence.score == 0" src="images/arcsmeters/C0.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.confidence.score == 1" src="images/arcsmeters/C1.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.confidence.score == 2" src="images/arcsmeters/C2.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.confidence.score == 3" src="images/arcsmeters/C3.png" style="width: 12px; float: right;"/>
+
+                                        <img ng-if="block.arcs.relevance.score == -3" src="images/arcsmeters/R-3.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.relevance.score == -2" src="images/arcsmeters/R-2.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.relevance.score == -1" src="images/arcsmeters/R-1.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.relevance.score == 0" src="images/arcsmeters/R0.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.relevance.score == 1" src="images/arcsmeters/R1.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.relevance.score == 2" src="images/arcsmeters/R2.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.relevance.score == 3" src="images/arcsmeters/R3.png" style="width: 12px; float: right;"/>
+
+                                        <img ng-if="block.arcs.attention.score == -3" src="images/arcsmeters/A-3.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.attention.score == -2" src="images/arcsmeters/A-2.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.attention.score == -1" src="images/arcsmeters/A-1.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.attention.score == 0" src="images/arcsmeters/A0.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.attention.score == 1" src="images/arcsmeters/A1.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.attention.score == 2" src="images/arcsmeters/A2.png" style="width: 12px; float: right;"/>
+                                        <img ng-if="block.arcs.attention.score == 3" src="images/arcsmeters/A3.png" style="width: 12px; float: right;"/>
+
                                         <h5>Voorbereiding</h5>
                                         {{block.preparation}}
                                         <h5>Omschrijving</h5>
@@ -214,5 +250,6 @@
 <!-- App controllers -->
 <script src="javascripts/app.js"></script>
 <script src="javascripts/controllers/blocks.js"></script>
+<script src="javascripts/controllers/planner.js"></script>
 </body>
 </html>
