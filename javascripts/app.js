@@ -9,6 +9,6 @@
  * Main module of the application.
  */
 angular
-    .module('arcsplannerApp', []).constant('config', {
+    .module('arcsplannerApp', ['ngSanitize', 'angular-timeline']).constant('config', {
 
     });
