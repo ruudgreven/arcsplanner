@@ -1,7 +1,59 @@
 {
   "blocks": [
     {
-      "title": "Samen iets doen, maar dan heel erg veel. Wat gebeurd er dan? Oh dat valt reuze mee",
+      "title": "Blokje 1",
+      "preparation": "Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders.",
+      "description": "Doe iets in de les. Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les",
+      "time": [10,20,30],
+      "arcs": {
+        "attention": {
+          "score": 3,
+          "keys": ["Perceptual Arousal"]
+        },
+        "relevance": {
+          "score": 0,
+          "keys": ["Perceptual Arousal"]
+        },
+        "confidence": {
+          "score": -1,
+          "keys": ["Perceptual Arousal"]
+        },
+        "satisfaction": {
+          "score": 3,
+          "keys": ["Perceptual Arousal"]
+        }
+      },
+      "grouping": "C",
+      "phases": ["S"]
+    },
+	{
+      "title": "Blokje 2",
+      "preparation": "Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders.",
+      "description": "Doe iets in de les. Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les",
+      "time": [10,20,30],
+      "arcs": {
+        "attention": {
+          "score": -2,
+          "keys": ["Perceptual Arousal"]
+        },
+        "relevance": {
+          "score": 1,
+          "keys": ["Perceptual Arousal"]
+        },
+        "confidence": {
+          "score": 2,
+          "keys": ["Perceptual Arousal"]
+        },
+        "satisfaction": {
+          "score": 3,
+          "keys": ["Perceptual Arousal"]
+        }
+      },
+      "grouping": "C",
+      "phases": ["S"]
+    },
+    {
+      "title": "Blokje 3",
       "preparation": "Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders.",
       "description": "Doe iets in de les. Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les",
       "time": [10,20,30],
@@ -11,11 +63,89 @@
           "keys": ["Perceptual Arousal"]
         },
         "relevance": {
-          "score": 0,
+          "score": 2,
           "keys": ["Perceptual Arousal"]
         },
         "confidence": {
-          "score": -1,
+          "score": -3,
+          "keys": ["Perceptual Arousal"]
+        },
+        "satisfaction": {
+          "score": 2,
+          "keys": ["Perceptual Arousal"]
+        }
+      },
+      "grouping": "C",
+      "phases": ["S"]
+    },
+    {
+      "title": "Blokje 4",
+      "preparation": "Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders.",
+      "description": "Doe iets in de les. Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les",
+      "time": [10,20,30],
+      "arcs": {
+        "attention": {
+          "score": 3,
+          "keys": ["Perceptual Arousal"]
+        },
+        "relevance": {
+          "score": 1,
+          "keys": ["Perceptual Arousal"]
+        },
+        "confidence": {
+          "score": 0,
+          "keys": ["Perceptual Arousal"]
+        },
+        "satisfaction": {
+          "score": 1,
+          "keys": ["Perceptual Arousal"]
+        }
+      },
+      "grouping": "C",
+      "phases": ["S"]
+    },
+    	{
+      "title": "Blokje 5",
+      "preparation": "Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders.",
+      "description": "Doe iets in de les. Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les",
+      "time": [10,20,30],
+      "arcs": {
+        "attention": {
+          "score": 3,
+          "keys": ["Perceptual Arousal"]
+        },
+        "relevance": {
+          "score": 3,
+          "keys": ["Perceptual Arousal"]
+        },
+        "confidence": {
+          "score": 3,
+          "keys": ["Perceptual Arousal"]
+        },
+        "satisfaction": {
+          "score": 0,
+          "keys": ["Perceptual Arousal"]
+        }
+      },
+      "grouping": "C",
+      "phases": ["S"]
+    },
+    {
+      "title": "Blokje 6",
+      "preparation": "Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders. Niets bijzonders.",
+      "description": "Doe iets in de les. Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les Doe iets in de les",
+      "time": [10,20,30],
+      "arcs": {
+        "attention": {
+          "score": 0,
+          "keys": ["Perceptual Arousal"]
+        },
+        "relevance": {
+          "score": 1,
+          "keys": ["Perceptual Arousal"]
+        },
+        "confidence": {
+          "score": 2,
           "keys": ["Perceptual Arousal"]
         },
         "satisfaction": {

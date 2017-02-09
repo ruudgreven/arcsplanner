@@ -5,13 +5,21 @@
 
     <!-- Angular JS and plugins -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.min.js"></script>
 
     <!-- Bootstrap and jQuery -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- Angular Timeline -->
+    <script src="javascripts/lib/angular-timeline.js"></script>
+    <link rel="stylesheet" href="stylesheets/lib/angular-timeline.css">
+    <link rel="stylesheet" href="stylesheets/lib/angular-timeline-bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/lib/angular-timeline-animations.css">
 </head>
 <body ng-app="arcsplannerApp">
 
@@ -36,7 +44,7 @@
                 <div class="panel-body">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-7 col-md-offset-5">
+                            <div class="col-md-8 col-md-offset-4">
                                 <form class="form-inline">
                                     <div class="form-group">
                                         <input type="blockfilter" class="form-control" id="blockfilter" placeholder="Filter op woorden...">
@@ -162,63 +170,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="col-md-4">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">
-                                            Werkvormpje
-                                            <span class="glyphicon glyphicon-plus" style="float: right;" aria-hidden="true"></span>
-                                            <span class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
-                                        </h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        Panel content
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">
-                                            Werkvormpje
-                                            <span class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
-                                        </h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        Panel content
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">
-                                            Werkvormpje
-                                            <span class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
-                                            <span class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"></span>
-                                        </h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        Panel content
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="panel panel-info">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">
-                                            Werkvormpje
-                                            <span class="glyphicon glyphicon-asterisk" style="float: right;" aria-hidden="true"></span>
-                                        </h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        Panel content
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -226,7 +177,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="panel panel-info">
+            <div class="panel panel-info" ng-controller="TimelineCtrl">
                 <div class="panel-body">
                     <!-- Overview selector -->
                     <div class="btn-group btn-group-justified" role="group" aria-label="phaseselector">
@@ -238,7 +189,26 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                
+                <!-- Timeline -->
+                <div style="overflow-y: auto; overflow-x: hidden; max-width: 100%; max-height:100%;">
+                    <div style="width: 180%; padding: 20px;">
+						<timeline>
+							<timeline-event ng-repeat="event in blocks" side="left">
+								<timeline-badge class="{{event.badgeClass}}">
+									<i class="glyphicon {{event.badgeIconClass}}"></i>
+								</timeline-badge>
+								<timeline-panel class="{{event.badgeClass}}">
+									<timeline-heading>
+										<h4>{{event.title}}</h4>
+									</timeline-heading>
+									<p>{{event.description}}</p>
+								</timeline-panel>
+							</timeline-event>
+						</timeline> 
+					</div>
+                </div>
+            </div>  
         </div>
     </div>
 </div>
@@ -251,5 +221,6 @@
 <script src="javascripts/app.js"></script>
 <script src="javascripts/controllers/blocks.js"></script>
 <script src="javascripts/controllers/planner.js"></script>
+<script src="javascripts/controllers/timeline.js"></script>
 </body>
 </html>

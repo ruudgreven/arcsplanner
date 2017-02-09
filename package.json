@@ -2,7 +2,7 @@
   "name": "arcsplanner",
   "version": "0.0.0",
   "private": true,
-  "main": "app.js".
+  "main": "app.js",
   "dependencies": {
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
