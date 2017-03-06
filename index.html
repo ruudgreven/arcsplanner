@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="stylesheets/lib/angular-timeline.css">
     <link rel="stylesheet" href="stylesheets/lib/angular-timeline-bootstrap.css">
     <link rel="stylesheet" href="stylesheets/lib/angular-timeline-animations.css">
+
+    <!-- Markdown plugin -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.6.4/showdown.min.js"></script>
+
 </head>
 <body ng-app="arcsplannerApp">
 
@@ -164,9 +168,9 @@
                                         <img ng-if="block.arcs.attention.score == 3" src="images/arcsmeters/A3.png" style="width: 12px; float: right;"/>
 
                                         <h5>Voorbereiding</h5>
-                                        {{block.preparation}}
+                                        <div ng-bind-html="convertToHtml(block.preparation)"></div>
                                         <h5>Omschrijving</h5>
-                                        {{block.description}}
+                                        <div ng-bind-html="convertToHtml(block.description)"></div>
                                     </div>
                                 </div>
                             </div>
@@ -219,8 +223,11 @@
 
 <!-- App controllers -->
 <script src="javascripts/app.js"></script>
-<script src="javascripts/controllers/blocks.js"></script>
-<script src="javascripts/controllers/planner.js"></script>
-<script src="javascripts/controllers/timeline.js"></script>
+
+<script src="javascripts/services/ConverterSvc.js"></script>
+
+<script src="javascripts/controllers/BlocksCtrl.js"></script>
+<script src="javascripts/controllers/PlannerCtrl.js"></script>
+<script src="javascripts/controllers/TimelineCtrl.js"></script>
 </body>
 </html>

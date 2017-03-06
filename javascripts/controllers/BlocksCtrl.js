@@ -8,7 +8,7 @@
  * Controller of the blocks
  */
 angular.module('arcsplannerApp')
-    .controller('BlocksCtrl', function ($scope, $http, $log, config) {
+    .controller('BlocksCtrl', function ($scope, $http, $log, ConverterSvc, config) {
         $scope.blocks = [];
 
         $http({
@@ -18,6 +18,10 @@ angular.module('arcsplannerApp')
             $scope.blocks = response.data.blocks;
             $log.info("Retrieved blocks: " + $scope.blocks);
         }, function error(response) {
-            $log.error("There was an error: ");
+            $log.error("There was an error: " + response);
         });
+
+        $scope.convertToHtml = function(text) {
+            return ConverterSvc.convertToHtml(text);
+        }
     });
