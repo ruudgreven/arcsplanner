@@ -5,11 +5,17 @@
     <div class="panel-body">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8 col-md-offset-4">
-                    <form class="form-inline">
+                <div class="col-md-6">
+                    <form class="form">
                         <div class="form-group">
                             <input type="blockfilter" ng-model="filter.text" class="form-control" id="blockfilter" placeholder="Filter op woorden...">
+                        </div>
+                    </form>
+                </div>
 
+                <div class="col-md-6">
+                    <form class="form">
+                        <div class="form-group">
                             <!-- Filter for phases -->
                             <div class="btn-group">
                                 <button type="button" class="btn" ng-class="{
@@ -81,7 +87,7 @@
                                     <li><a ng-click="removeFilter('grouping');">Alles</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li><a ng-click="setFilter('grouping', 'S');">Individueel werken</a></li>
-                                    <li><a ng-click="setFilter('grouping', 'D');">Duo'ss</a></li>
+                                    <li><a ng-click="setFilter('grouping', 'D');">Duo's</a></li>
                                     <li><a ng-click="setFilter('grouping', 'G');">Kleine groepjes</a></li>
                                     <li><a ng-click="setFilter('grouping', 'C');">Hele klas</a></li>
                                 </ul>
