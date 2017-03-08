@@ -1,7 +1,22 @@
 body {
-  padding: 25px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 25px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+.selector .block {
+    height:300px;
+}
+
+.selector .blockactive {
+    height: auto;
+    background-color: #F9F9F9;
+}
+
+.selector .block .panel-body {
+    overflow-y: hidden;
+    height: 200px;
 }

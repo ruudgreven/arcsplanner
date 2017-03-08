@@ -12,12 +12,22 @@
 
                             <!-- Filter for phases -->
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default">Fase</button>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button type="button" class="btn" ng-class="{
+                                    'btn-default' : !hasFilterOn('phase'),
+                                    'btn-info' : hasFilterOn('phase')
+                                }">Fase</button>
+
+                                <button type="button" class="btn btn-default dropdown-toggle" ng-class="{
+                                    'btn-default' : !hasFilterOn('phase'),
+                                    'btn-info' : hasFilterOn('phase')
+                                }" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="caret"></span>
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
+
                                 <ul class="dropdown-menu">
+                                    <li><a ng-click="removeFilter('phase');">Alles</a></li>
+                                    <li role="separator" class="divider"></li>
                                     <li><a ng-click="setFilter('phase', 'S');">Begin van de les</a></li>
                                     <li><a ng-click="setFilter('phase', 'C');">Midden van de les</a></li>
                                     <li><a ng-click="setFilter('phase', 'E');">Eind van de les</a></li>
@@ -30,12 +40,21 @@
 
                             <!-- Filter for ARCS -->
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default">ARCS</button>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button type="button" class="btn" ng-class="{
+                                    'btn-default' : !hasFilterOn('arcs'),
+                                    'btn-info' : hasFilterOn('arcs')
+                                }">ARCS</button>
+
+                                <button type="button" class="btn btn-default dropdown-toggle" ng-class="{
+                                    'btn-default' : !hasFilterOn('arcs'),
+                                    'btn-info' : hasFilterOn('arcs')
+                                }" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="caret"></span>
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
                                 <ul class="dropdown-menu">
+                                    <li><a ng-click="removeFilter('arcs');">Alles</a></li>
+                                    <li role="separator" class="divider"></li>
                                     <li><a ng-click="setFilter('arcs', 'A');">Attention</a></li>
                                     <li><a ng-click="setFilter('arcs', 'R');">Relevance</a></li>
                                     <li><a ng-click="setFilter('arcs', 'C');">Confidence</a></li>
@@ -43,14 +62,24 @@
                                 </ul>
                             </div>
 
-                            <!-- Filter for phases -->
+                            <!-- Filter for grouping -->
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default">Groep</button>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button type="button" class="btn" ng-class="{
+                                    'btn-default' : !hasFilterOn('grouping'),
+                                    'btn-info' : hasFilterOn('grouping')
+                                }">Groeperingsvorm</button>
+
+                                <button type="button" class="btn btn-default dropdown-toggle" ng-class="{
+                                    'btn-default' : !hasFilterOn('grouping'),
+                                    'btn-info' : hasFilterOn('grouping')
+                                }" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="caret"></span>
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
+
                                 <ul class="dropdown-menu">
+                                    <li><a ng-click="removeFilter('grouping');">Alles</a></li>
+                                    <li role="separator" class="divider"></li>
                                     <li><a ng-click="setFilter('grouping', 'S');">Individueel werken</a></li>
                                     <li><a ng-click="setFilter('grouping', 'D');">Duo'ss</a></li>
                                     <li><a ng-click="setFilter('grouping', 'G');">Kleine groepjes</a></li>
@@ -66,9 +95,19 @@
 
             </div>
 
+            <div class="row" style="height: 20px;">
+
+            </div>
+
             <div class="row">
                 <div class="col-md-4">
-                    <div ng-repeat="block in blocks | filter: applyFilter" ng-include="'templates/planner/selector-block.phtml'"></div>
+                    <div ng-repeat="block in blocks[0]" ng-include="'templates/planner/selector-block.phtml'"></div>
+                </div>
+                <div class="col-md-4">
+                    <div ng-repeat="block in blocks[1]" ng-include="'templates/planner/selector-block.phtml'"></div>
+                </div>
+                <div class="col-md-4">
+                    <div ng-repeat="block in blocks[2]" ng-include="'templates/planner/selector-block.phtml'"></div>
                 </div>
             </div>
         </div>
