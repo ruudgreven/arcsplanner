@@ -32,6 +32,7 @@ angular.module('arcsplannerApp')
 
                 //Convert all text to markdown
                 $scope.allblocks.forEach(function(block) {
+                    block.summary = convertToHtml(block.summary);
                     block.preparation = convertToHtml(block.preparation);
                     block.description = convertToHtml(block.description);
                 });

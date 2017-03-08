@@ -7,12 +7,14 @@ a {
     color: #00B7FF;
 }
 
-.selector .block {
-    height:300px;
+.selector .panel-heading {
+    height: 4.8em;
+    overflow: hidden;
 }
 
-.selector .blockactive {
+.selector .blockactive .panel-body {
     height: auto;
+    min-height: 300px;
     background-color: #F9F9F9;
 }
 
