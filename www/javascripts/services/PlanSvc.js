@@ -83,6 +83,14 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
         },
 
         /**
+         * Returns the current timeline
+         * @returns {Array}
+         */
+        getTimeline: function() {
+            return timelineEntries;
+        },
+
+        /**
          * Adds a block to the current timeline
          * @param startTimeMinutes An offset in minutes from the start from the lesson, zero means the start of the lesson
          * @param durationMinutes A duration for the block
