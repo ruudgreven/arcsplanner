@@ -59,7 +59,7 @@ angular.module('arcsplannerApp')
                 moveable: false,
                 orientation: 'horizontal',      //Update to none
                 timeAxis: {scale: 'minute', step: 15},
-                stack: true,
+                stack: false,
                 onMove: function (item, callback) {
                     try {
                         var startTime = moment(item.start);
@@ -75,7 +75,14 @@ angular.module('arcsplannerApp')
                 },
 
                 onRemove: function (item, callback) {
-                    callback(item);
+                    try {
+                        PlanSvc.removeTimelineEntry(item.id);
+                        $log.info('(PlannerCtrl): Timeline entry removed with id ' + item.id);
+                        callback(item);
+                    } catch (e) {
+                        $log.info('(PlannerCtrl): Timeline entry NOT removed: ' + e);
+                        callback(null);
+                    }
                 },
 
                 onMoving: function (item, callback) {
@@ -97,7 +104,7 @@ angular.module('arcsplannerApp')
                 timeline.items.add({id: timelineEntry.id, content: block.title, editable: true, start: timelineEntry.startTime.format(), end: timelineEntry.endTime.format(), group: 1});
                 $log.info('(PlannerCtrl): Timeline entry added with id ' + timelineEntry.id);
 
-                PlanSvc.printTimeline();
+                PlanSvc.printFreeBlocks();
                 return true
             } catch (e) {
                 $log.info('(PlannerCtrl): Timeline entry NOT added: ' + e);
@@ -110,7 +117,26 @@ angular.module('arcsplannerApp')
 
         $scope.onDropComplete=function(data,evt){
             $log.info('(PlannerCtrl): Dropping block \"' + data.block.title + '\"');
-            $scope.addTimelineEntry(30, 30, data.block);
+
+            var mintime = data.block.time[0];
+            var deftime = data.block.time[1];
+            var maxtime = data.block.time[2];
+
+            var deftimefit = PlanSvc.findBestFittingFreeBlocks(deftime);
+            if (deftimefit != -1) {
+                $log.info('(PlannerCtrl): The default time of ' + deftime + ' fits. Add it at time ' + deftimefit);
+                $scope.addTimelineEntry(deftimefit, deftime, data.block);
+            } else {
+                var mintimefit = PlanSvc.findBestFittingFreeBlocks(mintime);
+                if (mintimefit != -1) {
+                    $log.info('(PlannerCtrl): The default time of ' + deftime + ' does not fit. Use minimum time of ' + mintime + ' Add it at time ' + mintimefit);
+                    $scope.addTimelineEntry(mintimefit, mintime, data.block);
+                } else {
+                    $log.info('(PlannerCtrl): There is no place for a timeline entry with minimum time ' + mintime);
+                }
+            }
+
+
         };
 
         $scope.onLoaded = function (graphRef) {
