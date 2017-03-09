@@ -6,8 +6,9 @@
                                                                 'blockactive' : activeBlock === block,
                                                                 'block' : activeBlock !== block
                                                                 }"
-     draggable="true">
+     ng-drag="true" ng-drag-data="{block}">
 
+    <div ng-drag="true" ng-drag-data="obj"></div>
     <div class="panel-heading">
             <span ng-if="block.grouping=='S'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true" alt="Individuele werkvorm" title="Individuele werkvorm"></span>
 

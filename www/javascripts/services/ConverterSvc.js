@@ -3,10 +3,10 @@
 
 /**
  * @ngdoc function
- * @name robocodecupApp.controller:RankingCtrl
+ * @name arcsplannerApp.controller:ConverterSvc
  * @description
- * # competitionSrv
- * Contains information about the current competition
+ * # ConverterSvc
+ * Can be used to convert markdown to html.
  */
 
 angular.module('arcsplannerApp').service('ConverterSvc', function($rootScope, $log) {
