@@ -12,7 +12,9 @@ angular
     .module('arcsplannerApp', [
         'ngSanitize',
         'angular-timeline',
-        'ui.router'
+        'ui.router',
+        'ngVis',
+        'ngDraggable'
     ]).config(function ($stateProvider) {
         $stateProvider
             .state('planner',{

@@ -8,7 +8,7 @@
  * Controller of the blocks
  */
 angular.module('arcsplannerApp')
-    .controller('BlocksCtrl', function ($scope, $http, $log, ConverterSvc, config) {
+    .controller('BlocksCtrl', function ($scope, $http, $log, ConverterSvc, PlanSvc, config) {
         $scope.blocks = [];
         $scope.allblocks = [];
         $scope.filter = {
@@ -217,5 +217,8 @@ angular.module('arcsplannerApp')
             addBlocks(filteredblocks);
         };
 
+        $scope.onStartDrag = function(data, evt) {
+            console.log("drag success, data:", data);
+        };
 
     });
