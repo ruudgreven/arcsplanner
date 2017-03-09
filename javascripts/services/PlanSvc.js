@@ -93,6 +93,12 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
         addTimelineEntry: function(startTimeMinutes, durationMinutes, block) {
             var endTimeMinutes = startTimeMinutes + durationMinutes;
 
+
+            //Check if the starttime is >0
+            if (startTimeMinutes < 0) {
+                throw '(PlanSvc.addTimelineEntry): Block not added. The block starts before the beginning of the lesson';
+            }
+
             //Check if the duration is not longer than the actual lesson
             if (endTimeMinutes > lessonDuration) {
                 throw '(PlanSvc.addTimelineEntry): Block not added. The block exceeds the endtime of the lesson';
@@ -104,6 +110,11 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
                 if (entry.startTimeMinutes < (startTimeMinutes + durationMinutes) && entry.endTimeMinutes > startTimeMinutes) {
                     throw '(PlanSvc.addTimelineEntry): Block not added. There is overlap with an existing one';
                 }
+            }
+
+            //Check if the duration is equal to or greater than 5 minutes
+            if (durationMinutes < 5) {
+                throw '(PlanSvc.moveTimelineEntry): Block not moved. Minimum duration is 5 minutes';
             }
 
             //Add the block
@@ -142,10 +153,31 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
                 throw '(PlanSvc.moveTimelineEntry): Can not find the timelineEntry with id ' + id;
             }
 
+            //Check if the starttime is >0
+            if (startTimeMinutes < 0) {
+                throw '(PlanSvc.addTimelineEntry): Block not added. The block starts before the beginning of the lesson';
+            }
+
             var endTimeMinutes = startTimeMinutes + durationMinutes;
+
             //Check if the duration is not longer than the actual lesson
             if (endTimeMinutes > lessonDuration) {
                 throw '(PlanSvc.moveTimelineEntry): Block not moved. The block exceeds the endtime of the lesson';
+            }
+
+            //Check if the duration is equal to or greater than 5 minutes
+            if (durationMinutes < 5) {
+                throw '(PlanSvc.moveTimelineEntry): Block not moved. Minimum duration is 5 minutes';
+            }
+
+            //Check if there is overlap with existing entries
+            for (var i = 0; i < timelineEntries.length; i++) {
+                var entry = timelineEntries[i];
+                if (entry.id != timelineEntry.id) {
+                    if (entry.startTimeMinutes < (startTimeMinutes + durationMinutes) && entry.endTimeMinutes > startTimeMinutes) {
+                        throw '(PlanSvc.addTimelineEntry): Block not added. There is overlap with an existing one';
+                    }
+                }
             }
 
             var startTime = moment(lessonStartTime).add(startTimeMinutes, 'm');
@@ -163,6 +195,131 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
         },
 
         /**
+         * Remove the timelineEntry with the given id
+         * @param id
+         * @returns {boolean} true when removed, or throws an exception when not found
+         */
+        removeTimelineEntry : function(id) {
+            var indexToRemove = -1;
+
+            for (var i = 0; i < timelineEntries.length; i++) {
+                var entry = timelineEntries[i];
+                if (entry.id == id) {
+                    indexToRemove = i;
+                }
+            }
+
+            if (indexToRemove != -1) {
+                timelineEntries.splice(indexToRemove, 1);
+                return true;
+            } else {
+                throw 'Timeline entry with id ' + id + ' not found!';
+            }
+        },
+
+        /**
+         * Find all free blocks
+         * Returns a list of free blocks in the format {start: <time in minutes>, end: <time in minutes> }
+         * @returns {*}
+         */
+        getFreeBlocks : function() {
+            var freeBlocks = []; //Add objects with {starttime, duration}
+
+            if (timelineEntries.length == 0) {
+                freeBlocks.push({start: 0, end: lessonDuration});
+                return freeBlocks;
+            }
+
+            //Find all lesson blocks and add the time between them to freeBlocks
+            var lastEndtime = undefined;
+            for (var i = 0; i < timelineEntries.length; i++) {
+                var timelineEntry = timelineEntries[i];
+                if (lastEndtime != undefined) {
+                    freeBlocks.push({start: lastEndtime, end: timelineEntry.startTimeMinutes});
+                } else {
+                    freeBlocks.push({start: 0, end: timelineEntry.startTimeMinutes});
+                }
+                lastEndtime = timelineEntry.endTimeMinutes;
+            }
+
+            //Add the last block that ends add the end of the lesson
+            if (timelineEntries[timelineEntries.length - 1].end != lessonDuration) {
+                freeBlocks.push({start: timelineEntries[timelineEntries.length - 1].endTimeMinutes, end: lessonDuration});
+            }
+
+            //Check for same end and starttime and remove these
+            var toRemove = [];
+            for (var i = 0; i < freeBlocks.length; i++) {
+                var freeBlock = freeBlocks[i];
+                if (freeBlock.start == freeBlock.end) {
+                    toRemove.push(i);
+                }
+            }
+
+            var removalCount = 0;
+            for (var i = 0; i < toRemove.length; i++) {
+                freeBlocks.splice(toRemove[i] - removalCount, 1);
+                removalCount++;
+            }
+
+            return freeBlocks;
+        },
+
+        /**
+         * Find all free blocks that has a minimum of the given duration
+         * @param duration
+         * @returns {Array}
+         */
+        findFittingFreeBlocks: function(duration) {
+            var freeBlocks = this.getFreeBlocks();
+            var matchingBlocks = [];
+            for (var i = 0; i < freeBlocks.length; i++) {
+                if ((freeBlocks[i].end - freeBlocks[i].start) >= duration) {
+                    matchingBlocks.push(freeBlocks[i]);
+                }
+            }
+            return matchingBlocks;
+        },
+
+        /**
+         * Finds the starttime of the block with the smallest duration that fits the given duration. Returns -1 if
+         * there where no free fitting blocks
+         * @param duration
+         */
+        findBestFittingFreeBlocks: function(duration) {
+            var freeFittingBlocks = this.findFittingFreeBlocks(duration);
+            var blockDurations = [];
+
+            if (freeFittingBlocks.length == 0) {
+                return -1;
+            }
+
+            //Order all fitting durations based on the duration
+            var len = freeFittingBlocks.length;
+            for (var i = len - 1; i >= 0; i--) {
+                for (var j = 1; j <= i; j++) {
+                    var duration1 = freeFittingBlocks[j - 1].end - freeFittingBlocks[j - 1].start;
+                    var duration2 = freeFittingBlocks[j].end - freeFittingBlocks[j].start;
+
+                    if (duration1 > duration2) {
+                        var temp = freeFittingBlocks[j - 1];
+                        freeFittingBlocks[j - 1] = freeFittingBlocks[j];
+                        freeFittingBlocks[j] = temp;
+                    }
+                }
+            }
+
+            //Return the starttime of the first block that fits
+            for (var i = 0; i < freeFittingBlocks.length; i++) {
+                if ((freeFittingBlocks[i].end - freeFittingBlocks[i].start) >= duration) {
+                    return freeFittingBlocks[i].start;
+                }
+            }
+
+            return -1;
+        },
+
+        /**
          * Convert a timeMoment to a relatieve time in minutes from the start of the lesson
          * @param timeMoment A moment in time
          * @returns an integer with the number of minutes from the start of the lesson
@@ -176,6 +333,13 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
          */
         printTimeline: function() {
             $log.info('Current timeline: ' + JSON.stringify(timelineEntries, null, 2));
+        },
+
+        /**
+         * Prints the current free blocks in JSON (Pretty print)
+         */
+        printFreeBlocks: function() {
+            $log.info('Current free blocks: ' + JSON.stringify(this.getFreeBlocks(), null, 2));
         }
 
     };
