@@ -8,16 +8,18 @@
  * Controller of the blocks
  */
 angular.module('arcsplannerApp')
-    .controller('TimelineCtrl', function ($scope, $http, $log, config) {
-        $scope.blocks = [];
+    .controller('TimelineCtrl', function ($scope, $http, $log, PlanSvc, ConverterSvc) {
+        $scope.timeline = PlanSvc.getTimeline();
 
-        $http({
-            method: 'GET',
-            url: '/api/blocks'
-        }).then(function success(response) {
-            $scope.blocks = response.data.blocks;
-            $log.info("Retrieved blocks for timeline: " + $scope.blocks);
-        }, function error(response) {
-            $log.error("There was an error: ");
-        });
+        $scope.getLabel = function(event) {
+            return ConverterSvc.convertToPrettyTime(event.startTimeMinutes) + ' - ' + ConverterSvc.convertToPrettyTime(event.endTimeMinutes);
+        };
+
+        /**
+         * Converts the given markdown to HTML.
+         * @param text
+         */
+        var convertToHtml = function(text) {
+            return ConverterSvc.convertToHtml(text);
+        };
     });
