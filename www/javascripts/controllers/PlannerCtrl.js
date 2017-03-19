@@ -119,17 +119,16 @@ angular.module('arcsplannerApp')
             $log.info('(PlannerCtrl): Dropping block \"' + data.block.title + '\"');
 
             var mintime = data.block.time[0];
-            var deftime = data.block.time[1];
-            var maxtime = data.block.time[2];
+            var maxtime = data.block.time[1];
 
-            var deftimefit = PlanSvc.findBestFittingFreeBlocks(deftime);
-            if (deftimefit != -1) {
-                $log.info('(PlannerCtrl): The default time of ' + deftime + ' fits. Add it at time ' + deftimefit);
-                $scope.addTimelineEntry(deftimefit, deftime, data.block);
+            var maxtimefit = PlanSvc.findBestFittingFreeBlocks(maxtime);
+            if (maxtimefit != -1) {
+                $log.info('(PlannerCtrl): The maximum time of ' + maxtime + ' fits. Add it at time ' + maxtimefit);
+                $scope.addTimelineEntry(maxtimefit, maxtime, data.block);
             } else {
                 var mintimefit = PlanSvc.findBestFittingFreeBlocks(mintime);
                 if (mintimefit != -1) {
-                    $log.info('(PlannerCtrl): The default time of ' + deftime + ' does not fit. Use minimum time of ' + mintime + ' Add it at time ' + mintimefit);
+                    $log.info('(PlannerCtrl): The default time of ' + maxtime + ' does not fit. Use minimum time of ' + mintime + ' Add it at time ' + mintimefit);
                     $scope.addTimelineEntry(mintimefit, mintime, data.block);
                 } else {
                     $log.info('(PlannerCtrl): There is no place for a timeline entry with minimum time ' + mintime);

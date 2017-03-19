@@ -1,11 +1,11 @@
 {
   "blocks": [
     {
-      "title": "Outline van de les geven en dat dan heel erg laaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaang",
+      "title": "Doelen van de les geven en dat dan heel erg laaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaang",
       "summary": "De docent geeft aan het begin van de les een outline van de les, waarin hij/zij toelicht wat de lesdoelen zijn en hoe de les er verder uit gaat zien.",
       "preparation": "- Bepaal de lesdoelen.",
       "description": "- Benoem de lesdoelen van deze les.\n- Vertel wat je plan is voor deze les (Geef de outline).",
-      "time": [5,5,10],
+      "time": [5,10],
       "arcs": {
         "attention": {
           "score": 3,
@@ -25,14 +25,15 @@
         }
       },
       "grouping": "C",
-      "phases": ["S"]
+      "phases": ["S"],
+      "source": "Eigen praktijkervaring"
     },
 	{
       "title": "Leerdoel(en) laten bedenken door studenten",
       "summary": "De docent laat de student eigen leerdoelen formuleren voor de les. Het doel is dat zij daarmee meer betrokken raken bij de les en zien hoe zij invloed kunnen hebben op hun eigen attitude in de les.",
       "preparation": "- Memobriefjes meenemen.\n",
       "description": "- Laat iedere student individueel een doel voor de les verzinnen. Wanneer is voor hem/haar de les geslaagd?\n- Laat de studenten dit individueel opschrijven op een memoblaadje of op een bord.\n- Laat aan het einde van de les de briefjes inleveren en bespreek of het doel gelukt is.",
-      "time": [5,5,10],
+      "time": [5,10],
       "arcs": {
         "attention": {
           "score": -2,
@@ -52,14 +53,15 @@
         }
       },
       "grouping": "C",
-      "phases": ["S"]
+      "phases": ["S"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Bespreken programmeeropdrachten",
       "summary": "De studenten bespreken onderling met elkaar de opdracht die zij gemaakt hebben. De docent kan rondlopen en aanhaken bij groepjes waar hij/zij dat nodig acht.",
       "preparation": "- Kijk welke opdrachten de studenten hebben moeten maken.\n- Bekijk, als je dat prettig vind, eventueel zelf deze opdracht ook inhoudelijk.",
       "description": "- Maak groepjes. Zeg tegen studenten dat zij de opdracht moeten bespreken in een groepje. Ieder z’n uitwerking moet even aan bod komen. Hij/zij moet het op de laptop laten zien aan de anderen\n- Laat ieder één goed en één verbeterpunt aangeven op de uitwerking van de ander.\n- Loop als docent rond en kijk of ze het werk gemaakt hebben en geef eventueel feedback.",
-      "time": [5,15,30],
+      "time": [5,30],
       "arcs": {
         "attention": {
           "score": 2,
@@ -79,14 +81,15 @@
         }
       },
       "grouping": "G",
-      "phases": ["C"]
+      "phases": ["C"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Tonen uitwerking van de opdracht door willekeurige student",
       "summary": "Er wordt een willekeurige student gekozen die zijn uitwerking van de opdracht toont op de beamer. De docent is gespreksleider en betrekt de klas door hen vragen te stellen over de getoonde uitwerking",
       "preparation": "- Studentnamen invoeren in wie-is-het-bokje.",
       "description": "- Kies een willekeurige student met wie is het bokje\n- Nodig hem/haar uit voor de klas met de laptop.\n- Vraag hem/haar de code te presenteren.\n- Vraag de klas om feedback.",
-      "time": [5,20,30],
+      "time": [5,30],
       "arcs": {
         "attention": {
           "score": 3,
@@ -106,14 +109,15 @@
         }
       },
       "grouping": "C",
-      "phases": ["C"]
+      "phases": ["C"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Klassikale kennisoverdracht",
       "summary": "De docent leg een nieuw concept uit met behulp van sheets met als doel om de studenten nieuwe kennis aan te leren.",
       "preparation": "- Sheets voorbereiden",
       "description": "- Bespreek de sheets in de les",
-      "time": [5,20,60],
+      "time": [5,60],
       "arcs": {
         "attention": {
           "score": 3,
@@ -133,14 +137,15 @@
         }
       },
       "grouping": "C",
-      "phases": ["C"]
+      "phases": ["C"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Bespreken schiftelijke opdrachten",
       "summary": "De docent bespreekt de gemaakte opdrachten met de studenten door de vragen langs te lopen en hen stuk voor stuk een beurt te geven om de vraag te beantwoorden.",
       "preparation": "- Kijk welke opdrachten de studenten moesten maken.\n- Bereid zelf de vragen en antwoorden voor.",
       "description": "- Loop de vragen stuk voor stuk door.\n- Gebruik eventueel wie-is-het-bokje voor een willekeurige keuze van een student per vraag.",
-      "time": [5,20,60],
+      "time": [5,60],
       "arcs": {
         "attention": {
           "score": 0,
@@ -160,14 +165,15 @@
         }
       },
       "grouping": "C",
-      "phases": ["C"]
+      "phases": ["C"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Ontwerpopdracht uitvoeren in groepjes",
       "summary": "De docent beschrijft een bepaalde casus in hoofdlijnen, waarna de studenten de instructie krijgen om daarna in groepjes een technisch of grafisch ontwerp te maken. (of beide)",
       "preparation": "- Controleer of je in het lokaal voldoende whiteboardruimte hebt (per 4 studenten 1 whiteboard of deel daarvan).\n",
       "description": "- Deel studenten in in groepjes.\n- Plaats de studenten bij een whiteboard.\nGeef een duidelijke casus en laat studenten een ontwerp bedenken voor die casus. Dit kan zowel een technisch UML ontwerp zijn, maar ook bijvoorbeeld een opbouw en indeling van de UI.",
-      "time": [15,20,30],
+      "time": [15,30],
       "arcs": {
         "attention": {
           "score": 0,
@@ -187,14 +193,15 @@
         }
       },
       "grouping": "G",
-      "phases": ["C"]
+      "phases": ["C"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Uitleg zoeken over een bepaald onderwerp in groepjes",
       "summary": "De docent geeft de studenten een bepaald onderwerp of thema en de studenten gaan in groepjes op zoek naar informatie over dit thema. Daarna worden de uitkomsten besproken.",
       "preparation": "- Bedenk een aantal onderwerpen die je zou kunnen gebruiken als \"onderzoeksonderwerp\".",
       "description": "- Deel studenten in in groepjes.\n- Definieer voor elke groep een expliciete vraag/opdracht om iets specifieks uit te zoeken. Dit kan zowel een praktische vaardigheid zijn (Hoe met je X doen) of een meer theoretisch onderwerp (Wat is X?).\n- Laat iedere groep de uitkomst presenteren.",
-      "time": [30,45,60],
+      "time": [30,60],
       "arcs": {
         "attention": {
           "score": 0,
@@ -214,14 +221,15 @@
         }
       },
       "grouping": "G",
-      "phases": ["C"]
+      "phases": ["C"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Programmeeropdracht uitvoeren in duo's",
       "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna in duo's aan de slag om de gevraagde functionaliteit te programmeren.",
       "preparation": "- Bedenk een programmeeropdracht om uit te voeren.",
       "description": "- Maak duo's.\n- Leg de opdracht kort uit, laat de studenten in duo's bespreken hoe ze het gaan bouwen (bouwplan).\n- Zet de studenten aan het werk. Loop de verschillende duo's af en informeer naar de voortgang.",
-      "time": [45,60,120],
+      "time": [45,120],
       "arcs": {
         "attention": {
           "score": 0,
@@ -241,14 +249,15 @@
         }
       },
       "grouping": "D",
-      "phases": ["C"]
+      "phases": ["C"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Lesevaluatie door studenten",
       "summary": "De docent nodigt de studenten uit om zijn les te evalueren. Hij/zij vraagt een positief punt, een verbeterpunt en een cijfer voor de les. De studenten schrijven dit (anoniem) op op memobriefjes.",
       "preparation": "- Neem memo briefjes mee in twee verschillende kleuren, bij voorkeur rood en groen.",
       "description": "- Leg uit dat je een korte evaluatie van de les wilt doen, zodat je het de volgende keer beter kunt doen.\nJe vraagt de studenten om 3 dingen: \n    - Een goed punt van de workshop dat vastgehouden moet worden voor de volgende workshops.\n    - Een verbeterpunt voor de workshop.\n    - Een cijfer voor de workshop.\n- Deel aan iedere student één memobriefje uit per kleur. De groene voor het positieve punt en het cijfer. Het rode voor het verbeterpunt.\n- Laat studenten bij het verlaten van het lokaal de briefjes op het bord plakken.\n",
-      "time": [30,45,60],
+      "time": [30,60],
       "arcs": {
         "attention": {
           "score": 0,
@@ -268,14 +277,15 @@
         }
       },
       "grouping": "C",
-      "phases": ["E"]
+      "phases": ["E"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Samenvatting van de les door de docent",
       "summary": "De docent geeft een korte samenvatting van de les met als doel dat de studenten weten wat de belangrijkste thema's waren.",
       "preparation": "",
       "description": "- Vat kort en bondig samen wat er in de les besproken is.",
-      "time": [5,5,10],
+      "time": [5,10],
       "arcs": {
         "attention": {
           "score": 0,
@@ -295,14 +305,15 @@
         }
       },
       "grouping": "G",
-      "phases": ["E"]
+      "phases": ["E"],
+      "source": "Eigen praktijkervaring"
     },
     {
       "title": "Vooruitblik op de volgende les",
       "summary": "De docent geeft een korte vooruitblik op de volgende les, met als doel om de studenten te prikkelen.",
       "preparation": "- Kijken wat de volgende les aan bod komt.",
       "description": "- Benoem wat er de volgende les aan bod komt en wat studenten aan voorbereiden moeten doen.",
-      "time": [30,45,60],
+      "time": [30,60],
       "arcs": {
         "attention": {
           "score": 0,
@@ -322,7 +333,8 @@
         }
       },
       "grouping": "C",
-      "phases": ["E"]
+      "phases": ["E"],
+      "source": "Eigen praktijkervaring"
     }
   ]
 }

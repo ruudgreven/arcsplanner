@@ -10,7 +10,7 @@
  */
 
 angular.module('arcsplannerApp').factory('ConverterSvc', function($rootScope, $log) {
-    var converter = new showdown.Converter();
+    var converter;
 
     var convertorSvc = {
 
@@ -18,7 +18,8 @@ angular.module('arcsplannerApp').factory('ConverterSvc', function($rootScope, $l
          * Initialize the convertor service.
          */
         init : function() {
-
+            convertorSvc.converter = new showdown.Converter();
+            convertorSvc.converter.setFlavor('original');
         },
 
         /**
@@ -27,7 +28,7 @@ angular.module('arcsplannerApp').factory('ConverterSvc', function($rootScope, $l
          * @returns {*}
          */
         convertToHtml : function (text) {
-            var html = converter.makeHtml(text);
+            var html = convertorSvc.converter.makeHtml(text);
             return html;
         },
 

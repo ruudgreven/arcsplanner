@@ -11,6 +11,11 @@ angular.module('arcsplannerApp')
     .controller('TimelineCtrl', function ($scope, $http, $log, PlanSvc, ConverterSvc) {
         $scope.timeline = PlanSvc.getTimeline();
 
+        $scope.$on( 'plan.changed', function( event ) {
+            $scope.timeline = PlanSvc.getTimeline();
+            $scope.$apply();
+        });
+
         $scope.getLabel = function(event) {
             return ConverterSvc.convertToPrettyTime(event.startTimeMinutes) + ' - ' + ConverterSvc.convertToPrettyTime(event.endTimeMinutes);
         };
