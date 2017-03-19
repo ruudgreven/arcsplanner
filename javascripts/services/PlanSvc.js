@@ -145,6 +145,9 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
             //Sort the timelineentries
             sortTimelineEntries();
 
+            //Send a message that the plan has changed
+            $rootScope.$broadcast('plan.changed');
+
             return timelineEntry;
         },
 
@@ -200,6 +203,9 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
 
             //Sort the timelineentries
             sortTimelineEntries();
+
+            //Send a message that the plan has changed
+            $rootScope.$broadcast('plan.changed');
         },
 
         /**
@@ -219,6 +225,9 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
 
             if (indexToRemove != -1) {
                 timelineEntries.splice(indexToRemove, 1);
+
+                //Send a message that the plan has changed
+                $rootScope.$broadcast('plan.changed');
                 return true;
             } else {
                 throw 'Timeline entry with id ' + id + ' not found!';

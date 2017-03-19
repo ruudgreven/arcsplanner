@@ -35,6 +35,7 @@ angular.module('arcsplannerApp')
                     block.summary = convertToHtml(block.summary);
                     block.preparation = convertToHtml(block.preparation);
                     block.description = convertToHtml(block.description);
+                    block.source = convertToHtml(block.source);
                 });
 
                 addBlocks($scope.allblocks);
@@ -115,6 +116,64 @@ angular.module('arcsplannerApp')
                 $log.info('(BlocksCtrl): Set active block to ' + block.title);
                 $scope.activeBlock = block;
             }
+        };
+
+        /**
+         * Returns a description for the footer of the block
+         * @param block
+         */
+        $scope.getFooterDescription = function(block) {
+            var mesg = ''
+            if (block.phases.indexOf('S') !== -1 && block.phases.indexOf('C') !== -1 && block.phases.indexOf('E') !== -1) {
+                mesg += 'Overal in de les';
+            } else if (block.phases.indexOf('S') !== -1 && block.phases.indexOf('C') !== -1 && block.phases.indexOf('E') === -1) {
+                mesg += 'Begin of midden v/d les';
+            } else if (block.phases.indexOf('S') !== -1 && block.phases.indexOf('C') === -1 && block.phases.indexOf('E') !== -1) {
+                mesg += 'Begin of einde v/d les';
+            } else if (block.phases.indexOf('S') !== -1 && block.phases.indexOf('C') === -1 && block.phases.indexOf('E') === -1) {
+                mesg += 'Begin v/d les';
+            } else if (block.phases.indexOf('S') === -1 && block.phases.indexOf('C') !== -1 && block.phases.indexOf('E') !== -1) {
+                mesg += 'Midden of einde v/d les';
+            } else if (block.phases.indexOf('S') === -1 && block.phases.indexOf('C') !== -1 && block.phases.indexOf('E') === -1) {
+                mesg += 'Midden v/d les';
+            } else if (block.phases.indexOf('S') === -1 && block.phases.indexOf('C') === -1 && block.phases.indexOf('E') !== -1) {
+                mesg += 'Einde v/d les';
+            }
+
+            if (block.phases.indexOf('+') !== -1) {
+                if (mesg != '') {
+                    mesg += ', energizer'
+                } else {
+                    mesg = "energizer"
+                }
+            }
+            if (block.phases.indexOf('-') !== -1) {
+                if (mesg != '') {
+                    mesg += ', de-energizer'
+                } else {
+                    mesg = "de-energizer"
+                }
+            }
+            if (block.phases.indexOf('H') !== -1) {
+                if (mesg != '') {
+                    mesg += ', EHBD'
+                } else {
+                    mesg = "EHBD"
+                }
+            }
+
+            mesg = mesg + ', <strong>' + block.time[0] + '</strong> tot <strong>' + block.time[1] + '</strong> minuten';
+
+            return mesg;
+        };
+
+        /**
+         * Add drag handler
+         * @param data
+         * @param evt
+         */
+        $scope.onStartDrag = function(data, evt) {
+            console.log("drag success, data:", data);
         };
 
         /**
@@ -217,8 +276,6 @@ angular.module('arcsplannerApp')
             addBlocks(filteredblocks);
         };
 
-        $scope.onStartDrag = function(data, evt) {
-            console.log("drag success, data:", data);
-        };
+
 
     });
