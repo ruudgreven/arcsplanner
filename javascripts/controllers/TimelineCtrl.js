@@ -8,7 +8,7 @@
  * Controller of the blocks
  */
 angular.module('arcsplannerApp')
-    .controller('TimelineCtrl', function ($scope, $http, $log, PlanSvc, ConverterSvc) {
+    .controller('TimelineCtrl', function ($scope, $http, $log, $window, PlanSvc, ConverterSvc) {
         $scope.timeline = PlanSvc.getTimeline();
         $scope.showinfo = {
             "summary": false,
@@ -34,6 +34,13 @@ angular.module('arcsplannerApp')
         $scope.saveEditEvent = function() {
             $scope.currenteditevent = undefined;
         };
+
+        $scope.printTimeline = function() {
+            var newWindowRef = $window.open("printtimeline.html", "New Window", "width=1280,height=890,resizable=1");
+            newWindowRef.timelineEntries = document.getElementById('timelineEntries').innerHTML;
+            newWindowRef.focus();
+            newWindowRef.print();
+        }
 
         /**
          * Converts the given markdown to HTML.

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html dir="a4" lang="nl-NL">
+<head>
+    <meta charset="utf-8" />
+    <title>Lesplan</title>
+    <meta name="author" content="ARCSPlanner.nl"/>
+
+    <link rel="stylesheet" href="stylesheets/print.css">
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        var content = document.getElementById('content');
+        content.innerHTML = window.timelineEntries;
+    </script>
+</body>
+</html>

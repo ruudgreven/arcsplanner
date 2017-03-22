@@ -14,7 +14,7 @@ angular
         'angular-timeline',
         'ui.router',
         'ngVis',
-        'ngDraggable'
+        'ngDraggable',
     ]).config(function ($stateProvider) {
         $stateProvider
             .state('planner',{
