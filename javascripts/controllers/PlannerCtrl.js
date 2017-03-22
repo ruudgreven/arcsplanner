@@ -25,7 +25,7 @@ angular.module('arcsplannerApp')
                 groups: [
                     {
                         id: 1,
-                        content: 'Lesplan',
+                        content: '',
                         visible: true
                     },
                     {
@@ -57,7 +57,7 @@ angular.module('arcsplannerApp')
                 start: PlanSvc.getLessonStartTime().format(),
                 end: PlanSvc.getLessonEndTime().format(),
                 moveable: false,
-                orientation: 'horizontal',      //Update to none
+                orientation: 'none',      //Update to none
                 timeAxis: {scale: 'minute', step: 15},
                 stack: false,
                 onMove: function (item, callback) {
