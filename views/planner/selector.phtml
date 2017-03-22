@@ -1,0 +1,121 @@
+<div class="panel panel-info" ng-init="init()">
+    <div class="panel-heading">
+        <h3 class="panel-title">Blokkeuze</h3>
+    </div>
+    <div class="panel-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="form">
+                        <div class="form-group">
+                            <input type="blockfilter" ng-model="filter.text" class="form-control" id="blockfilter" placeholder="Filter op woorden...">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <form class="form">
+                        <div class="form-group">
+                            <!-- Filter for phases -->
+                            <div class="btn-group">
+                                <button type="button" class="btn" ng-class="{
+                                    'btn-default' : !hasFilterOn('phase'),
+                                    'btn-info' : hasFilterOn('phase')
+                                }">Fase</button>
+
+                                <button type="button" class="btn btn-default dropdown-toggle" ng-class="{
+                                    'btn-default' : !hasFilterOn('phase'),
+                                    'btn-info' : hasFilterOn('phase')
+                                }" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li><a ng-click="removeFilter('phase');">Alles</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a ng-click="setFilter('phase', 'S');">Begin van de les</a></li>
+                                    <li><a ng-click="setFilter('phase', 'C');">Midden van de les</a></li>
+                                    <li><a ng-click="setFilter('phase', 'E');">Eind van de les</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a ng-click="setFilter('phase', '+');">Energizer</a></li>
+                                    <li><a ng-click="setFilter('phase', '-');">De-energizer</a></li>
+                                    <li><a ng-click="setFilter('phase', 'H');">Eerste hulp bij demotivatie</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Filter for ARCS -->
+                            <div class="btn-group">
+                                <button type="button" class="btn" ng-class="{
+                                    'btn-default' : !hasFilterOn('arcs'),
+                                    'btn-info' : hasFilterOn('arcs')
+                                }">ARCS</button>
+
+                                <button type="button" class="btn btn-default dropdown-toggle" ng-class="{
+                                    'btn-default' : !hasFilterOn('arcs'),
+                                    'btn-info' : hasFilterOn('arcs')
+                                }" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a ng-click="removeFilter('arcs');">Alles</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a ng-click="setFilter('arcs', 'A');">Attention</a></li>
+                                    <li><a ng-click="setFilter('arcs', 'R');">Relevance</a></li>
+                                    <li><a ng-click="setFilter('arcs', 'C');">Confidence</a></li>
+                                    <li><a ng-click="setFilter('arcs', 'S');">Satisfaction</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Filter for grouping -->
+                            <div class="btn-group">
+                                <button type="button" class="btn" ng-class="{
+                                    'btn-default' : !hasFilterOn('grouping'),
+                                    'btn-info' : hasFilterOn('grouping')
+                                }">Groeperingsvorm</button>
+
+                                <button type="button" class="btn btn-default dropdown-toggle" ng-class="{
+                                    'btn-default' : !hasFilterOn('grouping'),
+                                    'btn-info' : hasFilterOn('grouping')
+                                }" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li><a ng-click="removeFilter('grouping');">Alles</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a ng-click="setFilter('grouping', 'S');">Individueel werken</a></li>
+                                    <li><a ng-click="setFilter('grouping', 'D');">Duo's</a></li>
+                                    <li><a ng-click="setFilter('grouping', 'G');">Kleine groepjes</a></li>
+                                    <li><a ng-click="setFilter('grouping', 'C');">Hele klas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row" style="height: 20px;">
+
+            </div>
+
+            <div class="row" style="height: 20px;">
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div ng-repeat="block in blocks[0]" ng-include="'templates/planner/selector-block.phtml'"></div>
+                </div>
+                <div class="col-md-4">
+                    <div ng-repeat="block in blocks[1]" ng-include="'templates/planner/selector-block.phtml'"></div>
+                </div>
+                <div class="col-md-4">
+                    <div ng-repeat="block in blocks[2]" ng-include="'templates/planner/selector-block.phtml'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
