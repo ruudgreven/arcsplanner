@@ -101,7 +101,18 @@ angular.module('arcsplannerApp')
         $scope.addTimelineEntry = function(startMinute, durationMinutes, block) {
             try {
                 var timelineEntry = PlanSvc.addTimelineEntry(startMinute, durationMinutes, block);
-                timeline.items.add({id: timelineEntry.id, content: block.title, editable: true, start: timelineEntry.startTime.format(), end: timelineEntry.endTime.format(), group: 1});
+                var itemclass = '';
+                if (block.grouping == 'S') {
+                    itemclass = 'grouping-single'
+                } else if (block.grouping == 'D') {
+                    itemclass = 'grouping-duo'
+                } else if (block.grouping == 'G') {
+                    itemclass = 'grouping-group'
+                } else if (block.grouping == 'C') {
+                    itemclass = 'grouping-class'
+                }
+
+                timeline.items.add({id: timelineEntry.id, content: block.title, editable: true, start: timelineEntry.startTime.format(), end: timelineEntry.endTime.format(), group: 1, className: itemclass});
                 $log.info('(PlannerCtrl): Timeline entry added with id ' + timelineEntry.id);
 
                 PlanSvc.printFreeBlocks();

@@ -1,7 +1,4 @@
-<div class="panel panel-info" ng-init="init()">
-    <div class="panel-heading">
-        <h3 class="panel-title">Planner</h3>
-    </div>
+<div class="panel panel-default" ng-init="init()">
     <div class="panel-body"> <!-- ondrop="drop(event)" ondragover="planner.allowDrop(event)" -->
         <div ng-drop="true" ng-drop-success="onDropComplete($data,$event)">
             <vis-timeline data="timeline_data" options="timeline_options" events="timeline_events"></vis-timeline>

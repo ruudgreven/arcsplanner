@@ -1,4 +1,4 @@
-<div class="panel panel-info">
+<div class="panel panel-default">
     <div class="panel-body">
         <!-- Overview selector -->
         <div class="btn-group btn-group-justified" role="group" aria-label="phaseselector">
@@ -15,29 +15,115 @@
     <div style="overflow-y: auto; overflow-x: hidden; max-width: 100%; max-height:100%;">
         <div style="width: 180%; padding: 20px;">
             <timeline>
-                <timeline-event ng-repeat="event in timeline" side="left">
-                    <timeline-badge class="{{event.badgeClass}}" style="background-color: #FF0000;">
-                        <span ng-if="event.block.grouping=='S'" class="glyphicon glyphicon-user" aria-hidden="true" alt="Individuele werkvorm" title="Individuele werkvorm"></span>
+                <div ng-repeat="event in timeline">
+                    <div ng-if="timeline[$index - 1] != undefined && timeline[$index - 1].endTimeMinutes != timeline[$index].startTimeMinutes">
+                        <timeline-event side="left">
+                            <timeline-badge>
+                                <span class="glyphicon glyphicon-time" aria-hidden="true" alt="Pauze"
+                                      title="Pauze"></span>
+                            </timeline-badge>
+                            <timeline-panel>
+                                <timeline-heading>
+                                    <h5>
+                                        Pauze
+                                    </h5>
+                                </timeline-heading>
+                            </timeline-panel>
+                        </timeline-event>
+                    </div>
 
-                        <span ng-if="event.block.grouping=='D'" class="glyphicon glyphicon-user" aria-hidden="true" alt="Werkvorm in duo's" title="Werkvorm in duo's"></span>
-                        <span ng-if="event.block.grouping=='D'" class="glyphicon glyphicon-user" aria-hidden="true" alt="Werkvorm in duo's" title="Werkvorm in duo's"></span>
+                    <timeline-event side="left">
+                        <timeline-badge ng-class="{  'grouping-single': event.block.grouping == 'S',
+                                                     'grouping-duo': event.block.grouping == 'D',
+                                                     'grouping-group': event.block.grouping == 'G',
+                                                     'grouping-class' : event.block.grouping == 'C' }">
+                            <span ng-if="event.block.grouping=='S'" class="glyphicon glyphicon-user" aria-hidden="true"
+                                  alt="Individuele werkvorm" title="Individuele werkvorm"></span>
 
-                        <span ng-if="event.block.grouping=='G'" class="glyphicon glyphicon-user" aria-hidden="true" alt="Werkvorm in kleine groepjes" title="Werkvorm in kleine groepjes"></span>
-                        <span ng-if="event.block.grouping=='G'" class="glyphicon glyphicon-plus" aria-hidden="true" alt="Werkvorm in kleine groepjes" title="Werkvorm in kleine groepjes"></span>
+                            <span ng-if="event.block.grouping=='D'" class="glyphicon glyphicon-user" aria-hidden="true"
+                                  alt="Werkvorm in duo's" title="Werkvorm in duo's"></span>
+                            <span ng-if="event.block.grouping=='D'" class="glyphicon glyphicon-user" aria-hidden="true"
+                                  alt="Werkvorm in duo's" title="Werkvorm in duo's"></span>
 
-                        <span ng-if="event.block.grouping=='C'" class="glyphicon glyphicon-asterisk" aria-hidden="true" alt="Klassikale werkvorm" title="Klassikale werkvorm"></span>
-                    </timeline-badge>
-                    <timeline-panel class="{{event.badgeClass}}" style="overflow-x: hidden;">
-                        <timeline-heading>
-                            <span class="label label-default">{{getLabel(event)}}</span>
-                            <h5>
-                                {{event.block.title}}
-                            </h5>
-                        </timeline-heading>
-                        <h6>Beschrijving</h6>
-                        <div ng-bind-html="event.block.description"></div>
-                    </timeline-panel>
-                </timeline-event>
+                            <span ng-if="event.block.grouping=='G'" class="glyphicon glyphicon-user" aria-hidden="true"
+                                  alt="Werkvorm in kleine groepjes" title="Werkvorm in kleine groepjes"></span>
+                            <span ng-if="event.block.grouping=='G'" class="glyphicon glyphicon-plus" aria-hidden="true"
+                                  alt="Werkvorm in kleine groepjes" title="Werkvorm in kleine groepjes"></span>
+
+                            <span ng-if="event.block.grouping=='C'" class="glyphicon glyphicon-asterisk"
+                                  aria-hidden="true" alt="Klassikale werkvorm" title="Klassikale werkvorm"></span>
+                        </timeline-badge>
+                        <timeline-panel>
+                            <timeline-heading>
+                                <span class="label label-primary" style="margin-right: 50px;">{{getLabel(event)}}</span>
+
+                                <img ng-if="event.block.arcs.satisfaction.score == -3" src="images/arcsmeters/S-3.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.satisfaction.score == -2" src="images/arcsmeters/S-2.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.satisfaction.score == -1" src="images/arcsmeters/S-1.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.satisfaction.score == 0" src="images/arcsmeters/S0.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.satisfaction.score == 1" src="images/arcsmeters/S1.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.satisfaction.score == 2" src="images/arcsmeters/S2.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.satisfaction.score == 3" src="images/arcsmeters/S3.png"
+                                     style="width: 12px; float: right;"/>
+
+                                <img ng-if="event.block.arcs.confidence.score == -3" src="images/arcsmeters/C-3.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.confidence.score == -2" src="images/arcsmeters/C-2.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.confidence.score == -1" src="images/arcsmeters/C-1.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.confidence.score == 0" src="images/arcsmeters/C0.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.confidence.score == 1" src="images/arcsmeters/C1.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.confidence.score == 2" src="images/arcsmeters/C2.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.confidence.score == 3" src="images/arcsmeters/C3.png"
+                                     style="width: 12px; float: right;"/>
+
+                                <img ng-if="event.block.arcs.relevance.score == -3" src="images/arcsmeters/R-3.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.relevance.score == -2" src="images/arcsmeters/R-2.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.relevance.score == -1" src="images/arcsmeters/R-1.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.relevance.score == 0" src="images/arcsmeters/R0.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.relevance.score == 1" src="images/arcsmeters/R1.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.relevance.score == 2" src="images/arcsmeters/R2.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.relevance.score == 3" src="images/arcsmeters/R3.png"
+                                     style="width: 12px; float: right;"/>
+
+                                <img ng-if="event.block.arcs.attention.score == -3" src="images/arcsmeters/A-3.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.attention.score == -2" src="images/arcsmeters/A-2.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.attention.score == -1" src="images/arcsmeters/A-1.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.attention.score == 0" src="images/arcsmeters/A0.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.attention.score == 1" src="images/arcsmeters/A1.png"
+                                     style="width: 12px; float: right;"/>
+                                <img ng-if="event.block.arcs.attention.score == 2" src="images/arcsmeters/A2.png"
+                                     style="width: 12px; float: right;"/>
+
+                                <h5>
+                                    {{event.block.title}}
+                                </h5>
+                            </timeline-heading>
+                            <h6>Omschrijving</h6>
+                            <div ng-bind-html="event.block.description"></div>
+                        </timeline-panel>
+                    </timeline-event>
+                </div>
             </timeline>
         </div>
     </div>

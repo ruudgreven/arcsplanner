@@ -168,15 +168,6 @@ angular.module('arcsplannerApp')
         };
 
         /**
-         * Add drag handler
-         * @param data
-         * @param evt
-         */
-        $scope.onStartDrag = function(data, evt) {
-            console.log("drag success, data:", data);
-        };
-
-        /**
          * Converts the given markdown to HTML.
          * @param text
          */

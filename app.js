@@ -21,12 +21,7 @@ var blocks = require('./resources/blocks')
 app.use('/api/blocks', blocks)
 
 //Configure static folders
-app.use('/web', express.static('www'));
-
-//Configure redirect to /web
-app.route('/').get(function(req,res) {
-    res.redirect('/web');
-});
+app.use('/', express.static('.'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

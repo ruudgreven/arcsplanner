@@ -41,17 +41,20 @@
 
 <div class="container-fluid">
     <div class="row">
+        <!-- Planner -->
+        <div class="col-md-12">
+            <div ui-view="planner" class="cmp-planner"></div>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Blocks -->
         <div class="col-md-8">
-            <!-- Planner -->
-            <div ui-view="planner"></div>
-
-            <!-- Blocks -->
-            <div ui-view="selector" class="selector"></div>
+            <div ui-view="selector" class="cmp-selector"></div>
         </div>
 
         <!-- Timeline -->
         <div class="col-md-4">
-            <div ui-view="timeline"></div>
+            <div ui-view="timeline" class="cmp-timeline"></div>
         </div>
     </div>
 </div>
