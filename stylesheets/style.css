@@ -79,6 +79,10 @@ a {
  * Configuration for blocks in the timeline
  */
 
+.cmp-timeline {
+    font-size: 80%;
+}
+
 .cmp-timeline .grouping-single {
     background-color: #CDDC39;
 }

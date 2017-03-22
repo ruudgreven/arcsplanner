@@ -136,7 +136,8 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
                 startTimeMinutes: startTimeMinutes,
                 endTimeMinutes: startTimeMinutes + durationMinutes,
                 duration: durationMinutes,
-                block: block
+                block: block,
+                content: ''
             };
 
             timelineEntries.push(timelineEntry);

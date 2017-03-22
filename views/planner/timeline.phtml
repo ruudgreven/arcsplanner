@@ -1,13 +1,11 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <!-- Overview selector -->
-        <div class="btn-group btn-group-justified" role="group" aria-label="phaseselector">
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-info">Voorbereiding</button>
-            </div>
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-info">De les</button>
-            </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn" ng-class="{'btn-default': !showinfo.summary, 'btn-info': showinfo.summary}" ng-click="showinfo.summary = !showinfo.summary">Samenvatting</button>
+            <button type="button" class="btn" ng-class="{'btn-default': !showinfo.preparation, 'btn-info': showinfo.preparation}" ng-click="showinfo.preparation = !showinfo.preparation">Voorbereiding</button>
+            <button type="button" class="btn" ng-class="{'btn-default': !showinfo.description, 'btn-info': showinfo.description}" ng-click="showinfo.description = !showinfo.description">Procedure</button>
+            <button type="button" class="btn" ng-class="{'btn-default': !showinfo.content, 'btn-info': showinfo.content}" ng-click="showinfo.content = !showinfo.content">Inhoud</button>
         </div>
     </div>
 
@@ -115,12 +113,42 @@
                                 <img ng-if="event.block.arcs.attention.score == 2" src="images/arcsmeters/A2.png"
                                      style="width: 12px; float: right;"/>
 
-                                <h5>
+                                <h4>
                                     {{event.block.title}}
-                                </h5>
+                                </h4>
                             </timeline-heading>
-                            <h6>Omschrijving</h6>
-                            <div ng-bind-html="event.block.description"></div>
+                            <div ng-if="showinfo.summary">
+                                <div ng-bind-html="event.block.summary"></div>
+                            </div>
+
+                            <div ng-if="showinfo.preparation">
+                                <h5>Voorbereiding</h5>
+                                <div ng-bind-html="event.block.preparation"></div>
+                            </div>
+
+                            <div ng-if="showinfo.description">
+                                <h6>Omschrijving</h6>
+                                <div ng-bind-html="event.block.description"></div>
+                            </div>
+
+                            <div ng-if="showinfo.content">
+                                <h6>Inhoud / Context</h6>
+                                <div ng-if="event.id == currenteditevent.id">
+                                    <textarea class="form-control" rows="4" style="width:100%; resize: vertical" placeholder="Typ hier informatie over de inhoud die je gaat behandelen gedurende dit blok. Dat kan bijvoorbeeld een lijst opdrachten zijn, maar ook set sheets, etc." ng-model="event.content"></textarea>
+                                    <button type="button" class="btn btn-sm btn-primary" ng-click="saveEditEvent()">Opslaan</button>
+                                </div>
+                                <div ng-if="event.id != currenteditevent.id">
+                                    <div ng-if="event.content == ''" style="cursor: pointer;">
+                                        <em ng-click="setEditEvent(event)">Geen specifieke inhoudsinformatie gegeven. Klik op deze tekst om iets toe te voegen.</em>
+                                    </div>
+                                    <div ng-if="event.content != ''" style="cursor: pointer;">
+                                        <div ng-click="setEditEvent(event)" ng-bind-html="convertToHtml(event.content)"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
                         </timeline-panel>
                     </timeline-event>
                 </div>
