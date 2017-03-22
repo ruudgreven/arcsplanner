@@ -1,8 +1,7 @@
-<div class="panel block" ng-click="toggleActiveBlock(block)" ng-class="{  'panel-success': block.phases.indexOf('S') !== -1 && block.phases.length === 1,
-                                                                'panel-warning': block.phases.indexOf('C') !== -1 && block.phases.length === 1,
-                                                                'panel-danger': block.phases.indexOf('E') !== -1 && block.phases.length === 1,
-                                                                'panel-primary' : (block.phases.indexOf('+') !== -1 || block.phases.indexOf('-') !== -1 || block.phases.indexOf('H') !== -1 ) && block.phases.length === 1,
-                                                                'panel-info'   : block.phases.length !== 1,
+<div class="panel block" ng-click="toggleActiveBlock(block)" ng-class="{  'panel-grouping-single': block.grouping == 'S',
+                                                                'panel-grouping-duo': block.grouping == 'D',
+                                                                'panel-grouping-group': block.grouping == 'G',
+                                                                'panel-grouping-class' : block.grouping == 'C',
                                                                 'blockactive' : activeBlock === block,
                                                                 'block' : activeBlock !== block
                                                                 }"
