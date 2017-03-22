@@ -26,7 +26,7 @@ angular.module('arcsplannerApp')
             clearBlocks();
             $http({
                 method: 'GET',
-                url: '/api/blocks'
+                url: 'blocks.json'
             }).then(function success(response) {
                 $scope.allblocks = response.data.blocks;
 
