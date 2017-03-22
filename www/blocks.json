@@ -8,8 +8,7 @@
       "time": [5,10],
       "arcs": {
         "attention": {
-          "score": 0,
-          "keys": []
+          "score": 0
         },
         "relevance": {
           "score": 3,
@@ -19,11 +18,10 @@
         "confidence": {
           "score": 1,
           "keys": ["Learning Requirements"],
-          "explanation": "Als je de lerenden duidelijk weet te maken welk observeerbaar gedrag of actie je wilt zien vergroot dat het vertrouwen, omdat ze dan exact weten wat ze moeten doen om het doel te behalen (Keller, 2010, p. 160)"
+          "explanation": "Als je de studentn duidelijk weet te maken welk observeerbaar gedrag of actie je wilt zien vergroot dat het vertrouwen, omdat ze dan exact weten wat ze moeten doen om het doel te behalen (Keller, 2010, p. 160)"
         },
         "satisfaction": {
-          "score": 0,
-          "keys": []
+          "score": 0
         }
       },
       "grouping": "C",
@@ -50,11 +48,10 @@
         "confidence": {
           "score": 1,
           "keys": ["Learning Requirements"],
-          "explanation": "Met name als je deze de discussie aangaat over de succescriteria (Wat moeten we doen om het doel te behalen) heeft het een positieve invloed op het vertrouwen van lerenden."
+          "explanation": "Met name als je deze de discussie aangaat over de succescriteria (Wat moeten we doen om het doel te behalen) heeft het een positieve invloed op het vertrouwen van studentn."
         },
         "satisfaction": {
-          "score": 0,
-          "keys": []
+          "score": 0
         }
       },
       "grouping": "C",
@@ -69,17 +66,15 @@
       "time": [5,30],
       "arcs": {
         "attention": {
-          "score": 0,
-          "keys": []
+          "score": 0
         },
         "relevance": {
-          "score": 0,
-          "keys": []
+          "score": 0
         },
         "confidence": {
           "score": 2,
           "keys": ["Personal Control"],
-          "explanation": "Lerenden krijgen hiermee de mogelijkheid om op hun eigen manier en op hun eigen niveau hun uitwerking te tonen aan peers. Dat geeft hen vertrouwen en is beter dan het direct aan een docent te laten zien."
+          "explanation": "studentn krijgen hiermee de mogelijkheid om op hun eigen manier en op hun eigen niveau hun uitwerking te tonen aan peers. Dat geeft hen vertrouwen en is beter dan het direct aan een docent te laten zien."
         },
         "satisfaction": {
           "score": 2,
@@ -101,7 +96,7 @@
         "attention": {
           "score": 2,
           "keys": ["Inquiry Arousal", "Variability"],
-          "explanation": "De randomizer tool maakt dat de lerenden even gefocusd zijn op wie het gaat worden. Het voegt een beetje spanning toe aan een les. Bovendien staat er daarna iemand anders voor de klas dan gebruikelijk en dat maakt het ook interressanter."
+          "explanation": "De randomizer tool maakt dat de studentn even gefocusd zijn op wie het gaat worden. Het voegt een beetje spanning toe aan een les. Bovendien staat er daarna iemand anders voor de klas dan gebruikelijk en dat maakt het ook interressanter."
         },
         "relevance": {
           "score": 2,
@@ -114,8 +109,7 @@
           "explanation": "Door de feedback van de docent weet degene voor de klas hoe hij/zij het gedaan heeft. De rest van de klas weet dat dan ook en kan zijn eigen uitwerking en inspanning beter op waarde schatten."
         },
         "satisfaction": {
-          "score": 0,
-          "keys": []
+          "score": 0
         }
       },
       "grouping": "C",
@@ -123,10 +117,10 @@
       "source": "Eigen praktijkervaring"
     },
     {
-      "title": "Samen een programmeerprobleem van een lerende oplossen",
+      "title": "Samen een programmeerprobleem van een student oplossen",
       "summary": "Er wordt een student gevraagd om voor de klas te komen die tegen een probleem aan is gelopen.. De docent is gespreksleider en betrekt de klas door hen te vragen naar oplossingsrichtingen van het probleem. De oplossing wordt direct gemaakt.",
       "preparation": "",
-      "description": "- Vraag de lerende naar voren en sluit de laptop aan.\n- Vraag de lerende om te benoemen tegen welk probleem hij aanliep. ",
+      "description": "- Vraag de student naar voren en sluit de laptop aan.\n- Vraag de student om te benoemen tegen welk probleem hij aanliep. ",
       "time": [5,30],
       "arcs": {
         "attention": {
@@ -135,8 +129,7 @@
           "explanation": "Samen een probleem oplossen, dat nog niet vaker voorbij is gekomen, maakt de les interressant."
         },
         "relevance": {
-          "score": 0,
-          "keys": []
+          "score": 0
         },
         "confidence": {
           "score": 2,
@@ -146,7 +139,7 @@
         "satisfaction": {
           "score": 2,
           "keys": ["Intrinsic Reinforcements", "Extrinsic Rewards"],
-          "explanation": "De lerenden in de klas kunnen laten zien hoe ze degene die het nog niet precies weet kunnen helpen. Degene die het nog niet weet wordt beloond met een groep lerenden die hem/haar helpen aan een goede oplossing."
+          "explanation": "De studentn in de klas kunnen laten zien hoe ze degene die het nog niet precies weet kunnen helpen. Degene die het nog niet weet wordt beloond met een groep studentn die hem/haar helpen aan een goede oplossing."
         }
       },
       "grouping": "C",
@@ -166,16 +159,13 @@
           "explanation": "Afhankelijk van de tijdsduur en de vaardigheden van de docent kan dit een negatieve invloed hebben op de aandacht. Los daarvan is het sowieso aan te raden om klassikale instructie kort te houden en af te wisselen met andere vormen."
         },
         "relevance": {
-          "score": 0,
-          "keys": []
+          "score": 0
         },
         "confidence": {
-          "score": 0,
-          "keys": []
+          "score": 0
         },
         "satisfaction": {
-          "score": 0,
-          "keys": []
+          "score": 0
         }
       },
       "grouping": "C",
@@ -192,19 +182,16 @@
         "attention": {
           "score": 2,
           "keys": ["Perceptual Arousal"],
-          "explanation": "Persoonlijke verhalen trekken de aandacht. Zorg wel dat het een echt verhaal is en geen verzonnen verhaal, daar prikken lerenden doorheen."
+          "explanation": "Persoonlijke verhalen trekken de aandacht. Zorg wel dat het een echt verhaal is en geen verzonnen verhaal, daar prikken studentn doorheen."
         },
         "relevance": {
-          "score": 0,
-          "keys": []
+          "score": 0
         },
         "confidence": {
-          "score": 0,
-          "keys": []
+          "score": 0
         },
         "satisfaction": {
-          "score": 0,
-          "keys": []
+          "score": 0
         }
       },
       "grouping": "C",
@@ -221,16 +208,15 @@
         "attention": {
           "score": 2,
           "keys": ["Inquiry Arousal"],
-          "explanation":"Bij het bespreken van de schriftelijke opdrachten stel je als docent voortdurend vragen aan de lerenden, hiermee betrek je ze bij de les."
+          "explanation":"Bij het bespreken van de schriftelijke opdrachten stel je als docent voortdurend vragen aan de studentn, hiermee betrek je ze bij de les."
         },
         "relevance": {
-          "score": 0,
-          "keys": [""]
+          "score": 0
         },
         "confidence": {
           "score": 1,
           "keys": ["Success Opportunities"],
-          "explanation": "Je geeft als docent doordat je een antwoord goed of fout vindt aan wat je verwacht van de lerenden."
+          "explanation": "Je geeft als docent doordat je een antwoord goed of fout vindt aan wat je verwacht van de studentn."
         },
         "satisfaction": {
           "score": 1,
@@ -252,17 +238,17 @@
         "attention": {
           "score": 2,
           "keys": ["Inquiry Arousal", "Variability"],
-          "explanation": "Het is een activerende vorm waarbij lerenden zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
+          "explanation": "Het is een activerende vorm waarbij studentn zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
         },
         "relevance": {
           "score": 3,
           "keys": ["Motive Matching"],
-          "explanation": "Tijdens het zelf ontwerpen kunnen lerenden dat op hun eigen manier doen. Ze werken in groepen en er zit een soort competitie in, omdat een ieder het beste ontwerp wil hebben. Al deze aspecten worden door Keller (2010, p.130) genoemd als positieve aspecten voor relevance."
+          "explanation": "Tijdens het zelf ontwerpen kunnen studentn dat op hun eigen manier doen. Ze werken in groepen en er zit een soort competitie in, omdat een ieder het beste ontwerp wil hebben. Al deze aspecten worden door Keller (2010, p.130) genoemd als positieve aspecten voor relevance."
         },
         "confidence": {
           "score": 1,
           "keys": ["Succes Opportunities"],
-          "explanation": "De lerenden ervaren succes als het hen lukt om een ontwerp te maken. Wees er als docent bedachtzaam op dat je wel iets kiest wat ook echt kan lukken (Niet te complex)."
+          "explanation": "De studentn ervaren succes als het hen lukt om een ontwerp te maken. Wees er als docent bedachtzaam op dat je wel iets kiest wat ook echt kan lukken (Niet te complex)."
         },
         "satisfaction": {
           "score": 2,
@@ -284,7 +270,7 @@
         "attention": {
           "score": 2,
           "keys": ["Inquiry Arousal", "Variability"],
-          "explanation": "Het is een activerende vorm waarbij lerenden zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
+          "explanation": "Het is een activerende vorm waarbij studentn zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
 
         },
         "relevance": {
@@ -295,7 +281,7 @@
         "confidence": {
           "score": 1,
           "keys": ["Succes Opportunities"],
-          "explanation": "De lerenden ervaren succes als het hen lukt om hun kennis uit te breiden."
+          "explanation": "De studentn ervaren succes als het hen lukt om hun kennis uit te breiden."
         },
         "satisfaction": {
           "score": 1,
@@ -304,6 +290,35 @@
         }
       },
       "grouping": "G",
+      "phases": ["C"],
+      "source": "Eigen praktijkervaring"
+    },
+    {
+      "title": "Programmeeropdracht individueel uitvoeren",
+      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna individueel aan de slag om de gevraagde functionaliteit te programmeren.",
+      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
+      "description": "- Leg de opdracht kort uit\n- Zet de studenten aan het werk. Loop iedere student af en informeer naar de voortgang.",
+      "time": [45,120],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": ["Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."]
+        },
+        "relevance": {
+          "score": 1,
+          "keys": ["Motive Matching"],
+          "explanation": "De studenten worden gestimuleerd om zelf problem-solving strategieen in te zetten. Dat draagt bij aan de relevance (Keller, 2010, p.130)"
+        },
+        "confidence": {
+          "score": 3,
+          "keys": ["Personal Control", "Succes Opportunities"],
+          "explanation": "De studentn hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studentn ervaren succes als het hen lukt om hun kennis uit te breiden."
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "S",
       "phases": ["C"],
       "source": "Eigen praktijkervaring"
     },
@@ -321,12 +336,12 @@
         "relevance": {
           "score": 2,
           "keys": ["Motive Matching", "Familiarity"],
-          "explanation": "De lerenden werken samen en werken aan iets waarbij ze hun opgedane voorkennis moeten inzetten"
+          "explanation": "De studentn werken samen en werken aan iets waarbij ze hun opgedane voorkennis moeten inzetten"
         },
         "confidence": {
           "score": 3,
           "keys": ["Personal Control", "Succes Opportunities"],
-          "explanation": "De lerenden hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De lerenden ervaren succes als het hen lukt om hun kennis uit te breiden."
+          "explanation": "De studentn hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studentn ervaren succes als het hen lukt om hun kennis uit te breiden."
         },
         "satisfaction": {
           "score": 1,
@@ -351,8 +366,7 @@
           "explanation": "Je stelt jezelf zo kwetsbaar op en geeft aan dat jij oprecht nieuwsgierig bent naar hun mening. En het is niet iets dat ze direct verwachten. Het is verstandig dit niet elke les te doen."
         },
         "relevance": {
-          "score": 0,
-          "keys": [""]
+          "score": 0
         },
         "confidence": {
           "score": 2,
@@ -360,11 +374,10 @@
           "explanation": "Hiermee geef je studenten de kans om commentaar te geven op je les, de materialen en andere aspecten. Dat is goed voor hun vertrouwen (Keller, 2010, p.162)."
         },
         "satisfaction": {
-          "score": 0,
-          "keys": [""]
+          "score": 0
         }
       },
-      "grouping": "C",
+      "grouping": "S",
       "phases": ["E"],
       "source": "Eigen praktijkervaring"
     },
@@ -376,8 +389,7 @@
       "time": [5,10],
       "arcs": {
         "attention": {
-          "score": 0,
-          "keys": [""]
+          "score": 0
         },
         "relevance": {
           "score": 2,
@@ -390,11 +402,10 @@
           "explanation": "Studenten horen zo wat ze hadden moeten opsteken van de les, dat helpt hen om te bepalen wanneer ze succesvol zijn en wanneer niet."
         },
         "satisfaction": {
-          "score": 0,
-          "keys": [""]
+          "score": 0
         }
       },
-      "grouping": "G",
+      "grouping": "C",
       "phases": ["E"],
       "source": "Eigen praktijkervaring"
     },
@@ -416,12 +427,10 @@
           "explanation": "Het geven van een vooruitblikt helpt de studenten om de doelen te kunnen plaatsen in een groter geheel, maar ook om de link te leggen met voorkennis en kennis die nog komt."
         },
         "confidence": {
-          "score": 0,
-          "keys": [""]
+          "score": 0
         },
         "satisfaction": {
-          "score": 0,
-          "keys": [""]
+          "score": 0
         }
       },
       "grouping": "C",
