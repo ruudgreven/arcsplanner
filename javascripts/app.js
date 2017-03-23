@@ -15,6 +15,7 @@ angular
         'ui.router',
         'ngVis',
         'ngDraggable',
+        'angular-google-analytics'
     ]).config(function ($stateProvider) {
         $stateProvider
             .state('planner',{
@@ -36,4 +37,7 @@ angular
             });
     }).constant('config', {
 
-    });
+    }).config(['AnalyticsProvider', function (AnalyticsProvider) {
+        // Add configuration code as desired
+        AnalyticsProvider.setAccount(ANALYTICS_ID);
+    }]).run(['Analytics', function(Analytics) { }]);;

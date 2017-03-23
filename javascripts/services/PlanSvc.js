@@ -8,7 +8,7 @@
  * # PlanSvc
  * Can be used to plan lessons based on blocks
  */
-angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
+angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, Analytics) {
     var timelineEntries = [];
 
     var lessonDuration = 180;
@@ -146,6 +146,9 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
             //Sort the timelineentries
             sortTimelineEntries();
 
+            //Send a message to google analytics
+            Analytics.trackEvent('block', 'add', block.title);
+
             //Send a message that the plan has changed
             $rootScope.$broadcast('plan.changed');
 
@@ -249,7 +252,10 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
             }
 
             if (indexToRemove != -1) {
-                timelineEntries.splice(indexToRemove, 1);
+                var timelineEntry = timelineEntries.splice(indexToRemove, 1)[0];
+
+                //Send a message to google analytics
+                Analytics.trackEvent('block', 'remove', timelineEntry.block.title);
 
                 //Send a message that the plan has changed
                 $rootScope.$broadcast('plan.changed');

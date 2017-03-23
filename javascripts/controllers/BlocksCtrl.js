@@ -8,7 +8,7 @@
  * Controller of the blocks
  */
 angular.module('arcsplannerApp')
-    .controller('BlocksCtrl', function ($scope, $http, $log, $anchorScroll, ConverterSvc, PlanSvc, config) {
+    .controller('BlocksCtrl', function ($scope, $http, $log, $anchorScroll, ConverterSvc, PlanSvc, Analytics, config) {
         $scope.blocks = [];
         $scope.allblocks = [];
         $scope.filter = {
@@ -62,10 +62,19 @@ angular.module('arcsplannerApp')
                 $scope.filter.text = filtervalue;
             } else if (name == 'phase') {
                 $scope.filter.phase = filtervalue;
+
+                //Send a message to google analytics
+                Analytics.trackEvent('filter', 'phase', filtervalue);
             } else if (name == 'arcs') {
                 $scope.filter.arcs = filtervalue;
+
+                //Send a message to google analytics
+                Analytics.trackEvent('filter', 'arcs', filtervalue);
             } else if (name == 'grouping') {
                 $scope.filter.grouping = filtervalue;
+
+                //Send a message to google analytics
+                Analytics.trackEvent('filter', 'grouping', filtervalue);
             }
             applyFilter();
         };
@@ -96,10 +105,19 @@ angular.module('arcsplannerApp')
                 $scope.filter.text = undefined;
             } else if (name == 'phase') {
                 $scope.filter.phase = undefined;
+
+                //Send a message to google analytics
+                Analytics.trackEvent('filter', 'phase', 'all');
             } else if (name == 'arcs') {
                 $scope.filter.arcs = undefined;
+
+                //Send a message to google analytics
+                Analytics.trackEvent('filter', 'arcs', 'all');
             } else if (name == 'grouping') {
                 $scope.filter.grouping = undefined;
+
+                //Send a message to google analytics
+                Analytics.trackEvent('filter', 'grouping', 'all');
             }
             applyFilter();
         };
