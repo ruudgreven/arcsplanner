@@ -10,11 +10,6 @@
 angular.module('arcsplannerApp')
     .controller('PlannerCtrl', function ($scope, $log, VisDataSet, PlanSvc) {
         var timeline = {};
-        var timelineEntries = [];
-
-        var lessonDuration = 180;
-        var lessonStartTime;
-        var lessonEndTime;
 
         $scope.init = function() {
             //The visual representation of the timeline
@@ -58,7 +53,7 @@ angular.module('arcsplannerApp')
                 end: PlanSvc.getLessonEndTime().format(),
                 moveable: false,
                 orientation: 'none',      //Update to none
-                timeAxis: {scale: 'minute', step: 15},
+                timeAxis: {scale: 'minute', step: 5},
                 stack: false,
                 onMove: function (item, callback) {
                     try {
@@ -91,62 +86,47 @@ angular.module('arcsplannerApp')
             };
         };
 
-        /**
-         * Add a block to the timeline
-         * @param startMinute The startminute of the block, start of the lesson is 0
-         * @param durationMinutes The duration of the block
-         * @param block The block to place
-         * @return true when added, false when not
-         */
-        $scope.addTimelineEntry = function(startMinute, durationMinutes, block) {
-            try {
-                var timelineEntry = PlanSvc.addTimelineEntry(startMinute, durationMinutes, block);
+
+        $scope.$on( 'plan.changed', function( event ) {
+            $log.info('(PlannerCtrl)Updated received');
+
+            var timelineEntries = PlanSvc.getTimeline();
+            var ids = timeline.items.getIds();
+
+            for (var i = 0; i < timelineEntries.length; i++) {
+                var timelineEntry = timelineEntries[i];
+
                 var itemclass = '';
-                if (block.grouping == 'S') {
+                if (timelineEntry.block.grouping == 'S') {
                     itemclass = 'grouping-single'
-                } else if (block.grouping == 'D') {
+                } else if (timelineEntry.block.grouping == 'D') {
                     itemclass = 'grouping-duo'
-                } else if (block.grouping == 'G') {
+                } else if (timelineEntry.block.grouping == 'G') {
                     itemclass = 'grouping-group'
-                } else if (block.grouping == 'C') {
+                } else if (timelineEntry.block.grouping == 'C') {
                     itemclass = 'grouping-class'
                 }
 
-                timeline.items.add({id: timelineEntry.id, content: block.title, editable: true, start: timelineEntry.startTime.format(), end: timelineEntry.endTime.format(), group: 1, className: itemclass});
-                $log.info('(PlannerCtrl): Timeline entry added with id ' + timelineEntry.id);
+                //Add item if it's not already on the timeline, or update when it's already on the timeline
+                if (ids.indexOf(timelineEntry.id) == -1) {
+                    timeline.items.add({id: timelineEntry.id, content: timelineEntry.block.title, editable: true, start: timelineEntry.startTime.format(), end: timelineEntry.endTime.format(), group: 1, className: itemclass});
+                } else {
+                    timeline.items.update({id: timelineEntry.id, content: timelineEntry.block.title, editable: true, start: timelineEntry.startTime.format(), end: timelineEntry.endTime.format(), group: 1, className: itemclass});
+                }
+            }
 
-                PlanSvc.printFreeBlocks();
+        });
+
+        $scope.onDropComplete=function(data,evt){
+            $log.info('(PlannerCtrl): Dropping block \"' + data.block.title + '\"');
+            try {
+                var timelineEntry = PlanSvc.addTimelineEntryToBestFittingPosition(data.block);
+                $log.info('(PlannerCtrl): Timeline entry added with id ' + timelineEntry.id);
                 return true
             } catch (e) {
                 $log.info('(PlannerCtrl): Timeline entry NOT added: ' + e);
                 return false;
             }
-
-
-        };
-
-
-        $scope.onDropComplete=function(data,evt){
-            $log.info('(PlannerCtrl): Dropping block \"' + data.block.title + '\"');
-
-            var mintime = data.block.time[0];
-            var maxtime = data.block.time[1];
-
-            var maxtimefit = PlanSvc.findBestFittingFreeBlocks(maxtime);
-            if (maxtimefit != -1) {
-                $log.info('(PlannerCtrl): The maximum time of ' + maxtime + ' fits. Add it at time ' + maxtimefit);
-                $scope.addTimelineEntry(maxtimefit, maxtime, data.block);
-            } else {
-                var mintimefit = PlanSvc.findBestFittingFreeBlocks(mintime);
-                if (mintimefit != -1) {
-                    $log.info('(PlannerCtrl): The default time of ' + maxtime + ' does not fit. Use minimum time of ' + mintime + ' Add it at time ' + mintimefit);
-                    $scope.addTimelineEntry(mintimefit, mintime, data.block);
-                } else {
-                    $log.info('(PlannerCtrl): There is no place for a timeline entry with minimum time ' + mintime);
-                }
-            }
-
-
         };
 
         $scope.onLoaded = function (graphRef) {

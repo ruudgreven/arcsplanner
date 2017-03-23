@@ -153,6 +153,30 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
         },
 
         /**
+         * Adds a block to the current timeline at the best fitting position
+         * @param block A block to add
+         * @returns {TimelineEntry} the added timeline entry.
+         * @throws Errormessage (string) when something went wrong.
+         */
+        addTimelineEntryToBestFittingPosition: function(block) {
+            var mintime = block.time[0];
+            var maxtime = block.time[1];
+
+            var maxtimefit = planSvc.findBestFittingFreeBlocks(maxtime);
+            if (maxtimefit != -1) {
+                return planSvc.addTimelineEntry(maxtimefit, maxtime, block);
+            } else {
+                var mintimefit = PlanSvc.findBestFittingFreeBlocks(mintime);
+                if (mintimefit != -1) {
+                    throw '(PlannerSvc.addTimelineEntryToBestFittingPosition): The default time of ' + maxtime + ' does not fit. Use minimum time of ' + mintime + ' Add it at time ' + mintimefit;
+                    return planSvc.addTimelineEntry(mintimefit, mintime, block);
+                } else {
+                    throw '(PlannerSvc.addTimelineEntryToBestFittingPosition: There is no place for a timeline entry with minimum time ' + mintime;
+                }
+            }
+        },
+
+        /**
          * Move a the timeline entry with the given id to the new position. First checks if this movement
          * is valid. If not, it doesn't change anything and throws an exception
          * @param id The id of the timelineEntry
