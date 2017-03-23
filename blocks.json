@@ -358,7 +358,7 @@
       "summary": "De docent nodigt de studenten uit om zijn les te evalueren. Hij/zij vraagt een positief punt, een verbeterpunt en een cijfer voor de les. De studenten schrijven dit (anoniem) op op memobriefjes.",
       "preparation": "- Neem memo briefjes mee in twee verschillende kleuren, bij voorkeur rood en groen.",
       "description": "- Leg uit dat je een korte evaluatie van de les wilt doen, zodat je het de volgende keer beter kunt doen.\nJe vraagt de studenten om 3 dingen: \n    - Een goed punt van de workshop dat vastgehouden moet worden voor de volgende workshops.\n    - Een verbeterpunt voor de workshop.\n    - Een cijfer voor de workshop.\n- Deel aan iedere student één memobriefje uit per kleur. De groene voor het positieve punt en het cijfer. Het rode voor het verbeterpunt.\n- Laat studenten bij het verlaten van het lokaal de briefjes op het bord plakken.\n",
-      "time": [30,60],
+      "time": [5,15],
       "arcs": {
         "attention": {
           "score": 2,
@@ -414,7 +414,7 @@
       "summary": "De docent geeft een korte vooruitblik op de volgende les, met als doel om de studenten te prikkelen.",
       "preparation": "- Kijken wat de volgende les aan bod komt.",
       "description": "- Benoem wat er de volgende les aan bod komt en wat studenten aan voorbereiden moeten doen.",
-      "time": [30,60],
+      "time": [5,10],
       "arcs": {
         "attention": {
           "score": 1,
