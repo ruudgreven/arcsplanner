@@ -11,6 +11,16 @@
  * Groepjes: #FFCCBC (Deep Orange, 100)
  * Klassikaal: #FFE0B2 (Orange, 100)
  */
+@media screen {
+    #printarea * {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
 body {
     padding: 25px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;

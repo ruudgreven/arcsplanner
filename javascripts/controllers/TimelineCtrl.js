@@ -35,13 +35,6 @@ angular.module('arcsplannerApp')
             $scope.currenteditevent = undefined;
         };
 
-        $scope.printTimeline = function() {
-            var newWindowRef = $window.open("printtimeline.html", "New Window", "width=1280,height=890,resizable=1");
-            newWindowRef.timelineEntries = document.getElementById('timelineEntries').innerHTML;
-            newWindowRef.focus();
-            newWindowRef.print();
-        }
-
         /**
          * Converts the given markdown to HTML.
          * @param text

@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/print.css">
 
     <!-- Angular JS and plugins -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
@@ -38,31 +39,72 @@
 </head>
 <body ng-app="arcsplannerApp">
 
-<div class="container-fluid">
-    <div class="row">
-        <!-- Planner -->
-        <div class="col-md-12">
-            <div ui-view="planner" class="cmp-planner"></div>
-        </div>
-    </div>
-    <div class="row">
-        <!-- Blocks -->
-        <div class="col-md-8">
-            <div ui-view="selector" class="cmp-selector"></div>
-        </div>
+<div id="printarea">
 
-        <!-- Timeline -->
-        <div class="col-md-4">
-            <div ui-view="timeline" class="cmp-timeline"></div>
-        </div>
-    </div>
-
-    <div id="aap">Dikke aap</div>
 </div>
-<!-- Planner -->
 
+<!-- Site view -->
+<div id="screenarea">
+    <!-- MODAL: Timeline print modal -->
+    <div class="modal fade" id="printModal" tabindex="-1" role="dialog" aria-labelledby="printModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Print preview</h4>
+                </div>
+                <div class="modal-body">
+                    <div ng-controller="TimelineCtrl" id="timelineprint">
+                        <div ng-repeat="event in timeline">
+                            <div ng-if="timeline[$index - 1] != undefined && timeline[$index - 1].endTimeMinutes != timeline[$index].startTimeMinutes">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"><h4>Pauze</h4></div>
+                                </div>
+                            </div>
 
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h4>{{event.block.title}}<span class="label label-primary" style="float:right;">{{getLabel(event)}}</span></h4></div>
+                                <div class="panel-body">
+                                    <h5>Voorbereiding</h5>
+                                    <p ng-bind-html="event.block.preparation"></p>
+                                    <h5>Omschrijving</h5>
+                                    <p ng-bind-html="event.block.description"></p>
+                                    <h5>Inhoud</h5>
+                                    <p ng-if="event.content" ng-bind-html="event.content"></p>
+                                    <p ng-if="!event.content">Niet gegeven.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
+                    <button type="button" class="btn btn-primary" onclick=" $('#printarea').html($('#timelineprint').html()); window.print(); $('#printarea').html('');">Printen</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Planner -->
+            <div class="col-md-12">
+                <div ui-view="planner" class="cmp-planner"></div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Blocks -->
+            <div class="col-md-8">
+                <div ui-view="selector" class="cmp-selector"></div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="col-md-4">
+                <div ui-view="timeline" class="cmp-timeline"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- App controllers -->
 <script src="javascripts/app.js"></script>
