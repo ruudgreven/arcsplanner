@@ -51,7 +51,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Print preview</h4>
+                    <h4 class="modal-title">Print preview</h4>
                 </div>
                 <div class="modal-body">
                     <div ng-controller="TimelineCtrl" id="timelineprint">
@@ -84,6 +84,59 @@
             </div>
         </div>
     </div>
+
+    <!-- MODAL: Help modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">ARCSPlanner.nl Help</h4>
+                </div>
+                <div class="modal-body">
+                    <h1>Welkom bij ARCSPlanner.nl!</h1>
+                    <p>De ARCSPlanner tool kan gebruikt worden om een les te plannen. ARCS staat voor Attention, Relevance, Confidence en Satisfaction.
+                        Dit zijn aspecten die volgens Keller (2010) nodig zijn om studenten te motiveren. Details hierover kun je vinden in het boek van Keller,
+                        of een korte Nederlandse samenvatting op <a href="http://www.denieuwemeesters.nl/arcs-model-van-keller-reuzen-van-de-didactiek-iv/" target="_blank">De Nieuwe Meesters</a>.</p>
+                    <h3>Gebruikshandleiding</h3>
+                    <ul>
+                        <li>Bedenk vooraf welke doelen je wilt bereiken in je les.</li>
+                        <li>Zoek naar lesvormen bij je les in het vak met alle blokken. Je kunt lesvormen filters op woorden in de titel, fase in de les (begin, midden, eind), groeperingsvorm (alleen, duo's, groepjes of klassikaal) en op de ARCS eigenschappen</li>
+                        <ul>
+                            <li>De metertjes geven de score op de vier componenten van ARCS aan. Hoe hoger de meter hoe positiver. Een werkvorm kan ook een negatieve invloed hebben op motivatie, dan staan de blokjes onder de middellijn.</li>
+                            <li>Klik op de inhoud van een lesblok voor meer informatie</li>
+                            <li>Dubbelklik op de titel om een lesblok aan de tijdlijn toe te voegen. Je kunt hem ook slepen naar de tijdlijn.</li>
+                        </ul>
+                        <li>Pas eventueel in de tijdlijn de tijdsduur aan.</li>
+                        <li>Voeg eventueel in de outline van je les rechts eigen commentaar toe aan een blok, om zo voor jezelf bijvoorbeeld de inhoud er bij te vermelden.</li>
+                        <li>Print vervolgens je lesplan (of exporteer naar PDF via het printscherm) en neem 'm mee naar de les!</li>
+                    </ul>
+
+                    <h3>Beperkingen prototype 1</h3>
+                    <ul>
+                        <li>Het lesplan is niet op te slaan. Bij een refresh van de pagina is alles weg.</li>
+                        <li>Het is alleen mogelijk om lessen van 3 klokuur te plannen. Korte lessen kan door gewoon tot een bepaalde tijd vol te plannen. Langere lessen kan niet.</li>
+                        <li>Er is nog geen goede samenvatting van een les te zien, dus je kunt niet zien hoe je scoort op de ARCS punten.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">ARCSPlanner.nl, prototype 1</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#printModal"><span class="glyphicon glyphicon-print" aria-hidden="true" title="Print je lesplan"></span></a></li>
+                <li><a href="#" data-toggle="modal" data-target="#helpModal"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="Help!"></span></a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container-fluid">
         <div class="row">

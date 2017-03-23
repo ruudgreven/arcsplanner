@@ -20,7 +20,9 @@ angular.module('arcsplannerApp')
 
         $scope.$on( 'plan.changed', function( event ) {
             $scope.timeline = PlanSvc.getTimeline();
-            $scope.$apply();
+            if(!$scope.$$phase) {
+                $scope.$apply();
+            }
         });
 
         $scope.getLabel = function(event) {

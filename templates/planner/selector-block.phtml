@@ -1,4 +1,4 @@
-<div class="panel block" ng-click="toggleActiveBlock(block)" ng-class="{  'panel-grouping-single': block.grouping == 'S',
+<div class="panel block" ng-class="{  'panel-grouping-single': block.grouping == 'S',
                                                                 'panel-grouping-duo': block.grouping == 'D',
                                                                 'panel-grouping-group': block.grouping == 'G',
                                                                 'panel-grouping-class' : block.grouping == 'C',
@@ -7,23 +7,28 @@
                                                                 }"
      ng-drag="true" ng-drag-data="{block}">
 
-    <div ng-drag="true" ng-drag-data="obj"></div>
-    <div class="panel-heading">
-            <span ng-if="block.grouping=='S'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true" alt="Individuele werkvorm" title="Individuele werkvorm"></span>
-
-            <span ng-if="block.grouping=='D'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true" alt="Werkvorm in duo's" title="Werkvorm in duo's"></span>
-            <span ng-if="block.grouping=='D'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true" alt="Werkvorm in duo's" title="Werkvorm in duo's"></span>
-
-            <span ng-if="block.grouping=='G'" class="glyphicon glyphicon-plus" style="float: right;" aria-hidden="true" alt="Werkvorm in kleine groepjes" title="Werkvorm in kleine groepjes"></span>
-            <span ng-if="block.grouping=='G'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true" alt="Werkvorm in kleine groepjes" title="Werkvorm in kleine groepjes"></span>
-
-            <span ng-if="block.grouping=='C'" class="glyphicon glyphicon-asterisk" style="float: right;" aria-hidden="true" alt="Klassikale werkvorm" title="Klassikale werkvorm"></span>
+    <div class="panel-heading" ng-dblclick="addBlockToPlan(block);">
         <h3 class="panel-title">
+            <span ng-if="block.grouping=='S'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"
+                  alt="Individuele werkvorm" title="Individuele werkvorm"></span>
+
+            <span ng-if="block.grouping=='D'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"
+                  alt="Werkvorm in duo's" title="Werkvorm in duo's"></span>
+            <span ng-if="block.grouping=='D'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"
+                  alt="Werkvorm in duo's" title="Werkvorm in duo's"></span>
+
+            <span ng-if="block.grouping=='G'" class="glyphicon glyphicon-plus" style="float: right;" aria-hidden="true"
+                  alt="Werkvorm in kleine groepjes" title="Werkvorm in kleine groepjes"></span>
+            <span ng-if="block.grouping=='G'" class="glyphicon glyphicon-user" style="float: right;" aria-hidden="true"
+                  alt="Werkvorm in kleine groepjes" title="Werkvorm in kleine groepjes"></span>
+
+            <span ng-if="block.grouping=='C'" class="glyphicon glyphicon-asterisk" style="float: right;" aria-hidden="true"
+                  alt="Klassikale werkvorm" title="Klassikale werkvorm"></span>
             {{block.title}}
         </h3>
-    </div>
-    <div class="panel-body">
 
+    </div>
+    <div class="panel-body" ng-click="toggleActiveBlock(block)">
         <img ng-if="block.arcs.satisfaction.score == -3" src="images/arcsmeters/S-3.png" style="width: 12px; float: right;"/>
         <img ng-if="block.arcs.satisfaction.score == -2" src="images/arcsmeters/S-2.png" style="width: 12px; float: right;"/>
         <img ng-if="block.arcs.satisfaction.score == -1" src="images/arcsmeters/S-1.png" style="width: 12px; float: right;"/>

@@ -166,7 +166,7 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log) {
             if (maxtimefit != -1) {
                 return planSvc.addTimelineEntry(maxtimefit, maxtime, block);
             } else {
-                var mintimefit = PlanSvc.findBestFittingFreeBlocks(mintime);
+                var mintimefit = planSvc.findBestFittingFreeBlocks(mintime);
                 if (mintimefit != -1) {
                     throw '(PlannerSvc.addTimelineEntryToBestFittingPosition): The default time of ' + maxtime + ' does not fit. Use minimum time of ' + mintime + ' Add it at time ' + mintimefit;
                     return planSvc.addTimelineEntry(mintimefit, mintime, block);

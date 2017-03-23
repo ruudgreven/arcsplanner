@@ -8,7 +8,7 @@
  * Controller of the blocks
  */
 angular.module('arcsplannerApp')
-    .controller('BlocksCtrl', function ($scope, $http, $log, ConverterSvc, PlanSvc, config) {
+    .controller('BlocksCtrl', function ($scope, $http, $log, $anchorScroll, ConverterSvc, PlanSvc, config) {
         $scope.blocks = [];
         $scope.allblocks = [];
         $scope.filter = {
@@ -165,6 +165,18 @@ angular.module('arcsplannerApp')
             mesg = mesg + ', <strong>' + block.time[0] + '</strong> tot <strong>' + block.time[1] + '</strong> minuten';
 
             return mesg;
+        };
+
+        $scope.addBlockToPlan = function(block) {
+            try {
+                var timelineEntry = PlanSvc.addTimelineEntryToBestFittingPosition(block);
+                $log.info('(BlocksCtrl): Timeline entry added with id ' + timelineEntry.id);
+                $anchorScroll();
+                return true
+            } catch (e) {
+                $log.info('(BlocksCtrl): Timeline entry NOT added: ' + e);
+                return false;
+            }
         };
 
         /**
