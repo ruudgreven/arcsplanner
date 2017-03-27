@@ -40,5 +40,5 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(3000, function () {
-    console.log('Robocodecup website listening on port 3000');
+    console.log('ARCSPlanner website listening on port 3000');
 });

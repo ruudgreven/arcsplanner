@@ -171,10 +171,17 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, A
             } else {
                 var mintimefit = planSvc.findBestFittingFreeBlocks(mintime);
                 if (mintimefit != -1) {
-                    throw '(PlannerSvc.addTimelineEntryToBestFittingPosition): The default time of ' + maxtime + ' does not fit. Use minimum time of ' + mintime + ' Add it at time ' + mintimefit;
+                    $log.info('(PlannerSvc.addTimelineEntryToBestFittingPosition): The default time of ' + maxtime + ' does not fit. Use minimum time of ' + mintime + ' Add it at time ' + mintimefit);
                     return planSvc.addTimelineEntry(mintimefit, mintime, block);
                 } else {
-                    throw '(PlannerSvc.addTimelineEntryToBestFittingPosition: There is no place for a timeline entry with minimum time ' + mintime;
+                    var fiveminutesfit = planSvc.findBestFittingFreeBlocks(5);
+                    if (fiveminutesfit != -1) {
+                        $log.info('(PlannerSvc.addTimelineEntryToBestFittingPosition): The minimum time of ' + mintime + ' does not fit. Use 5 minutes time. Add it at time ' + fiveminutesfit);
+                        return planSvc.addTimelineEntry(fiveminutesfit, 5, block);
+                    } else {
+                        throw '(PlannerSvc.addTimelineEntryToBestFittingPosition: There is no place for a timeline entry with minimum time of 5 minutes';
+                    }
+
                 }
             }
         },
