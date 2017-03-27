@@ -73,7 +73,7 @@
                                     <h5>Omschrijving</h5>
                                     <p ng-bind-html="event.block.description"></p>
                                     <h5>Inhoud</h5>
-                                    <p ng-if="event.content" ng-bind-html="event.content"></p>
+                                    <p ng-if="event.content" ng-bind-html="convertToHtml(event.content)"></p>
                                     <p ng-if="!event.content">Niet gegeven.</p>
                                 </div>
                             </div>
