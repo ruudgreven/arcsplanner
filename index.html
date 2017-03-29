@@ -39,6 +39,10 @@
 
     <!-- Analytics -->
     <script src="javascripts/lib/angular-google-analytics.min.js"></script>
+
+    <!-- ChartJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/angular.chartjs/latest/angular-chart.min.js"></script>
 </head>
 <body ng-app="arcsplannerApp">
 
@@ -48,6 +52,7 @@
 
 <!-- Site view -->
 <div id="screenarea">
+
     <!-- MODAL: Timeline print modal -->
     <div class="modal fade" id="printModal" tabindex="-1" role="dialog" aria-labelledby="printModal">
         <div class="modal-dialog modal-lg" role="document">
@@ -144,8 +149,11 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Planner -->
-            <div class="col-md-12">
+            <div class="col-md-10">
                 <div ui-view="planner" class="cmp-planner"></div>
+            </div>
+            <div class="col-md-2">
+                <div ui-view="stats" class="cmp-stats"></div>
             </div>
         </div>
         <div class="row">
@@ -172,5 +180,6 @@
 <script src="javascripts/controllers/BlocksCtrl.js"></script>
 <script src="javascripts/controllers/PlannerCtrl.js"></script>
 <script src="javascripts/controllers/TimelineCtrl.js"></script>
+<script src="javascripts/controllers/StatsCtrl.js"></script>
 </body>
 </html>

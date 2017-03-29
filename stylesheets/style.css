@@ -7,7 +7,7 @@
  *
  * COLORS FOR PANEL HEADERS, Based on material design
  * Alleen: #F0F4C3 (Lime, 100)
- * Duo's: #DCEDC8 (Light green, 100)
+ * Duo's: #B2DFDB (Teal, 100)
  * Groepjes: #FFCCBC (Deep Orange, 100)
  * Klassikaal: #FFE0B2 (Orange, 100)
  */
@@ -41,7 +41,7 @@ a {
     background-color: #CDDC39;
 }
 .cmp-selector .panel-grouping-duo .panel-heading {
-    background-color: #8BC34A;
+    background-color: #009688;
 }
 .cmp-selector .panel-grouping-group .panel-heading {
     background-color: #FF5722;
@@ -90,8 +90,8 @@ a {
     border-color: #F0F4C3;
 }
 .cmp-planner .vis-item.grouping-duo {
-    background-color: #8BC34A;
-    border-color: #DCEDC8;
+    background-color: #009688;
+    border-color: #B2DFDB;
 }
 .cmp-planner .vis-item.grouping-group {
     background-color: #FF5722;

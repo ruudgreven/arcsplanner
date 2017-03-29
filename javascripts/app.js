@@ -15,7 +15,8 @@ angular
         'ui.router',
         'ngVis',
         'ngDraggable',
-        'angular-google-analytics'
+        'angular-google-analytics',
+        'chart.js'
     ]).config(function ($stateProvider) {
         $stateProvider
             .state('planner',{
@@ -32,6 +33,10 @@ angular
                     'timeline': {
                         templateUrl: 'views/planner/timeline.phtml',
                         controller: 'TimelineCtrl'
+                    },
+                    'stats': {
+                        templateUrl: 'views/planner/stats.phtml',
+                        controller: 'StatsCtrl'
                     }
                 }
             });
