@@ -24,7 +24,7 @@ angular.module('arcsplannerApp')
         $scope.chartoptions = {
             cutoutPercentage: 40,
             tooltips: {
-                enabled: false
+                enabled: true
             }
         };
 
