@@ -16,7 +16,8 @@ angular
         'ngVis',
         'ngDraggable',
         'angular-google-analytics',
-        'chart.js'
+        'chart.js',
+        'LocalStorageModule'
     ]).config(function ($stateProvider) {
         $stateProvider
             .state('planner',{
@@ -45,4 +46,6 @@ angular
     }).config(['AnalyticsProvider', function (AnalyticsProvider) {
         // Add configuration code as desired
         AnalyticsProvider.setAccount(ANALYTICS_ID);
-    }]).run(['Analytics', function(Analytics) { }]);;
+    }]).config(function (localStorageServiceProvider) {
+        localStorageServiceProvider.setPrefix('arcsplanner')
+    }).run(['Analytics', function(Analytics) { }]);;

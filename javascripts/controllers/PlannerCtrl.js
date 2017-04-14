@@ -84,12 +84,12 @@ angular.module('arcsplannerApp')
                     callback(item);
                 }
             };
+
+            //Update the UI from the plan
+            $scope.update();
         };
 
-
-        $scope.$on( 'plan.changed', function( event ) {
-            $log.info('(PlannerCtrl)Updated received');
-
+        $scope.update = function() {
             var timelineEntries = PlanSvc.getTimeline();
             var ids = timeline.items.getIds();
 
@@ -114,7 +114,11 @@ angular.module('arcsplannerApp')
                     timeline.items.update({id: timelineEntry.id, content: timelineEntry.block.title, editable: true, start: timelineEntry.startTime.format(), end: timelineEntry.endTime.format(), group: 1, className: itemclass});
                 }
             }
+        };
 
+        $scope.$on( 'plan.changed', function( event ) {
+            $log.info('(PlannerCtrl)Updated received');
+            $scope.update();
         });
 
         $scope.onDropComplete=function(data,evt){

@@ -24,7 +24,7 @@ angular.module('arcsplannerApp')
                 $scope.$apply();
             }
         });
-
+        
         $scope.getLabel = function(event) {
             return ConverterSvc.convertToPrettyTime(event.startTimeMinutes) + ' - ' + ConverterSvc.convertToPrettyTime(event.endTimeMinutes);
         };

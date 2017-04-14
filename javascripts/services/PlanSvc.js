@@ -8,7 +8,7 @@
  * # PlanSvc
  * Can be used to plan lessons based on blocks
  */
-angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, Analytics) {
+angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, Analytics, localStorageService) {
     var timelineEntries = [];
 
     var lessonDuration = 180;
@@ -54,6 +54,41 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, A
          */
         init : function() {
             this.startNewLesson(moment().startOf('day'), 180);
+
+            var timelineEntriesFromStorage = localStorageService.get('currentplan');
+            if (timelineEntriesFromStorage != undefined) {
+                $log.info('(PlanSvc) Load updated plan from localstorage');
+                timelineEntries = timelineEntriesFromStorage;
+
+                //Convert moment objects to moments
+                for (var i = 0; i < timelineEntries.length; i++) {
+                    var entry = timelineEntries[i];
+                    entry.startTime = moment(entry.startTime);
+                    entry.endTime = moment(entry.endTime);
+
+                    if (entry.id > lastId) {
+                        lastId = entry.id;
+                    }
+                }
+                lastId++;
+                $rootScope.$broadcast('plan.changed');
+            }
+        },
+
+        /**
+         * Clears the plan
+         */
+        clearPlan: function() {
+            timelineEntries = [];
+
+            //Send a message that the plan has changed
+            $rootScope.$broadcast('plan.changed');
+
+            //Save plan to local storage
+            $log.info('(PlanSvc) Clear plan in localstorage');
+            localStorageService.set('currentplan', timelineEntries);
+
+            lastId = 0;
         },
 
         /**
@@ -152,6 +187,10 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, A
             //Send a message that the plan has changed
             $rootScope.$broadcast('plan.changed');
 
+            //Save the plan to local storage
+            $log.info('(PlanSvc) Save updated plan to localstorage');
+            localStorageService.set('currentplan', timelineEntries);
+
             return timelineEntry;
         },
 
@@ -241,6 +280,10 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, A
 
             //Send a message that the plan has changed
             $rootScope.$broadcast('plan.changed');
+
+            //Save the plan to local storage
+            $log.info('(PlanSvc) Save updated plan to localstorage');
+            localStorageService.set('currentplan', timelineEntries);
         },
 
         /**
@@ -266,6 +309,10 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, A
 
                 //Send a message that the plan has changed
                 $rootScope.$broadcast('plan.changed');
+
+                //Save the plan to local storage
+                $log.info('(PlanSvc) Save updated plan to localstorage');
+                localStorageService.set('currentplan', timelineEntries);
                 return true;
             } else {
                 throw 'Timeline entry with id ' + id + ' not found!';

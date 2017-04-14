@@ -28,8 +28,11 @@ angular.module('arcsplannerApp')
             }
         };
 
+        $scope.init = function() {
+            $scope.update();
+        };
 
-        $scope.$on( 'plan.changed', function( event ) {
+        $scope.update = function() {
             var timeline = PlanSvc.getTimeline();
 
             if (timeline.length == 0) {
@@ -94,10 +97,12 @@ angular.module('arcsplannerApp')
 
             }
 
-
-
             if(!$scope.$$phase) {
                 $scope.$apply();
             }
+        }
+
+        $scope.$on( 'plan.changed', function( event ) {
+            $scope.update();
         });
     });
