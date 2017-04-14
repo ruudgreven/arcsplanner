@@ -1,16 +1,36 @@
 <div class="panel panel-default" ng-init="init()">
-    <div class="panel-body">
+    <div class="panel-body panel-stats">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-4">
-                </div>
-                <div class="col-xs-4">
+                <div class="col-lg-4 col-xs-6 chartpanel">
                     <canvas id="doughnut" class="chart chart-doughnut img-responsive" chart-options="chartoptions" chart-colors="arcschart.colors" chart-data="arcschart.data" chart-labels="arcschart.labels">
                     </canvas>
+                    ARCS
                 </div>
-                <div class="col-xs-4">
+                <div class="col-lg-4 col-xs-6 chartpanel">
                     <canvas id="doughnut" class="chart chart-doughnut img-responsive" chart-options="chartoptions" chart-colors="groupingchart.colors" chart-data="groupingchart.data" chart-labels="groupingchart.labels">
                     </canvas>
+                    Groepering
+                </div>
+                <div class="col-lg-4 legenda">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-6">
+                                &nbsp;<br/>
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true" style="color: #e83b31"></span> &nbsp; Attention<br/>
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true" style="color: #008ce7"></span> &nbsp; Relevance<br/>
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true" style="color: #7db13b"></span> &nbsp; Confidence<br/>
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true" style="color: #ffd620"></span> &nbsp; Satisfaction<br/>
+                            </div>
+                            <div class="col-lg-12 col-md-6">
+                                &nbsp;<br/>
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true" style="color: #CDDC39"></span> &nbsp; Individueel<br/>
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true" style="color: #8BC34A"></span> &nbsp; Duo's<br/>
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true" style="color: #FF5722"></span> &nbsp; Groepjes<br/>
+                                <span class="glyphicon glyphicon-tags" aria-hidden="true" style="color: #FF9800"></span> &nbsp; Klas<br/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

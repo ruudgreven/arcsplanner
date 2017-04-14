@@ -22,9 +22,9 @@ angular.module('arcsplannerApp')
         };
 
         $scope.chartoptions = {
-            cutoutPercentage: 40,
+            cutoutPercentage: 10,
             tooltips: {
-                enabled: true
+                enabled: false
             }
         };
 
@@ -88,7 +88,7 @@ angular.module('arcsplannerApp')
                 $scope.arcschart.labels = ['Attention', 'Relevance', 'Confidence', 'Satisfaction'];
                 $scope.arcschart.data = [attention, relevance, confidence, satisfaction];
 
-                $scope.groupingchart.colors = ['#CDDC39', '#009688', '#FF5722', '#ffd620'];
+                $scope.groupingchart.colors = ['#CDDC39', '#009688', '#FF5722', '#FF9800'];
                 $scope.groupingchart.labels = ['Individueel', 'Duo\'s', 'Groepjes', 'Klas'];
                 $scope.groupingchart.data = [single, duo, group, clas];
 

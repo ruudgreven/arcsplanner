@@ -91,6 +91,19 @@ a {
     animation: blinker 0.5s linear 2;
 }
 
+.cmp-stats .panel-stats {
+    background-color: #eeeeee;
+}
+.cmp-stats .legenda {
+    font-size: 9px;
+}
+
+.cmp-stats .chartpanel {
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 11px;
+}
+
 .cmp-planner .vis-item.grouping-single {
     background-color: #CDDC39;
     border-color: #F0F4C3;
