@@ -23,19 +23,19 @@ angular
                 url: '',
                 views: {
                     'planner': {
-                        templateUrl: 'views/planner/planner.phtml',
+                        templateUrl: 'views/planner/planner.html',
                         controller: 'PlannerCtrl'
                     },
                     'selector': {
-                        templateUrl: 'views/planner/selector.phtml',
+                        templateUrl: 'views/planner/selector.html',
                         controller: 'BlocksCtrl',
                     },
                     'timeline': {
-                        templateUrl: 'views/planner/timeline.phtml',
+                        templateUrl: 'views/planner/timeline.html',
                         controller: 'TimelineCtrl'
                     },
                     'stats': {
-                        templateUrl: 'views/planner/stats.phtml',
+                        templateUrl: 'views/planner/stats.html',
                         controller: 'StatsCtrl'
                     }
                 }
