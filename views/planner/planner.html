@@ -1,5 +1,25 @@
 <div class="panel panel-default" ng-init="init()">
-    <div class="panel-body" ng-drop="true" ng-drop-success="onDropComplete($data,$event)" style="height:100px;">
+    <div class="panel-body" ng-drop="true" ng-drop-success="onDropComplete($data,$event)">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Lesplan voor les</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" ng-model="lessonName" ng-change="saveLessonName()" placeholder="Naam van de les">
+                </div>
+                <div class="col-md-2">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Opties
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#" ng-click="removeAllBlocks();">Verwijder alle blokken</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#lessonPropertiesModal">Pas lesduur aan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
         <div>
             <vis-timeline data="timeline_data" options="timeline_options" events="timeline_events"></vis-timeline>
         </div>

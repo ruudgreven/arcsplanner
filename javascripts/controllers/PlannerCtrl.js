@@ -10,8 +10,11 @@
 angular.module('arcsplannerApp')
     .controller('PlannerCtrl', function ($scope, $log, VisDataSet, PlanSvc) {
         var timeline = {};
+        $scope.lessonName = undefined;
 
         $scope.init = function() {
+            $scope.lessonName = PlanSvc.getLessonName();
+
             //The visual representation of the timeline
             timeline = {
                 items: new vis.DataSet([
@@ -52,8 +55,10 @@ angular.module('arcsplannerApp')
                 start: PlanSvc.getLessonStartTime().format(),
                 end: PlanSvc.getLessonEndTime().format(),
                 moveable: false,
-                orientation: 'none',      //Update to none
-                timeAxis: {scale: 'minute', step: 5},
+                orientation: 'bottom',      //Update to none
+                timeAxis: {scale: 'minute', step: 10},
+                showMinorLabels: true,
+                showMajorLabels: false,
                 stack: false,
                 onMove: function (item, callback) {
                     try {
@@ -92,6 +97,10 @@ angular.module('arcsplannerApp')
         $scope.update = function() {
             var timelineEntries = PlanSvc.getTimeline();
             var ids = timeline.items.getIds();
+
+            if (timelineEntries.length == 0) {
+                timeline.items.clear();
+            }
 
             for (var i = 0; i < timelineEntries.length; i++) {
                 var timelineEntry = timelineEntries[i];
@@ -140,6 +149,14 @@ angular.module('arcsplannerApp')
             });
         };
 
+        $scope.removeAllBlocks = function() {
+            PlanSvc.clearPlan();
+        }
 
+        $scope.saveLessonName = function() {
+            $log.info('(PlannerCtrl): Save lesson name \"' + $scope.lessonName + '\"');
+            PlanSvc.setLessonName($scope.lessonName);
+            PlanSvc.saveProperties();
+        }
 
     });

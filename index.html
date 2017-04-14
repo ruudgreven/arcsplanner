@@ -96,16 +96,41 @@
         </div>
     </div>
 
-    <!-- MODAL: Help modal -->
-    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
+    <!-- MODAL: ARCS Help modal -->
+    <div class="modal fade" id="arcshelpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">ARCSPlanner.nl Help</h4>
+                    <h4 class="modal-title">ARCSPlanner.nl: Wat is ARCS?</h4>
                 </div>
                 <div class="modal-body">
-                    <h1>Welkom bij ARCSPlanner.nl!</h1>
+                    <p>Blabla.</p>
+                    <h3>Attention</h3>
+                    <p>Bla</p>
+                    <h3>Relevance</h3>
+                    <p>Bla</p>
+                    <h3>Confidence</h3>
+                    <p>Bla</p>
+                    <h3>Satisfaction</h3>
+                    <p>Bla</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Tool Help modal -->
+    <div class="modal fade" id="toolhelpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">ARCSPlanner.nl: Hoe gebruik ik de tool?</h4>
+                </div>
+                <div class="modal-body">
                     <p>De ARCSPlanner tool kan gebruikt worden om een les te plannen. ARCS staat voor Attention, Relevance, Confidence en Satisfaction.
                         Dit zijn aspecten die volgens Keller (2010) nodig zijn om studenten te motiveren. Details hierover kun je vinden in het boek van Keller,
                         of een korte Nederlandse samenvatting op <a href="http://www.denieuwemeesters.nl/arcs-model-van-keller-reuzen-van-de-didactiek-iv/" target="_blank">De Nieuwe Meesters</a>.</p>
@@ -122,15 +147,32 @@
                         <li>Voeg eventueel in de outline van je les rechts eigen commentaar toe aan een blok, om zo voor jezelf bijvoorbeeld de inhoud er bij te vermelden.</li>
                         <li>Print vervolgens je lesplan (of exporteer naar PDF via het printscherm) en neem 'm mee naar de les!</li>
                     </ul>
-
-                    <h3>Beperkingen prototype 2</h3>
-                    <ul>
-                        <li>Het lesplan is niet op te slaan. Bij een refresh van de pagina is alles weg.</li>
-                        <li>Het is alleen mogelijk om lessen van 3 klokuur te plannen. Korte lessen kan door gewoon tot een bepaalde tijd vol te plannen. Langere lessen kan niet.</li>
-                        <li>Er is nog geen goede samenvatting van een les te zien, dus je kunt niet zien hoe je scoort op de ARCS punten.</li>
-                    </ul>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Tool Help modal -->
+    <div class="modal fade" id="lessonPropertiesModal" tabindex="-1" role="dialog" aria-labelledby="helpModal" ng-controller="LessonPropertiesCtrl" ng-init="init()">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">ARCSPlanner.nl: Instellingen voor je les</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Vul hieronder het aantal minuten in dat je les duurt:</p>
+                    <div class="form-group">
+                        <label for="inputTime">Tijdsduur van je les (in minuten)</label>
+                        <input type="number" class="form-control" id="inputTime" placeholder="Kies het aantal minuten" ng-model="lessonTime">
+                    </div>
+                    <p><Strong>Let op</Strong>: Bij het opslaan zal je bestaande plan verwijdert worden!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-click="save();" data-dismiss="modal">Opslaan</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
                 </div>
             </div>
@@ -144,30 +186,36 @@
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" data-toggle="modal" data-target="#printModal"><span class="glyphicon glyphicon-print" aria-hidden="true" title="Print je lesplan"></span> Print je plan</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#helpModal"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="Help!"></span> Help!</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#arcshelpModal"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="Help!"></span> Wat is ARCS?</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#toolhelpModal"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="Help!"></span> Hoe gebruik ik de tool?</a></li>
             </ul>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Planner -->
+                <div class="col-sm-8">
+                    <div ui-view="planner" class="cmp-planner"></div>
+                </div>
+                <div class="col-sm-4">
+                    <div ui-view="stats" class="cmp-stats"></div>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Planner -->
-            <div class="col-sm-8">
-                <div ui-view="planner" class="cmp-planner"></div>
-            </div>
-            <div class="col-sm-4">
-                <div ui-view="stats" class="cmp-stats"></div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Blocks -->
-            <div class="col-md-8">
-                <div ui-view="selector" class="cmp-selector"></div>
-            </div>
+    <div style="padding-top:25px;">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Blocks -->
+                <div class="col-md-8">
+                    <div ui-view="selector" class="cmp-selector"></div>
+                </div>
 
-            <!-- Timeline -->
-            <div class="col-md-4">
-                <div ui-view="timeline" class="cmp-timeline"></div>
+                <!-- Timeline -->
+                <div class="col-md-4">
+                    <div ui-view="timeline" class="cmp-timeline"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -184,5 +232,21 @@
 <script src="javascripts/controllers/PlannerCtrl.js"></script>
 <script src="javascripts/controllers/TimelineCtrl.js"></script>
 <script src="javascripts/controllers/StatsCtrl.js"></script>
+<script src="javascripts/controllers/LessonPropertiesCtrl.js"></script>
+
+<script>
+    var onResize = function() {
+        // apply dynamic padding at the top of the body according to the fixed navbar height
+        $("body").css("padding-top", $(".navbar-fixed-top").height());
+    };
+
+    // attach the function to the window resize event
+    $(window).resize(onResize);
+
+    // call it also when the page is ready after load or reload
+    $(function() {
+        onResize();
+    });
+</script>
 </body>
 </html>

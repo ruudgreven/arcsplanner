@@ -23,14 +23,8 @@
 
 body {
     padding: 25px;
-    padding-top: 70px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        padding-top: 170px;
-    }
+    height: 100%;
 }
 
 a {

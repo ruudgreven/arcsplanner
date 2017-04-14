@@ -11,6 +11,7 @@
 angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, Analytics, localStorageService) {
     var timelineEntries = [];
 
+    var lessonName = '';
     var lessonDuration = 180;
     var lessonStartTime;
     var lessonEndTime;
@@ -53,8 +54,20 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, A
          * Initialize the lesson service.
          */
         init : function() {
-            this.startNewLesson(moment().startOf('day'), 180);
+            //Load properties
+            var lessonNameFromStorage = localStorageService.get('lessonName');
+            var lessonDurationFromStorage = localStorageService.get('lessonDuration');
+            if (lessonNameFromStorage != undefined) {
+                lessonName = lessonNameFromStorage;
+            }
+            if (lessonDurationFromStorage != undefined) {
+                lessonDuration = lessonDurationFromStorage;
+            }
 
+            //Start a lesson
+            this.startNewLesson(moment().startOf('day'), lessonDuration);
+
+            //Load lesson plan
             var timelineEntriesFromStorage = localStorageService.get('currentplan');
             if (timelineEntriesFromStorage != undefined) {
                 $log.info('(PlanSvc) Load updated plan from localstorage');
@@ -92,12 +105,22 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, A
         },
 
         /**
+         * Saves the properties for the plan
+         */
+        saveProperties: function() {
+            localStorageService.set('lessonName', lessonName);
+            localStorageService.set('lessonDuration', lessonDuration);
+        },
+
+        /**
          * Starts a new lesson.
          * Needs to be the first call to the service, to configure the starttime, duration and entime for the lesson
          * @param startTime, a moment for the start of the lesson
          * @param duration. A duration in minutes
          */
         startNewLesson : function(startTime, duration) {
+            $log.info('(PlanSvc) Lesson started with duration ' + duration);
+            timelineEntries = [];
             lastId = 0;
 
             lessonStartTime = startTime;
@@ -111,6 +134,22 @@ angular.module('arcsplannerApp').factory('PlanSvc', function($rootScope, $log, A
 
         getLessonEndTime: function() {
             return lessonEndTime;
+        },
+
+        setLessonName: function(name) {
+            lessonName = name;
+        },
+
+        getLessonName: function() {
+            return lessonName;
+        },
+
+        setLessonDuration: function(duration) {
+            if (duration > 5 && duration < 600) {
+                lessonDuration = duration;
+            } else {
+                lessonDuration = 180;
+            }
         },
 
         getLessonDuration: function() {

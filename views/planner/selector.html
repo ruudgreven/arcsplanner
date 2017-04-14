@@ -98,19 +98,17 @@
 
             </div>
 
-            <div class="row" style="height: 20px;">
-
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div ng-repeat="block in blocks[0]" ng-include="'templates/planner/selector-block.html'"></div>
-                </div>
-                <div class="col-sm-4">
-                    <div ng-repeat="block in blocks[1]" ng-include="'templates/planner/selector-block.html'"></div>
-                </div>
-                <div class="col-sm-4">
-                    <div ng-repeat="block in blocks[2]" ng-include="'templates/planner/selector-block.html'"></div>
+            <div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div ng-repeat="block in blocks[0]" ng-include="'templates/planner/selector-block.html'"></div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div ng-repeat="block in blocks[1]" ng-include="'templates/planner/selector-block.html'"></div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div ng-repeat="block in blocks[2]" ng-include="'templates/planner/selector-block.html'"></div>
+                    </div>
                 </div>
             </div>
         </div>
