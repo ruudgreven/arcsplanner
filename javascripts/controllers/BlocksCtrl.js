@@ -215,7 +215,7 @@ angular.module('arcsplannerApp')
             nwBlocks.forEach(function(block) {
                 $scope.blocks[counter%3].push(block);
                 counter++;
-            })
+            });
         };
 
         /**

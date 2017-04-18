@@ -18,7 +18,7 @@
         "confidence": {
           "score": 1,
           "keys": ["Learning Requirements"],
-          "explanation": "Als je de studentn duidelijk weet te maken welk observeerbaar gedrag of actie je wilt zien vergroot dat het vertrouwen, omdat ze dan exact weten wat ze moeten doen om het doel te behalen (Keller, 2010, p. 160)"
+          "explanation": "Als je de studenten duidelijk weet te maken welk observeerbaar gedrag of actie je wilt zien vergroot dat het vertrouwen, omdat ze dan exact weten wat ze moeten doen om het doel te behalen (Keller, 2010, p. 160)"
         },
         "satisfaction": {
           "score": 0
@@ -48,7 +48,7 @@
         "confidence": {
           "score": 1,
           "keys": ["Learning Requirements"],
-          "explanation": "Met name als je deze de discussie aangaat over de succescriteria (Wat moeten we doen om het doel te behalen) heeft het een positieve invloed op het vertrouwen van studentn."
+          "explanation": "Met name als je deze de discussie aangaat over de succescriteria (Wat moeten we doen om het doel te behalen) heeft het een positieve invloed op het vertrouwen van studenten."
         },
         "satisfaction": {
           "score": 0
@@ -74,7 +74,7 @@
         "confidence": {
           "score": 2,
           "keys": ["Personal Control"],
-          "explanation": "studentn krijgen hiermee de mogelijkheid om op hun eigen manier en op hun eigen niveau hun uitwerking te tonen aan peers. Dat geeft hen vertrouwen en is beter dan het direct aan een docent te laten zien."
+          "explanation": "studenten krijgen hiermee de mogelijkheid om op hun eigen manier en op hun eigen niveau hun uitwerking te tonen aan peers. Dat geeft hen vertrouwen en is beter dan het direct aan een docent te laten zien."
         },
         "satisfaction": {
           "score": 2,
@@ -96,7 +96,7 @@
         "attention": {
           "score": 2,
           "keys": ["Inquiry Arousal", "Variability"],
-          "explanation": "De randomizer tool maakt dat de studentn even gefocusd zijn op wie het gaat worden. Het voegt een beetje spanning toe aan een les. Bovendien staat er daarna iemand anders voor de klas dan gebruikelijk en dat maakt het ook interressanter."
+          "explanation": "De randomizer tool maakt dat de studenten even gefocusd zijn op wie het gaat worden. Het voegt een beetje spanning toe aan een les. Bovendien staat er daarna iemand anders voor de klas dan gebruikelijk en dat maakt het ook interressanter."
         },
         "relevance": {
           "score": 2,
@@ -139,7 +139,7 @@
         "satisfaction": {
           "score": 2,
           "keys": ["Intrinsic Reinforcements", "Extrinsic Rewards"],
-          "explanation": "De studentn in de klas kunnen laten zien hoe ze degene die het nog niet precies weet kunnen helpen. Degene die het nog niet weet wordt beloond met een groep studentn die hem/haar helpen aan een goede oplossing."
+          "explanation": "De studenten in de klas kunnen laten zien hoe ze degene die het nog niet precies weet kunnen helpen. Degene die het nog niet weet wordt beloond met een groep studenten die hem/haar helpen aan een goede oplossing."
         }
       },
       "grouping": "C",
@@ -182,7 +182,7 @@
         "attention": {
           "score": 2,
           "keys": ["Perceptual Arousal"],
-          "explanation": "Persoonlijke verhalen trekken de aandacht. Zorg wel dat het een echt verhaal is en geen verzonnen verhaal, daar prikken studentn doorheen."
+          "explanation": "Persoonlijke verhalen trekken de aandacht. Zorg wel dat het een echt verhaal is en geen verzonnen verhaal, daar prikken studenten doorheen."
         },
         "relevance": {
           "score": 0
@@ -208,7 +208,7 @@
         "attention": {
           "score": 2,
           "keys": ["Inquiry Arousal"],
-          "explanation":"Bij het bespreken van de schriftelijke opdrachten stel je als docent voortdurend vragen aan de studentn, hiermee betrek je ze bij de les."
+          "explanation":"Bij het bespreken van de schriftelijke opdrachten stel je als docent voortdurend vragen aan de studenten, hiermee betrek je ze bij de les."
         },
         "relevance": {
           "score": 0
@@ -216,7 +216,7 @@
         "confidence": {
           "score": 1,
           "keys": ["Success Opportunities"],
-          "explanation": "Je geeft als docent doordat je een antwoord goed of fout vindt aan wat je verwacht van de studentn."
+          "explanation": "Je geeft als docent doordat je een antwoord goed of fout vindt aan wat je verwacht van de studenten."
         },
         "satisfaction": {
           "score": 1,
@@ -238,17 +238,17 @@
         "attention": {
           "score": 2,
           "keys": ["Inquiry Arousal", "Variability"],
-          "explanation": "Het is een activerende vorm waarbij studentn zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
+          "explanation": "Het is een activerende vorm waarbij studenten zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
         },
         "relevance": {
           "score": 3,
           "keys": ["Motive Matching"],
-          "explanation": "Tijdens het zelf ontwerpen kunnen studentn dat op hun eigen manier doen. Ze werken in groepen en er zit een soort competitie in, omdat een ieder het beste ontwerp wil hebben. Al deze aspecten worden door Keller (2010, p.130) genoemd als positieve aspecten voor relevance."
+          "explanation": "Tijdens het zelf ontwerpen kunnen studenten dat op hun eigen manier doen. Ze werken in groepen en er zit een soort competitie in, omdat een ieder het beste ontwerp wil hebben. Al deze aspecten worden door Keller (2010, p.130) genoemd als positieve aspecten voor relevance."
         },
         "confidence": {
           "score": 1,
           "keys": ["Succes Opportunities"],
-          "explanation": "De studentn ervaren succes als het hen lukt om een ontwerp te maken. Wees er als docent bedachtzaam op dat je wel iets kiest wat ook echt kan lukken (Niet te complex)."
+          "explanation": "De studenten ervaren succes als het hen lukt om een ontwerp te maken. Wees er als docent bedachtzaam op dat je wel iets kiest wat ook echt kan lukken (Niet te complex)."
         },
         "satisfaction": {
           "score": 2,
@@ -270,7 +270,7 @@
         "attention": {
           "score": 2,
           "keys": ["Inquiry Arousal", "Variability"],
-          "explanation": "Het is een activerende vorm waarbij studentn zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
+          "explanation": "Het is een activerende vorm waarbij studenten zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
 
         },
         "relevance": {
@@ -281,7 +281,7 @@
         "confidence": {
           "score": 1,
           "keys": ["Succes Opportunities"],
-          "explanation": "De studentn ervaren succes als het hen lukt om hun kennis uit te breiden."
+          "explanation": "De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
         },
         "satisfaction": {
           "score": 1,
@@ -312,7 +312,7 @@
         "confidence": {
           "score": 3,
           "keys": ["Personal Control", "Succes Opportunities"],
-          "explanation": "De studentn hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studentn ervaren succes als het hen lukt om hun kennis uit te breiden."
+          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
         },
         "satisfaction": {
           "score": 0
@@ -336,12 +336,12 @@
         "relevance": {
           "score": 2,
           "keys": ["Motive Matching", "Familiarity"],
-          "explanation": "De studentn werken samen en werken aan iets waarbij ze hun opgedane voorkennis moeten inzetten"
+          "explanation": "De studenten werken samen en werken aan iets waarbij ze hun opgedane voorkennis moeten inzetten"
         },
         "confidence": {
           "score": 3,
           "keys": ["Personal Control", "Succes Opportunities"],
-          "explanation": "De studentn hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studentn ervaren succes als het hen lukt om hun kennis uit te breiden."
+          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
         },
         "satisfaction": {
           "score": 1,

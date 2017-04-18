@@ -30,6 +30,22 @@ body {
 a {
     color: #00B7FF;
 }
+
+/**
+ * Tooltips
+ */
+.tooltip.blocktooltip .tooltip-inner {
+    width: 500px;
+    color: #ffffff;
+    background-color: #333333;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+/* Hide arrow */
+.tooltip.blocktooltip .tooltip-arrow {
+    display: none;
+}
+
 /**
  * Configuration of the blocks in the selector.
  */

@@ -10,6 +10,8 @@
  */
 angular
     .module('arcsplannerApp', [
+        'ngAnimate',
+        'ui.bootstrap',
         'ngSanitize',
         'angular-timeline',
         'ui.router',
