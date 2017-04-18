@@ -5,19 +5,26 @@
       "summary": "De docent geeft aan het begin van de les een outline van de les, waarin hij/zij toelicht wat de lesdoelen zijn en hoe de les er verder uit gaat zien.",
       "preparation": "- Zorg dat je de doelen voor de les duidelijk inzichtelijk hebt zodat je ze toe kunt lichten",
       "description": "- Benoem de lesdoelen van deze les, zo concreet mogelijk (Wanneer is de les geslaagd?).\n- Vertel wat je plan is voor deze les en geef globaal de tijdsverdeling aan.",
-      "time": [5,10],
+      "time": [
+        5,
+        10
+      ],
       "arcs": {
         "attention": {
           "score": 0
         },
         "relevance": {
           "score": 3,
-          "keys": ["Goal Orientation"],
+          "keys": [
+            "Goal Orientation"
+          ],
           "explanation": "Door de doelen helder en concreet te benoemen kun je makkelijk een link leggen tussen wat je in de les doet en waar dat toe leid. (Keller, 2010, p. 127)"
         },
         "confidence": {
           "score": 1,
-          "keys": ["Learning Requirements"],
+          "keys": [
+            "Learning Requirements"
+          ],
           "explanation": "Als je de studenten duidelijk weet te maken welk observeerbaar gedrag of actie je wilt zien vergroot dat het vertrouwen, omdat ze dan exact weten wat ze moeten doen om het doel te behalen (Keller, 2010, p. 160)"
         },
         "satisfaction": {
@@ -25,29 +32,40 @@
         }
       },
       "grouping": "C",
-      "phases": ["S"],
+      "phases": [
+        "S"
+      ],
       "source": "Eigen praktijkervaring"
     },
-	{
+    {
       "title": "Leerdoel(en) laten formuleren door studenten",
       "summary": "De docent laat de student eigen leerdoelen formuleren voor de les. Het doel is dat zij daarmee meer betrokken raken bij de les en zien hoe zij invloed kunnen hebben op hun eigen attitude in de les.",
       "preparation": "- Memobriefjes meenemen.\n",
       "description": "- Laat iedere student individueel een doel voor de les verzinnen. Wanneer is voor hem/haar de les geslaagd?\n- Laat de studenten dit individueel opschrijven op een memoblaadje of op een bord.\n- Vraag enkelen eventueel direct na het opschrijven wat ze opgeschreven hebben. Vraag eventueel door naar hoe jij als docent samen met hen kunt zorgen dat het doel behaald wordt.\n- Laat aan het einde van de les de briefjes inleveren en bespreek of het doel gelukt is.",
-      "time": [5,10],
+      "time": [
+        5,
+        10
+      ],
       "arcs": {
         "attention": {
           "score": 1,
-          "keys": ["Inquiry Arousal"],
+          "keys": [
+            "Inquiry Arousal"
+          ],
           "explanation": "Studenten zullen misschien wat verbaasd zijn door de vraag, zeker als dit niet elke les gebeurd. Het verassende effect zorgt voor meer betrokkenheid."
         },
         "relevance": {
           "score": 2,
-          "keys": ["Goal Orientation"],
+          "keys": [
+            "Goal Orientation"
+          ],
           "explanation": "Door de doelen helder en concreet te benoemen kun je makkelijk een link leggen tussen wat je in de les doet en waar dat toe leid. (Keller, 2010, p. 127). Bij deze vorm kan het echter wel voorkomen dat studenten de doelen niet duidelijk weten te formulieren of een ander doel blijken te hebben dan de docent"
         },
         "confidence": {
           "score": 1,
-          "keys": ["Learning Requirements"],
+          "keys": [
+            "Learning Requirements"
+          ],
           "explanation": "Met name als je deze de discussie aangaat over de succescriteria (Wat moeten we doen om het doel te behalen) heeft het een positieve invloed op het vertrouwen van studenten."
         },
         "satisfaction": {
@@ -55,77 +73,29 @@
         }
       },
       "grouping": "C",
-      "phases": ["S"],
+      "phases": [
+        "S"
+      ],
       "source": "Eigen praktijkervaring"
     },
+
+
     {
-      "title": "Onderling bespreken van een programmeeropdracht",
-      "summary": "De studenten bespreken onderling met elkaar de opdracht die zij gemaakt hebben. Dit doen ze door allemaal hun laptop er bij te pakken en omstebeurten om een van de laptops heen te gaan staan. De docent kan rondlopen en aanhaken bij groepjes waar hij/zij dat nodig acht.",
-      "preparation": "- Kijk welke opdrachten de studenten hebben moeten maken.\n- Bekijk, als je dat prettig vind, eventueel zelf deze opdracht ook inhoudelijk.",
-      "description": "- Maak groepjes.\n- Zeg tegen studenten dat zij de opdracht moeten bespreken in een groepje. Ieder z’n uitwerking moet even aan bod komen. Hij/zij moet het op de laptop laten zien aan de anderen\n- Laat ieder één goed en één verbeterpunt aangeven op de uitwerking van de ander.\n- Loop als docent rond en kijk of ze het werk gemaakt hebben en geef eventueel feedback.",
-      "time": [5,30],
-      "arcs": {
-        "attention": {
-          "score": 0
-        },
-        "relevance": {
-          "score": 0
-        },
-        "confidence": {
-          "score": 2,
-          "keys": ["Personal Control"],
-          "explanation": "studenten krijgen hiermee de mogelijkheid om op hun eigen manier en op hun eigen niveau hun uitwerking te tonen aan peers. Dat geeft hen vertrouwen en is beter dan het direct aan een docent te laten zien."
-        },
-        "satisfaction": {
-          "score": 2,
-          "keys": ["Intrinsic Reinforcement"],
-          "explanation": "Degenen die de stof goed beheersen krijgen de mogelijkheid om hun kennis te delen en anderen te helpen met het oplossen van problemen. Daardoor voelen zij een positieve erkenning van hun capaciteiten. (Keller, 2010, p. 190)"
-        }
-      },
-      "grouping": "G",
-      "phases": ["C"],
-      "source": "Eigen praktijkervaring"
-    },
-    {
-      "title": "Tonen opdrachtuitwerking door willekeurige student",
-      "summary": "Er wordt een willekeurige student gekozen die zijn uitwerking van de opdracht toont op de beamer. De docent is gespreksleider en betrekt de klas door hen vragen te stellen over de getoonde uitwerking",
-      "preparation": "- Voer alle namen in in een randomizer tool zoals [WieIsHetBokje.nl](http://www.wieishetbokje.nl)",
-      "description": "- Kies een willekeurige student met een randomizer tool zoals [WieIsHetBokje.nl](http://www.wieishetbokje.nl)\n- Nodig hem/haar uit voor de klas met de laptop.\n- Vraag hem/haar de code te presenteren en stel met name waarom- en hoe-vragen.\n- Vraag de klas om feedback op de gemaakte uitwerking.",
-      "time": [5,30],
-      "arcs": {
-        "attention": {
-          "score": 2,
-          "keys": ["Inquiry Arousal", "Variability"],
-          "explanation": "De randomizer tool maakt dat de studenten even gefocusd zijn op wie het gaat worden. Het voegt een beetje spanning toe aan een les. Bovendien staat er daarna iemand anders voor de klas dan gebruikelijk en dat maakt het ook interressanter."
-        },
-        "relevance": {
-          "score": 2,
-          "keys": ["Motive Matching"],
-          "explanation": "Als er een student voor de klas staat die het goed gelukt is dan kan de rest zien wat dat doet met zo'n student (Die krijgt waarschijnlijk een positief). Als de student het niet af heeft is het ook duidelijk om te zien wat dat met diegene doet. Het moet voor studenten gaan voelen als een gezamenlijke verantwoordelijk om te zorgen dat iedereen de opdracht snapt."
-        },
-        "confidence": {
-          "score": 1,
-          "keys": ["Personal Control"],
-          "explanation": "Door de feedback van de docent weet degene voor de klas hoe hij/zij het gedaan heeft. De rest van de klas weet dat dan ook en kan zijn eigen uitwerking en inspanning beter op waarde schatten."
-        },
-        "satisfaction": {
-          "score": 0
-        }
-      },
-      "grouping": "C",
-      "phases": ["C"],
-      "source": "Eigen praktijkervaring"
-    },
-    {
-      "title": "Samen een programmeerprobleem van een student oplossen",
-      "summary": "Er wordt een student gevraagd om voor de klas te komen die tegen een probleem aan is gelopen.. De docent is gespreksleider en betrekt de klas door hen te vragen naar oplossingsrichtingen van het probleem. De oplossing wordt direct gemaakt.",
+      "title": "Samen een probleem van een student oplossen",
+      "summary": "Met name geschikt voor praktische problemen met een tool, of een praktijkopdracht. Er wordt een student gevraagd om voor de klas te komen die tegen een probleem aan is gelopen.. De docent is gespreksleider en betrekt de klas door hen te vragen naar oplossingsrichtingen van het probleem. De oplossing wordt direct gemaakt.",
       "preparation": "",
       "description": "- Vraag de student naar voren en sluit de laptop aan.\n- Vraag de student om te benoemen tegen welk probleem hij aanliep. ",
-      "time": [5,30],
+      "time": [
+        5,
+        30
+      ],
       "arcs": {
         "attention": {
           "score": 2,
-          "keys": ["Inquiry Arousal", "Variability"],
+          "keys": [
+            "Inquiry Arousal",
+            "Variability"
+          ],
           "explanation": "Samen een probleem oplossen, dat nog niet vaker voorbij is gekomen, maakt de les interressant."
         },
         "relevance": {
@@ -133,17 +103,72 @@
         },
         "confidence": {
           "score": 2,
-          "keys": ["Personal Control", "Succes Opportunities"],
+          "keys": [
+            "Personal Control",
+            "Succes Opportunities"
+          ],
           "explanation": "Door de feedback van de klas weet degene voor de klas hoe hij/zij het gedaan heeft. De rest van de klas weet dat dan ook en kan zijn eigen uitwerking en inspanning beter op waarde schatten. Degenen die het moeilijk vonden, maar niet voor de klas staan, zullen toch geholpen worden. Als het uiteindelijk lukt is het voor de hele klas een gedeeld succes"
         },
         "satisfaction": {
           "score": 2,
-          "keys": ["Intrinsic Reinforcements", "Extrinsic Rewards"],
+          "keys": [
+            "Intrinsic Reinforcements",
+            "Extrinsic Rewards"
+          ],
           "explanation": "De studenten in de klas kunnen laten zien hoe ze degene die het nog niet precies weet kunnen helpen. Degene die het nog niet weet wordt beloond met een groep studenten die hem/haar helpen aan een goede oplossing."
         }
       },
       "grouping": "C",
-      "phases": ["C"],
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    },
+    {
+      "title": "Een online Socrative quiz uitvoeren",
+      "summary": "De docent start een quiz die bestaat uit verschillende vragen. Hij laat de vragen achter elkaar op de beamer of het smartboard verschijnen en vraagt de studenten om te antwoorden via een app op hun mobiel. Na iedere vraag verschijnt het goede antwoord en de docent kan zien hoeveel mensen het goed of fout hadden en daarna feedback geven op het antwoord.",
+      "preparation": "- Een quiz aanmaken op [Socrative.com](http://www.socrative.com)\n- Nagaan of studenten een mobiel of laptop bij de hand hebben in je les.",
+      "description": "- Ga naar [Socrative.com](http://www.socrative.com).\n- Ga naar *Launch* en kies voor *Quiz*\n-Selecteer de quiz die je wilt starten.\n- Kies bij delivery method voor *Teacher Paced*.\n- Klik op *Start*\n- Vraag de studenten om in te loggen op [Socrative.com](http://www.socrative.com) bij student login. Geef hen de roomnumber die bovenin beeld staat.\n- Doorloop de vragen stuk voor stuk. Je kunt in beeld zien hoeveel studenten al een antwoord hebben gegeven.",
+      "time": [
+        10,
+        30
+      ],
+      "arcs": {
+        "attention": {
+          "score": 2,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "Een quiz trekt de aandacht. Afhankelijk van hoe goed de docent (presentator) de quiz presenteert kan het behoorlijk lange tijd aandacht vergrotend werken. Gebruik het middel echter wel spaarzaam, na diverse quizen is de lol er wel af."
+        },
+        "relevance": {
+          "score": 1,
+          "keys": [
+            "Motive Matching"
+          ],
+          "explanation": "De student kan, aan de hand van of hij antwoorden goed of fout heeft, meten hoe goed hij het doet. Als de vragen goed gekozen zijn bij de doelen die je hebt helpt dit de student om de relevantie in te zien van de stof."
+        },
+        "confidence": {
+          "score": 2,
+          "keys": [
+            "Learning Requirements",
+            "Success Opportunities"
+          ],
+          "explanation": "De quiz maakt duidelijk aan de student of hij succesvol is of niet en het maakt ook duidelijk welke onderwerpen hij/zij nog niet goed snapt. Ook het meten met andere klasgenoten is belangrijk om het vertrouwen te vergroten (ook als iemand concludeert nog niet zo goed te zijn als hij/zij wil)."
+        },
+        "satisfaction": {
+          "score": 2,
+          "keys": [
+            "Extrinsic Rewards",
+            "Equity"
+          ],
+          "explanation": "Studenten krijgen extrensieke beloningen door het zien of zij de vraag goed of fout hadden en ze weten ook dat de anderen op exact dezelfde manier beoordeeld worden, dat geeft het gevoel van gelijkheid en dat is belangrijk."
+        }
+      },
+      "grouping": "C",
+      "phases": [
+        "C"
+      ],
       "source": "Eigen praktijkervaring"
     },
     {
@@ -151,11 +176,16 @@
       "summary": "De docent legt een nieuw concept uit met behulp van theorie op de sheets met als doel om de studenten nieuwe kennis aan te leren.",
       "preparation": "- Sheets voorbereiden",
       "description": "- Bespreek de sheets in de les",
-      "time": [5,20],
+      "time": [
+        5,
+        20
+      ],
       "arcs": {
         "attention": {
           "score": -1,
-          "keys": ["Variability"],
+          "keys": [
+            "Variability"
+          ],
           "explanation": "Afhankelijk van de tijdsduur en de vaardigheden van de docent kan dit een negatieve invloed hebben op de aandacht. Los daarvan is het sowieso aan te raden om klassikale instructie kort te houden en af te wisselen met andere vormen."
         },
         "relevance": {
@@ -169,7 +199,9 @@
         }
       },
       "grouping": "C",
-      "phases": ["C"],
+      "phases": [
+        "C"
+      ],
       "source": "Eigen praktijkervaring"
     },
     {
@@ -177,11 +209,16 @@
       "summary": "De docent vertelt een concrete ervaring of probleem waar hij/zij tegenaan liep en hoe dit opgelost is.",
       "preparation": "- Een verhaal voorbereiden, eventueel met demo",
       "description": "- Vertel het verhaal in de les. Gebruik eventueel een voorbeeld of demo om het concreter te maken.",
-      "time": [5,20],
+      "time": [
+        5,
+        20
+      ],
       "arcs": {
         "attention": {
           "score": 2,
-          "keys": ["Perceptual Arousal"],
+          "keys": [
+            "Perceptual Arousal"
+          ],
           "explanation": "Persoonlijke verhalen trekken de aandacht. Zorg wel dat het een echt verhaal is en geen verzonnen verhaal, daar prikken studenten doorheen."
         },
         "relevance": {
@@ -195,7 +232,9 @@
         }
       },
       "grouping": "C",
-      "phases": ["C"],
+      "phases": [
+        "C"
+      ],
       "source": "Eigen praktijkervaring"
     },
     {
@@ -203,61 +242,89 @@
       "summary": "De docent bespreekt de gemaakte opdrachten met de studenten door de vragen langs te lopen en hen stuk voor stuk een beurt te geven om de vraag te beantwoorden.",
       "preparation": "- Kijk welke opdrachten de studenten moesten maken.\n- Bereid zelf de vragen en antwoorden voor.",
       "description": "- Loop de vragen stuk voor stuk door.\n- Vraag een student naar het antwoord. Betrek eventueel andere studenten bij de discussie over het antwoord. Vraag hen ook wat zij van het antwoord vinden.\nGebruik eventueel [WieIsHetBokje.nl](http://www.wieishetbokje.nl) voor een willekeurige keuze van een student per vraag.",
-      "time": [5,60],
+      "time": [
+        5,
+        60
+      ],
       "arcs": {
         "attention": {
           "score": 2,
-          "keys": ["Inquiry Arousal"],
-          "explanation":"Bij het bespreken van de schriftelijke opdrachten stel je als docent voortdurend vragen aan de studenten, hiermee betrek je ze bij de les."
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "Bij het bespreken van de schriftelijke opdrachten stel je als docent voortdurend vragen aan de studenten, hiermee betrek je ze bij de les."
         },
         "relevance": {
           "score": 0
         },
         "confidence": {
           "score": 1,
-          "keys": ["Success Opportunities"],
+          "keys": [
+            "Success Opportunities"
+          ],
           "explanation": "Je geeft als docent doordat je een antwoord goed of fout vindt aan wat je verwacht van de studenten."
         },
         "satisfaction": {
           "score": 1,
-          "keys": ["Positive Consequences"],
+          "keys": [
+            "Positive Consequences"
+          ],
           "explanation": "Je beloont studenten die goed gewerkt hebben en die de antwoorden weten."
         }
       },
       "grouping": "C",
-      "phases": ["C"],
+      "phases": [
+        "C"
+      ],
       "source": "Eigen praktijkervaring"
     },
+
+
     {
       "title": "Ontwerpopdracht uitvoeren in groepjes",
       "summary": "De docent beschrijft een bepaalde casus in hoofdlijnen, waarna de studenten de instructie krijgen om daarna in groepjes een technisch of grafisch ontwerp te maken. (of beide)",
       "preparation": "- Controleer of je in het lokaal voldoende whiteboardruimte hebt (per 4 studenten 1 whiteboard of deel daarvan).\n",
       "description": "- Deel studenten in in groepjes.\n- Plaats de studenten bij een whiteboard.\nGeef een duidelijke casus en laat studenten een ontwerp bedenken voor die casus. Dit kan zowel een technisch UML ontwerp zijn, maar ook bijvoorbeeld een opbouw en indeling van de UI.\n- Bespreek aan het eind alle ontwerpen. Laat een student uit elk groepje kort het ontwerp toelichten.",
-      "time": [15,30],
+      "time": [
+        15,
+        30
+      ],
       "arcs": {
         "attention": {
           "score": 2,
-          "keys": ["Inquiry Arousal", "Variability"],
+          "keys": [
+            "Inquiry Arousal",
+            "Variability"
+          ],
           "explanation": "Het is een activerende vorm waarbij studenten zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
         },
         "relevance": {
           "score": 3,
-          "keys": ["Motive Matching"],
+          "keys": [
+            "Motive Matching"
+          ],
           "explanation": "Tijdens het zelf ontwerpen kunnen studenten dat op hun eigen manier doen. Ze werken in groepen en er zit een soort competitie in, omdat een ieder het beste ontwerp wil hebben. Al deze aspecten worden door Keller (2010, p.130) genoemd als positieve aspecten voor relevance."
         },
         "confidence": {
           "score": 1,
-          "keys": ["Succes Opportunities"],
+          "keys": [
+            "Succes Opportunities"
+          ],
           "explanation": "De studenten ervaren succes als het hen lukt om een ontwerp te maken. Wees er als docent bedachtzaam op dat je wel iets kiest wat ook echt kan lukken (Niet te complex)."
         },
         "satisfaction": {
           "score": 2,
-          "keys": ["Intrinsic Reinforcement", "Equity"],
+          "keys": [
+            "Intrinsic Reinforcement",
+            "Equity"
+          ],
           "explanation": "Studenten kunnen elkaar helpen. Goede studenten kunnen tonen dat ze het kunnen door in hun groepje de leiding te nemen en de anderen te helpen. Minder goede studenten kun je stimuleren door positieve feedback. Als de bespreking aan het eind op een open en eerlijke manier gebeurd geeft dat de student een gevoel van eerlijke behandelding"
         }
       },
       "grouping": "G",
-      "phases": ["C"],
+      "phases": [
+        "C"
+      ],
       "source": "Eigen praktijkervaring"
     },
     {
@@ -265,104 +332,64 @@
       "summary": "De docent geeft de studenten een bepaald onderwerp of thema en de studenten gaan in groepjes op zoek naar informatie over dit thema. Daarna worden de uitkomsten besproken.",
       "preparation": "- Bedenk een aantal onderwerpen die je zou kunnen gebruiken als \"onderzoeksonderwerp\".",
       "description": "- Deel studenten in in groepjes.\n- Definieer voor elke groep een expliciete vraag/opdracht om iets specifieks uit te zoeken. Dit kan zowel een praktische vaardigheid zijn (Hoe met je X doen) of een meer theoretisch onderwerp (Wat is X?).\n- Laat iedere groep de uitkomst presenteren.",
-      "time": [30,60],
+      "time": [
+        30,
+        60
+      ],
       "arcs": {
         "attention": {
           "score": 2,
-          "keys": ["Inquiry Arousal", "Variability"],
+          "keys": [
+            "Inquiry Arousal",
+            "Variability"
+          ],
           "explanation": "Het is een activerende vorm waarbij studenten zelf aan de slag mogen en er wordt nieuwsgierigheid opgewekt door de opdracht."
-
         },
         "relevance": {
           "score": 2,
-          "keys": ["Motive Matching"],
+          "keys": [
+            "Motive Matching"
+          ],
           "explanation": "Er zit een soort competitie in de opdracht, omdat studenten graag een goede uitleg willen geven van het thema dat zij uit moeten zoeken. Dat is positief voor de relevance (Keller 2010, p.130)"
         },
         "confidence": {
           "score": 1,
-          "keys": ["Succes Opportunities"],
+          "keys": [
+            "Succes Opportunities"
+          ],
           "explanation": "De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
         },
         "satisfaction": {
           "score": 1,
-          "keys": ["Intrinsic Reinforcement"],
+          "keys": [
+            "Intrinsic Reinforcement"
+          ],
           "explanation": "Studenten kunnen elkaar helpen. Goede studenten kunnen tonen dat ze het kunnen door in hun groepje de leiding te nemen en de anderen te helpen. Minder goede studenten kun je stimuleren door positieve feedback."
         }
       },
       "grouping": "G",
-      "phases": ["C"],
+      "phases": [
+        "C"
+      ],
       "source": "Eigen praktijkervaring"
     },
-    {
-      "title": "Programmeeropdracht individueel uitvoeren",
-      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna individueel aan de slag om de gevraagde functionaliteit te programmeren.",
-      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
-      "description": "- Leg de opdracht kort uit\n- Zet de studenten aan het werk. Loop iedere student af en informeer naar de voortgang.",
-      "time": [45,120],
-      "arcs": {
-        "attention": {
-          "score": 1,
-          "keys": ["Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."]
-        },
-        "relevance": {
-          "score": 1,
-          "keys": ["Motive Matching"],
-          "explanation": "De studenten worden gestimuleerd om zelf problem-solving strategieen in te zetten. Dat draagt bij aan de relevance (Keller, 2010, p.130)"
-        },
-        "confidence": {
-          "score": 3,
-          "keys": ["Personal Control", "Succes Opportunities"],
-          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
-        },
-        "satisfaction": {
-          "score": 0
-        }
-      },
-      "grouping": "S",
-      "phases": ["C"],
-      "source": "Eigen praktijkervaring"
-    },
-    {
-      "title": "Programmeeropdracht uitvoeren in duo's",
-      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna in duo's aan de slag om de gevraagde functionaliteit te programmeren.",
-      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
-      "description": "- Maak duo's.\n- Leg de opdracht kort uit, laat de studenten in duo's bespreken hoe ze het gaan bouwen (bouwplan).\n- Zet de studenten aan het werk. Loop de verschillende duo's af en informeer naar de voortgang.",
-      "time": [45,120],
-      "arcs": {
-        "attention": {
-          "score": 1,
-          "keys": ["Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."]
-        },
-        "relevance": {
-          "score": 2,
-          "keys": ["Motive Matching", "Familiarity"],
-          "explanation": "De studenten werken samen en werken aan iets waarbij ze hun opgedane voorkennis moeten inzetten"
-        },
-        "confidence": {
-          "score": 3,
-          "keys": ["Personal Control", "Succes Opportunities"],
-          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
-        },
-        "satisfaction": {
-          "score": 1,
-          "keys": ["Intrinsic Reinforcement"],
-          "explanation": "Studenten kunnen elkaar helpen. Goede studenten kunnen tonen dat ze het kunnen door in hun groepje de leiding te nemen en de anderen te helpen. Minder goede studenten kun je stimuleren door positieve feedback."
-        }
-      },
-      "grouping": "D",
-      "phases": ["C"],
-      "source": "Eigen praktijkervaring"
-    },
+
+
     {
       "title": "Lesevaluatie door studenten",
       "summary": "De docent nodigt de studenten uit om zijn les te evalueren. Hij/zij vraagt een positief punt, een verbeterpunt en een cijfer voor de les. De studenten schrijven dit (anoniem) op op memobriefjes.",
       "preparation": "- Neem memo briefjes mee in twee verschillende kleuren, bij voorkeur rood en groen.",
       "description": "- Leg uit dat je een korte evaluatie van de les wilt doen, zodat je het de volgende keer beter kunt doen.\nJe vraagt de studenten om 3 dingen: \n    - Een goed punt van de workshop dat vastgehouden moet worden voor de volgende workshops.\n    - Een verbeterpunt voor de workshop.\n    - Een cijfer voor de workshop.\n- Deel aan iedere student één memobriefje uit per kleur. De groene voor het positieve punt en het cijfer. Het rode voor het verbeterpunt.\n- Laat studenten bij het verlaten van het lokaal de briefjes op het bord plakken.\n",
-      "time": [5,15],
+      "time": [
+        5,
+        15
+      ],
       "arcs": {
         "attention": {
           "score": 2,
-          "keys": ["Perceptual Arousal"],
+          "keys": [
+            "Perceptual Arousal"
+          ],
           "explanation": "Je stelt jezelf zo kwetsbaar op en geeft aan dat jij oprecht nieuwsgierig bent naar hun mening. En het is niet iets dat ze direct verwachten. Het is verstandig dit niet elke les te doen."
         },
         "relevance": {
@@ -370,7 +397,9 @@
         },
         "confidence": {
           "score": 2,
-          "keys": ["Personal Control"],
+          "keys": [
+            "Personal Control"
+          ],
           "explanation": "Hiermee geef je studenten de kans om commentaar te geven op je les, de materialen en andere aspecten. Dat is goed voor hun vertrouwen (Keller, 2010, p.162)."
         },
         "satisfaction": {
@@ -378,7 +407,9 @@
         }
       },
       "grouping": "S",
-      "phases": ["E"],
+      "phases": [
+        "E"
+      ],
       "source": "Eigen praktijkervaring"
     },
     {
@@ -386,19 +417,26 @@
       "summary": "De docent geeft een korte samenvatting van de les met als doel dat de studenten weten wat de belangrijkste thema's waren.",
       "preparation": "",
       "description": "- Vat kort en bondig samen wat er in de les besproken is.",
-      "time": [5,10],
+      "time": [
+        5,
+        10
+      ],
       "arcs": {
         "attention": {
           "score": 0
         },
         "relevance": {
           "score": 2,
-          "keys": ["Goal Orientation"],
+          "keys": [
+            "Goal Orientation"
+          ],
           "explanation": "Het samenvatten van de les helpt studenten om het geleerde te kunnen plaatsen in een groter geheel, maar ook om de link te leggen met voorkennis en kennis die nog komt."
         },
         "confidence": {
           "score": 2,
-          "keys": ["Learning Requirements"],
+          "keys": [
+            "Learning Requirements"
+          ],
           "explanation": "Studenten horen zo wat ze hadden moeten opsteken van de les, dat helpt hen om te bepalen wanneer ze succesvol zijn en wanneer niet."
         },
         "satisfaction": {
@@ -406,7 +444,9 @@
         }
       },
       "grouping": "C",
-      "phases": ["E"],
+      "phases": [
+        "E"
+      ],
       "source": "Eigen praktijkervaring"
     },
     {
@@ -414,16 +454,23 @@
       "summary": "De docent geeft een korte vooruitblik op de volgende les, met als doel om de studenten te prikkelen.",
       "preparation": "- Kijken wat de volgende les aan bod komt.",
       "description": "- Benoem wat er de volgende les aan bod komt en wat studenten aan voorbereiden moeten doen.",
-      "time": [5,10],
+      "time": [
+        5,
+        10
+      ],
       "arcs": {
         "attention": {
           "score": 1,
-          "keys": ["Perceptual Arousal"],
+          "keys": [
+            "Perceptual Arousal"
+          ],
           "explanation": "Je maakt studenten nieuwsgierig naar de volgende les."
         },
         "relevance": {
           "score": 2,
-          "keys": ["Goal Orientation"],
+          "keys": [
+            "Goal Orientation"
+          ],
           "explanation": "Het geven van een vooruitblikt helpt de studenten om de doelen te kunnen plaatsen in een groter geheel, maar ook om de link te leggen met voorkennis en kennis die nog komt."
         },
         "confidence": {
@@ -434,7 +481,9 @@
         }
       },
       "grouping": "C",
-      "phases": ["E"],
+      "phases": [
+        "E"
+      ],
       "source": "Eigen praktijkervaring"
     }
   ]

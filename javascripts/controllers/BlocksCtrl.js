@@ -24,25 +24,10 @@ angular.module('arcsplannerApp')
          */
         $scope.init = function() {
             clearBlocks();
-            $http({
-                method: 'GET',
-                url: 'blocks.json'
-            }).then(function success(response) {
-                $scope.allblocks = response.data.blocks;
 
-                //Convert all text to markdown
-                $scope.allblocks.forEach(function(block) {
-                    block.summary = convertToHtml(block.summary);
-                    block.preparation = convertToHtml(block.preparation);
-                    block.description = convertToHtml(block.description);
-                    block.source = convertToHtml(block.source);
-                });
-
-                addBlocks($scope.allblocks);
-                $log.info('(BlocksCtrl): Retrieved ' + $scope.allblocks.length + ' blocks');
-            }, function error(response) {
-                $log.error('(BlocksCtrl): There was an error: ' + response);
-            });
+            //Load blocks
+            addBlocksFromResource('blocks/arcsplanner/algemeen.json');
+            addBlocksFromResource('blocks/arcsplanner/programmeren.json');
         };
 
         /**
@@ -205,6 +190,32 @@ angular.module('arcsplannerApp')
             return ConverterSvc.convertToHtml(text);
         };
 
+        /**
+         * Adds blocks from the given resource (json) file
+         * @param url
+         */
+        var addBlocksFromResource = function(url) {
+            $http({
+                method: 'GET',
+                url: url
+            }).then(function success(response) {
+                //Convert all text to markdown
+                response.data.blocks.forEach(function(block) {
+                    block.summary = convertToHtml(block.summary);
+                    block.preparation = convertToHtml(block.preparation);
+                    block.description = convertToHtml(block.description);
+                    block.source = convertToHtml(block.source);
+                });
+
+
+                addBlocks(response.data.blocks);
+                $scope.allblocks = $scope.allblocks.concat(response.data.blocks);
+
+                $log.info('(BlocksCtrl): Retrieved ' + response.data.blocks.length + ' blocks from ' + url);
+            }, function error(response) {
+                $log.error('(BlocksCtrl): There was an error loading blocks from "' + url + '" : ' + response);
+            });
+        };
 
         /**
          * Add the given blocks to the list of blocks

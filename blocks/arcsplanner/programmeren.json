@@ -1,0 +1,257 @@
+{
+  "blocks": [
+    {
+      "title": "Programmeren: Onderling bespreken van een opdracht",
+      "summary": "De studenten bespreken onderling met elkaar de opdracht die zij gemaakt hebben. Dit doen ze door allemaal hun laptop er bij te pakken en omstebeurten om een van de laptops heen te gaan staan. De docent kan rondlopen en aanhaken bij groepjes waar hij/zij dat nodig acht.",
+      "preparation": "- Kijk welke opdrachten de studenten hebben moeten maken.\n- Bekijk, als je dat prettig vind, eventueel zelf deze opdracht ook inhoudelijk.",
+      "description": "- Maak groepjes.\n- Zeg tegen studenten dat zij de opdracht moeten bespreken in een groepje. Ieder z’n uitwerking moet even aan bod komen. Hij/zij moet het op de laptop laten zien aan de anderen\n- Laat ieder één goed en één verbeterpunt aangeven op de uitwerking van de ander.\n- Loop als docent rond en kijk of ze het werk gemaakt hebben en geef eventueel feedback.",
+      "time": [
+        5,
+        30
+      ],
+      "arcs": {
+        "attention": {
+          "score": 0
+        },
+        "relevance": {
+          "score": 0
+        },
+        "confidence": {
+          "score": 2,
+          "keys": [
+            "Personal Control"
+          ],
+          "explanation": "studenten krijgen hiermee de mogelijkheid om op hun eigen manier en op hun eigen niveau hun uitwerking te tonen aan peers. Dat geeft hen vertrouwen en is beter dan het direct aan een docent te laten zien."
+        },
+        "satisfaction": {
+          "score": 2,
+          "keys": [
+            "Intrinsic Reinforcement"
+          ],
+          "explanation": "Degenen die de stof goed beheersen krijgen de mogelijkheid om hun kennis te delen en anderen te helpen met het oplossen van problemen. Daardoor voelen zij een positieve erkenning van hun capaciteiten. (Keller, 2010, p. 190)"
+        }
+      },
+      "grouping": "G",
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    },
+    {
+      "title": "Programmeren: Tonen opdrachtuitwerking door willekeurige student",
+      "summary": "Er wordt een willekeurige student gekozen die zijn uitwerking van de opdracht toont op de beamer. De docent is gespreksleider en betrekt de klas door hen vragen te stellen over de getoonde uitwerking",
+      "preparation": "- Voer alle namen in in een randomizer tool zoals [WieIsHetBokje.nl](http://www.wieishetbokje.nl)",
+      "description": "- Kies een willekeurige student met een randomizer tool zoals [WieIsHetBokje.nl](http://www.wieishetbokje.nl)\n- Nodig hem/haar uit voor de klas met de laptop.\n- Vraag hem/haar de code te presenteren en stel met name waarom- en hoe-vragen.\n- Vraag de klas om feedback op de gemaakte uitwerking.",
+      "time": [
+        5,
+        30
+      ],
+      "arcs": {
+        "attention": {
+          "score": 2,
+          "keys": [
+            "Inquiry Arousal",
+            "Variability"
+          ],
+          "explanation": "De randomizer tool maakt dat de studenten even gefocusd zijn op wie het gaat worden. Het voegt een beetje spanning toe aan een les. Bovendien staat er daarna iemand anders voor de klas dan gebruikelijk en dat maakt het ook interressanter."
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Motive Matching"
+          ],
+          "explanation": "Als er een student voor de klas staat die het goed gelukt is dan kan de rest zien wat dat doet met zo'n student (Die krijgt waarschijnlijk een positief). Als de student het niet af heeft is het ook duidelijk om te zien wat dat met diegene doet. Het moet voor studenten gaan voelen als een gezamenlijke verantwoordelijk om te zorgen dat iedereen de opdracht snapt."
+        },
+        "confidence": {
+          "score": 1,
+          "keys": [
+            "Personal Control"
+          ],
+          "explanation": "Door de feedback van de docent weet degene voor de klas hoe hij/zij het gedaan heeft. De rest van de klas weet dat dan ook en kan zijn eigen uitwerking en inspanning beter op waarde schatten."
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "C",
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    },
+    {
+      "title": "Programmeren: Opdracht individueel uitvoeren",
+      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna individueel aan de slag om de gevraagde functionaliteit te programmeren.",
+      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
+      "description": "- Leg de opdracht kort uit\n- Zet de studenten aan het werk. Loop iedere student af en informeer naar de voortgang.",
+      "time": [
+        45,
+        120
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."
+          ]
+        },
+        "relevance": {
+          "score": 1,
+          "keys": [
+            "Motive Matching"
+          ],
+          "explanation": "De studenten worden gestimuleerd om zelf problem-solving strategieen in te zetten. Dat draagt bij aan de relevance (Keller, 2010, p.130)"
+        },
+        "confidence": {
+          "score": 3,
+          "keys": [
+            "Personal Control",
+            "Succes Opportunities"
+          ],
+          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "S",
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    },
+    {
+      "title": "Programmeren: Opdracht uitvoeren in duo's",
+      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna in duo's aan de slag om de gevraagde functionaliteit te programmeren.",
+      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
+      "description": "- Maak duo's.\n- Leg de opdracht kort uit, laat de studenten in duo's bespreken hoe ze het gaan bouwen (bouwplan).\n- Zet de studenten aan het werk. Loop de verschillende duo's af en informeer naar de voortgang.",
+      "time": [
+        45,
+        120
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."
+          ]
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Motive Matching",
+            "Familiarity"
+          ],
+          "explanation": "De studenten werken samen en werken aan iets waarbij ze hun opgedane voorkennis moeten inzetten"
+        },
+        "confidence": {
+          "score": 3,
+          "keys": [
+            "Personal Control",
+            "Succes Opportunities"
+          ],
+          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
+        },
+        "satisfaction": {
+          "score": 1,
+          "keys": [
+            "Intrinsic Reinforcement"
+          ],
+          "explanation": "Studenten kunnen elkaar helpen. Goede studenten kunnen tonen dat ze het kunnen door in hun groepje de leiding te nemen en de anderen te helpen. Minder goede studenten kun je stimuleren door positieve feedback."
+        }
+      },
+      "grouping": "D",
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    },
+    {
+      "title": "Programmeren: Opdracht individueel uitvoeren",
+      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna individueel aan de slag om de gevraagde functionaliteit te programmeren.",
+      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
+      "description": "- Leg de opdracht kort uit\n- Zet de studenten aan het werk. Loop iedere student af en informeer naar de voortgang.",
+      "time": [
+        45,
+        120
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."
+          ]
+        },
+        "relevance": {
+          "score": 1,
+          "keys": [
+            "Motive Matching"
+          ],
+          "explanation": "De studenten worden gestimuleerd om zelf problem-solving strategieen in te zetten. Dat draagt bij aan de relevance (Keller, 2010, p.130)"
+        },
+        "confidence": {
+          "score": 3,
+          "keys": [
+            "Personal Control",
+            "Succes Opportunities"
+          ],
+          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "S",
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    },
+    {
+      "title": "Programmeren: Opdracht uitvoeren in duo's",
+      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna in duo's aan de slag om de gevraagde functionaliteit te programmeren.",
+      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
+      "description": "- Maak duo's.\n- Leg de opdracht kort uit, laat de studenten in duo's bespreken hoe ze het gaan bouwen (bouwplan).\n- Zet de studenten aan het werk. Loop de verschillende duo's af en informeer naar de voortgang.",
+      "time": [
+        45,
+        120
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."
+          ]
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Motive Matching",
+            "Familiarity"
+          ],
+          "explanation": "De studenten werken samen en werken aan iets waarbij ze hun opgedane voorkennis moeten inzetten"
+        },
+        "confidence": {
+          "score": 3,
+          "keys": [
+            "Personal Control",
+            "Succes Opportunities"
+          ],
+          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
+        },
+        "satisfaction": {
+          "score": 1,
+          "keys": [
+            "Intrinsic Reinforcement"
+          ],
+          "explanation": "Studenten kunnen elkaar helpen. Goede studenten kunnen tonen dat ze het kunnen door in hun groepje de leiding te nemen en de anderen te helpen. Minder goede studenten kun je stimuleren door positieve feedback."
+        }
+      },
+      "grouping": "D",
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    }
+  ]
+}
