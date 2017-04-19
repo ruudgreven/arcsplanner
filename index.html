@@ -65,27 +65,34 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="btn btn-primary" style="float: right; margin-right: 20px;" onclick=" $('#printarea').html($('#printdocument').html()); window.print(); $('#printarea').html('');">Printen</button>
                     <h4 class="modal-title">Print preview</h4>
                 </div>
                 <div class="modal-body">
-                    <div ng-controller="TimelineCtrl" id="timelineprint">
-                        <div ng-repeat="event in timeline">
-                            <div ng-if="timeline[$index - 1] != undefined && timeline[$index - 1].endTimeMinutes != timeline[$index].startTimeMinutes">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading"><h4>Pauze</h4></div>
+                    <div id="printdocument">
+                        <div ng-controller="PlannerCtrl" ng-init="init()">
+                            <h2>Lesplan voor {{lessonName}}</h2>
+                        </div>
+                        &nbsp;<br/>
+                        <div ng-controller="TimelineCtrl" ng-init="init()">
+                            <div ng-repeat="event in timeline">
+                                <div ng-if="timeline[$index - 1] != undefined && timeline[$index - 1].endTimeMinutes != timeline[$index].startTimeMinutes">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading"><h4>Pauze</h4></div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="panel panel-default">
-                                <div class="panel-heading"><h4>{{event.block.title}}<span class="label label-primary" style="float:right;">{{getLabel(event)}}</span></h4></div>
-                                <div class="panel-body">
-                                    <h5>Voorbereiding</h5>
-                                    <p ng-bind-html="event.block.preparation"></p>
-                                    <h5>Omschrijving</h5>
-                                    <p ng-bind-html="event.block.description"></p>
-                                    <h5>Inhoud</h5>
-                                    <p ng-if="event.content" ng-bind-html="convertToHtml(event.content)"></p>
-                                    <p ng-if="!event.content">Niet gegeven.</p>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"><h4>{{event.block.title}}<span class="label label-primary" style="float:right;">{{getLabel(event)}}</span></h4></div>
+                                    <div class="panel-body">
+                                        <h5>Voorbereiding</h5>
+                                        <p ng-bind-html="event.block.preparation"></p>
+                                        <h5>Omschrijving</h5>
+                                        <p ng-bind-html="event.block.description"></p>
+                                        <h5>Inhoud</h5>
+                                        <p ng-if="event.content" ng-bind-html="convertToHtml(event.content)"></p>
+                                        <p ng-if="!event.content">Niet gegeven.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +100,27 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
-                    <button type="button" class="btn btn-primary" onclick=" $('#printarea').html($('#timelineprint').html()); window.print(); $('#printarea').html('');">Printen</button>
+                    <button type="button" class="btn btn-primary" onclick=" $('#printarea').html($('#printdocument').html()); window.print(); $('#printarea').html('');">Printen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- MODAL: ARCS Help modal -->
+    <div class="modal fade" id="whyhelpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">ARCSPlanner.nl: Nut en noodzaak ARCSPlanner.nl?</h4>
+                </div>
+                <div class="modal-body">
+                    INSERT YOUTUBE LINK
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#arcshelpModal">Verder lezen/kijken: Wat is ARCS?</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
                 </div>
             </div>
         </div>
@@ -119,6 +146,7 @@
                     <p>Bla</p>
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#toolhelpModal">Verder lezen/kijken: Hoe gebruik ik de tool?</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Sluiten</button>
                 </div>
             </div>
@@ -185,12 +213,14 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">ARCSPlanner.nl, prototype 2</a>
+                <a class="navbar-brand" href="#">ARCSPlanner.nl, Final prototype 3</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" data-toggle="modal" data-target="#printModal"><span class="glyphicon glyphicon-print" aria-hidden="true" title="Print je lesplan"></span> Print je plan</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#whyhelpModal"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="Help!"></span> Nut en noodzaak ARCSPlanner.nl?</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#arcshelpModal"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="Help!"></span> Wat is ARCS?</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#toolhelpModal"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="Help!"></span> Hoe gebruik ik de tool?</a></li>
+
+                <li><a href="#" data-toggle="modal" data-target="#printModal"><span class="glyphicon glyphicon-print" aria-hidden="true" title="Print je lesplan"></span> Print je plan</a></li>
             </ul>
         </div>
 
@@ -240,7 +270,7 @@
 <script>
     var onResize = function() {
         // apply dynamic padding at the top of the body according to the fixed navbar height
-        $("body").css("padding-top", $(".navbar-fixed-top").height());
+        $("#screenarea").css("padding-top", $(".navbar-fixed-top").height());
     };
 
     // attach the function to the window resize event
@@ -249,6 +279,13 @@
     // call it also when the page is ready after load or reload
     $(function() {
         onResize();
+    });
+
+    $(document).ready(function() {
+        if (document.cookie.indexOf("visited") == -1) {
+            document.cookie = "visited=true";
+            $("#whyhelpModal").modal("show");
+        }
     });
 </script>
 </body>
