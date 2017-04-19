@@ -352,7 +352,11 @@
             if ($('.modal:visible').length) {
                 $('body').addClass('modal-open');
             }
+
+            $(window).resize(onResize);
         });
+
+        $(window).resize(onResize);
     });
 </script>
 </body>
