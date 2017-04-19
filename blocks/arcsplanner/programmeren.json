@@ -133,8 +133,9 @@
         "attention": {
           "score": 1,
           "keys": [
-            "Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."
-          ]
+            "Inquiry Arousal"
+          ],
+          "explanation": "Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."
         },
         "relevance": {
           "score": 2,
@@ -167,87 +168,41 @@
       "source": "Eigen praktijkervaring"
     },
     {
-      "title": "Programmeren: Opdracht individueel uitvoeren",
-      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna individueel aan de slag om de gevraagde functionaliteit te programmeren.",
-      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
-      "description": "- Leg de opdracht kort uit\n- Zet de studenten aan het werk. Loop iedere student af en informeer naar de voortgang.",
+      "title": "Programmeren: Wat zou er gebeuren als ik 'm start?",
+      "summary": "De studenten of de docent hebben een stuk code gemaakt en één van deze uitwerkingen wordt op de beamer getoond. Aan de studenten de vraag om te bedenken wat er gaat gebeuren als het programma gestart wordt.",
+      "description": "- Maak aan het begin van de les groepjes van gelijke grote, zij vormen gedurende de les een team.\n- Kies een stuk code uit van studenten en vraag aan de groepjes om de werking te voorspellen.\n- Maak kort een rondje in de klas om te informeren wat er volgens iedereen gaat gebeuren.\n- Voer de code uit\n- Laat de groepjes met elkaar erachter komen waarom dit gebeurt. Hadden ze het goed?\n",
       "time": [
-        45,
-        120
+        5,
+        15
       ],
       "arcs": {
         "attention": {
           "score": 1,
           "keys": [
-            "Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."
-          ]
+            "Inquiry Arousal"
+          ],
+          "explanation": "Het voorspellen van de uitkomst van een programma betrekt studenten bij de les."
         },
         "relevance": {
           "score": 1,
           "keys": [
-            "Motive Matching"
+            "Motivate Matching"
           ],
-          "explanation": "De studenten worden gestimuleerd om zelf problem-solving strategieen in te zetten. Dat draagt bij aan de relevance (Keller, 2010, p.130)"
+          "explanation": "Studenten werken samen aan het *voorspellen* van de uitkomst van het programma."
+
         },
         "confidence": {
-          "score": 3,
+          "score": 2,
           "keys": [
-            "Personal Control",
             "Succes Opportunities"
           ],
-          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
+          "explanation": "Als studenten het goed hebben geeft een succeservaring. Als ze het niet goed hebben helpt de discussie achteraf om te snappen waarom het misging en zo wordt het eigenlijk altijd als een succes ervaren."
         },
         "satisfaction": {
           "score": 0
         }
       },
-      "grouping": "S",
-      "phases": [
-        "C"
-      ],
-      "source": "Eigen praktijkervaring"
-    },
-    {
-      "title": "Programmeren: Opdracht uitvoeren in duo's",
-      "summary": "De docent geeft de studenten een opdracht/casus. Zij gaan daarna in duo's aan de slag om de gevraagde functionaliteit te programmeren.",
-      "preparation": "- Bedenk een programmeeropdracht om uit te voeren. Let erop dat het grootste deel van de vereiste kennis al aanwezig moet zijn bij de studenten.",
-      "description": "- Maak duo's.\n- Leg de opdracht kort uit, laat de studenten in duo's bespreken hoe ze het gaan bouwen (bouwplan).\n- Zet de studenten aan het werk. Loop de verschillende duo's af en informeer naar de voortgang.",
-      "time": [
-        45,
-        120
-      ],
-      "arcs": {
-        "attention": {
-          "score": 1,
-          "keys": [
-            "Het is een actieverende vorm, maar wel met het risico dat studenten het lastig vinden om in een (vol) klaslokaal de aandacht er bij te houden."
-          ]
-        },
-        "relevance": {
-          "score": 2,
-          "keys": [
-            "Motive Matching",
-            "Familiarity"
-          ],
-          "explanation": "De studenten werken samen en werken aan iets waarbij ze hun opgedane voorkennis moeten inzetten"
-        },
-        "confidence": {
-          "score": 3,
-          "keys": [
-            "Personal Control",
-            "Succes Opportunities"
-          ],
-          "explanation": "De studenten hebben zelf controle over het proces, ze kunnen op hun eigen tempo werken en ze kunnen op hun eigen manier laten zien dat ze het kunnen. De studenten ervaren succes als het hen lukt om hun kennis uit te breiden."
-        },
-        "satisfaction": {
-          "score": 1,
-          "keys": [
-            "Intrinsic Reinforcement"
-          ],
-          "explanation": "Studenten kunnen elkaar helpen. Goede studenten kunnen tonen dat ze het kunnen door in hun groepje de leiding te nemen en de anderen te helpen. Minder goede studenten kun je stimuleren door positieve feedback."
-        }
-      },
-      "grouping": "D",
+      "grouping": "G",
       "phases": [
         "C"
       ],

@@ -28,6 +28,7 @@ angular.module('arcsplannerApp')
             //Load blocks
             addBlocksFromResource('blocks/arcsplanner/algemeen.json');
             addBlocksFromResource('blocks/arcsplanner/programmeren.json');
+            addBlocksFromResource('blocks/slo.json');
         };
 
         /**

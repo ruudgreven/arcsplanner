@@ -278,7 +278,86 @@
       ],
       "source": "Eigen praktijkervaring"
     },
-
+    {
+      "title": "Onderling bespreken van een opdracht",
+      "summary": "De studenten bespreken onderling met elkaar de opdracht die zij gemaakt hebben. Dit doen ze door de opdrachten er bij te pakken en aan elkaar uit te leggen.",
+      "preparation": "- Kijk welke opdrachten de studenten hebben moeten maken. Kies voor deze opdracht een wat grotere opdracht (die meerdere oplossingsrichtingen heeft), of kies voor een aantal kleine opdrachtjes.\n- Bekijk, als je dat prettig vind, eventueel zelf deze opdracht ook inhoudelijk.",
+      "description": "- Maak groepjes van ongeveer 4 personen.\n- Spreek een (korte) tijd af waarin iedere student individueel zijn uitwerking van de opdracht laat zien (Bijvoorbeeld twee minuten per groepslid).\n- Laat de studenten omstebeurten aan de groepsgenoten hun uitwerking tonen en toelichten.\n- Laat de groep een aantal opvallende punten opschrijven. Welke verschillen in uitwerking zagen zij?\n- Loop als docent rond en kijk of ze het werk gemaakt hebben en geef eventueel feedback.",
+      "time": [
+        5,
+        30
+      ],
+      "arcs": {
+        "attention": {
+          "score": 0
+        },
+        "relevance": {
+          "score": 0
+        },
+        "confidence": {
+          "score": 2,
+          "keys": [
+            "Personal Control"
+          ],
+          "explanation": "Studenten krijgen hiermee de mogelijkheid om op hun eigen manier en op hun eigen niveau hun uitwerking te tonen aan peers. Dat geeft hen vertrouwen en is beter dan het direct aan een docent te laten zien."
+        },
+        "satisfaction": {
+          "score": 2,
+          "keys": [
+            "Intrinsic Reinforcement"
+          ],
+          "explanation": "Degenen die de stof goed beheersen krijgen de mogelijkheid om hun kennis te delen en anderen te helpen met het oplossen van problemen. Daardoor voelen zij een positieve erkenning van hun capaciteiten. (Keller, 2010, p. 190)"
+        }
+      },
+      "grouping": "G",
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    },
+    {
+      "title": "Opdracht beoordeling door een klasgenoot",
+      "summary": "De studenten hebben opdrachten gemaakt en leggen deze voor aan een klasgenoot die ze gaat beoordelen. Deze opdracht werkt met name goed bij opdrachten waarbij een complexer antwoord gevraagd wordt (dus niet alleen goed of fout).",
+      "preparation": "- Kijk welke opdrachten de studenten hebben moeten maken en kies een of enkele geschikte opdrachten.\n- Zorg dat je beoordelingscriteria of een antwoordmodel bij de hand hebt waarop staat op welke punten het antwoord beoordeeld wordt.",
+      "description": "- Maak duo's.\n- Spreek een (korte) tijd af waarin iedere student de opdrachten van de ander beoordeeld. In deze tijd wordt er niet gepraat (De ander mag niet zijn antwoord toelichten).\n- Laat, als beide studenten klaar zijn, de antwoorden bespreken. Laat de beoordelaar uitleggen hoe hij tot het oordeel is gekomen.\n- Bespreek met de hele klas na hoe dit beviel en welke punten zij eruit geleerd hebben.",
+      "time": [
+        15,
+        30
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "De nieuwsgierigheid wordt gewekt doordat studenten ineens met elkaar werk aan de slag mogen. Ze zien (waarschijnlijk voor het eerst) elkaar uitwerkingen en mogen daar ook nog een oordeel over geven."
+        },
+        "relevance": {
+          "score": 0
+        },
+        "confidence": {
+          "score": 2,
+          "keys": [
+            "Personal Control"
+          ],
+          "explanation": "Studenten krijgen hiermee de mogelijkheid om op hun eigen manier en op hun eigen niveau hun uitwerking te tonen aan peers. Dat geeft hen vertrouwen en is beter dan het direct aan een docent te laten zien."
+        },
+        "satisfaction": {
+          "score": 3,
+          "keys": [
+            "Intrinsic Reinforcement",
+            "Extrensic Rewards",
+            "Equity"
+          ],
+          "explanation": "Doordat studenten elkaar beoordelen weten ze hoe ze ervoor staan. Het voelt veel veiliger dan een docent die oordeelt en degenen die de stof goed beheersen krijgen de mogelijkheid om hun kennis te delen en anderen te helpen met het oplossen van problemen."
+        }
+      },
+      "grouping": "D",
+      "phases": [
+        "C"
+      ],
+      "source": "Eigen praktijkervaring"
+    },
 
     {
       "title": "Ontwerpopdracht uitvoeren in groepjes",
@@ -369,6 +448,7 @@
       },
       "grouping": "G",
       "phases": [
+        "S",
         "C"
       ],
       "source": "Eigen praktijkervaring"
@@ -415,7 +495,6 @@
     {
       "title": "Samenvatting van de les door de docent",
       "summary": "De docent geeft een korte samenvatting van de les met als doel dat de studenten weten wat de belangrijkste thema's waren.",
-      "preparation": "",
       "description": "- Vat kort en bondig samen wat er in de les besproken is.",
       "time": [
         5,

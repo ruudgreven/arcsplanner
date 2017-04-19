@@ -1,0 +1,357 @@
+{
+  "blocks": [
+    {
+      "title": "Samen mindmappen",
+      "summary": "Samen met de studenten maak je een mindmap over het onderwerp van de les.",
+      "preparation": "- Zorg dat je een onderwerp of het doel van de les in eén kernwoord samengevat hebt.",
+      "description": "- Schrijf het onderwerp dat je hebt gekozen in het midden van het whiteboard.\n- Laat leerlingen begrippen noemen en relateer ze aan het gekozen onderwerp en schrijf ze op. Laat eventueel zelf de leerlingen dingen op het bord schrijven.\n- Ga eventueel een niveau verder door verder te relateren op één van de andere woorden die inmiddels op het bord staan.",
+      "time": [
+        5,
+        10
+      ],
+      "arcs": {
+        "attention": {
+          "score": 2,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "De nieuwsgierigheid wordt gewekt door het onderwerp dat je opschrijft en de studenten worden ook geprikkeld door associaties die hun klasgenoten maken."
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Motive Matching"
+          ],
+          "explanation": "De studenten worden in staat gesteld hun eigen associaties te noemen met het begrip en het wordt samengewerkt. Dit helpt om beter de relevantie van het onderwerp in te zien."
+        },
+        "confidence": {
+          "score": 0
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "C",
+      "phases": [
+        "S",
+        "C"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    },
+    {
+      "title": "Student als docent",
+      "summary": "Een student neemt voor korte tijd de rol van docent op zich om een stuk uit te leggen.",
+      "preparation": "- Vraag in de voorgaande les een student om een onderwerp voor te bereiden. Hierop wordt hij de expert en is het hem de taak om aan de klas uit te leggen hoe het in elkaar zit. Kies, zeker als je dit voor de eerste keer doet in een klas, voor iemand waarvan weet dat hij dit kan en aandurft.",
+      "description": "- Vraag de student-docent om naar voren te komen.\n- Vraag de aandacht van de klas, maak duidelijk dat komende X minuten voor de student-docent zijn.\n- Ga achterin de klas zitten en observeer de student-docent en de andere studenten.\n- Beloon de student voor zijn uitleg en bespreek kort na.",
+      "time": [
+        15,
+        30
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Perceptual Arousal"
+          ],
+          "explanation": "De nieuwsgierigheid wordt gewekt doordat ineens iemand anders de les gaat overnemen."
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Familiarity"
+          ],
+          "explanation": "De docent-student weet waarschijnlijk goed aan te sluiten bij de praktijk van de studenten. Hij zal vertellen vanuit zijn eigen visie en ervaring."
+        },
+        "confidence": {
+          "score": 1,
+          "keys": [
+            "Succes Opportunities"
+          ],
+          "explanation": "Zien dat een andere student uitleg geeft vergroot het vertrouwen dat ze dat zelf wellicht ook kunnen."
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "C",
+      "phases": [
+        "C"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    },
+    {
+      "title": "Uitleggen aan elkaar",
+      "summary": "Studenten bereiden allemaal een stuk theorie voor (Allemaal hetzelfde, of de ene helft iets anders dan de andere). Zij leggen in groepjes aan elkaar uit waar de stof over gaat.",
+      "preparation": "- Vraag in de voorgaande les de studenten allemaal om een stuk theorie voor te bereiden.",
+      "description": "- Verdeel de studenten in groepjes van vier. Als je verschillende stof hebt laten voorbereiden, meng dan de groepjes zoveel mogelijk.\n- Vraag student 1 om de stof aan 3 uit te leggen. Student 2 doet dat bij student 4. Student 3 en 4 mogen uiteraard vragen stellen. Alle vragen of moeilijkheden worden opgeschreven op een papier dat op tafel ligt.\n- Het proces herhaalt zich. Student 3 en 4 zijn nu de docent. Nummer 3 legt uit aan nummer 2, en nummer 4 aan nummer 1. Problemen worden weer opgeschreven.\n- Na deze rondes volgt een groepsdiscussie over de opgeschreven problemen. De studenten proberen de problemeen zelf op te lossen.",
+      "time": [
+        30,
+        60
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "De uitleg van iemand anders dan de docent wekt nieuwsgierigheid op."
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Motive Matching",
+            "Familiarity"
+          ],
+          "explanation": "Het samenwerkingsaspect helpt om de relevantie te vergroten. Door het vertellen aan elkaar wordt de lesstof concreter en sluit het automatisch beter aan bij al aanwezige voorkennis."
+        },
+        "confidence": {
+          "score": 2,
+          "keys": [
+            "Succes Opportunities"
+          ],
+          "explanation": "Het met elkaar praten over de stof maakt dat de studenten een succeservaring beleven. Samen weten ze meer dan één."
+        },
+        "satisfaction": {
+          "score": 1,
+          "keys": [
+            "Equity"
+          ],
+          "explanation": "Het maken van groepjes waarin iedereen dezelfde rol heeft geeft een gevoel van gelijkheid. Dit maakt het leren tot een positieve ervaring."
+        }
+      },
+      "grouping": "G",
+      "phases": [
+        "C"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    },
+
+
+    {
+      "title": "Ideeen parade",
+      "summary": "De docent noemt een probleemstelling waarbij meerdere oplossingsrichtingen of meningen mogelijk zijn. Iedere student schrijft zijn mening op een post-it. Tot slot worden de meningen gewaarderd door de andere studenten. Kan goed gebruikt worden om een les of een nieuw onderwerp te introduceren.",
+      "preparation": "- Bedenk een goede stelling, die tot de verbeelding spreekt en meerdere oplossingsrichtingen/meningen heeft.\n- Regel een stapel memobriefjes.\n- Neem whiteboard stiften mee.",
+      "description": "- Deel de memobriefjes uit. Geef iedere student één briefje.\n- Noem de stelling en laat iedere student zijn oplossingsrichting/mening opschrijven en opplakken.\n- Wacht tot alles hangt op het bord. Benoem de antwoorden eventueel kort.\nVraag iedere student met een whiteboard marker een stipje te zetten onder de oplossingrichting die hij/zij het beste vindt.\n",
+      "time": [
+        15,
+        25
+      ],
+      "arcs": {
+        "attention": {
+          "score": 2,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "De studenten worden betrokken bij het formuleren van meningen op een stelling. Dit wekt nieuwsgierigheid."
+        },
+        "relevance": {
+          "score": 0
+        },
+        "confidence": {
+          "score": 0
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "C",
+      "phases": [
+        "S",
+        "C"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    },
+    {
+      "title": "Discussie starten",
+      "summary": "De docent neemt een stelling waar studenten een mening over vormen van 1 (niet mee eens) tot 5 (mee eens). Daarna volgt een discussie. Kan goed gebruikt worden om een les of een nieuw onderwerp te introduceren.",
+      "preparation": "- Bedenk een goede stelling, die tot de verbeelding spreekt en die prikkelend is.\n- Neem kaartjes en whiteboardstiften mee- Zorg dat je voor ieder een kaartje en whiteboardstift hebt.\n",
+      "description": "- Deel de kaartjes uit. Geef iedere student één briefje.\n- Benoem de stelling en vraag om een cijfer van 1 tot 5 op het kaartje te schrijven. Een alternatieve uitvoering is om de studenten naar een plek in het lokaal te laten lopen (Mee eens is de linkerkant, mee oneens de rechterkant van het lokaal oid).\n- Start een discussie tussen de voor- en tegenstanders van de stelling.\n",
+      "time": [
+        10,
+        30
+      ],
+      "arcs": {
+        "attention": {
+          "score": 2,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "De studenten worden betrokken bij het formuleren van meningen op een stelling. Dit wekt nieuwsgierigheid."
+        },
+        "relevance": {
+          "score": 1,
+          "keys": [
+            "Motive Matching"
+          ],
+          "explanation": "Studenten staan vermoedelijk niet alleen in hun standpunt. Zo kunnen ze samen hun oordeel vormen over de stelling."
+        },
+        "confidence": {
+          "score": 0
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "C",
+      "phases": [
+        "S",
+        "C"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    },
+    {
+      "title": "What's next?",
+      "summary": "De studenten worden verdeeld in teams van ongeveer 4 studenten. Er wordt een situatie getoond (live, een video, of iets anders) waarbij er abrupt gestopt wordt en de studenten moeten bedenken wat er daarna gaat gebeuren of zou moeten gebeuren.",
+      "preparation": "- Bereid een aantal situaties / momenten voor waarop je de les kunt stilleggen en *what's next?* kunt spelen.\n",
+      "description": "- Verdeel de studenten vooraf (misschien al aan het begin van de les in in teams die bij elkaar zitten).\n- Bedenk voordat je begint aan een uitleg of het tonen van een video wanneer het *what's next?* moment begint. Zorg dat je op tijd stopt met je uitleg en vraag *what's next?*.\n- De studenten discussieren in de groepjes over wat er komen gaat of wat er moet gebeuren.\n- Maak een rondje van meningen en laat zien wat er gebeurt of vervolg je uitleg en geef aan wat er inderdaad moest gebeuren.\n",
+      "time": [
+        10,
+        20
+      ],
+      "arcs": {
+        "attention": {
+          "score": 2,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "Hoe onverwachter de gekozen momenten hoe leuker het wordt. Het kan een echte aandachtstrekker worden."
+        },
+        "relevance": {
+          "score": 0
+        },
+        "confidence": {
+          "score": 0
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "G",
+      "phases": [
+        "C"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    },
+    {
+      "title": "Les samenvatten door student",
+      "summary": "Aan het einde van de les worden twee, naast elkaar zittende, studenten gevraagd om de les samen te vatten. Bepaal vooraf wie dit worden of geef aan de hele groep aan dat er aan het eind willekeurig twee mensen gekozen worden.\n",
+      "description": "- Benoem eventueel aan het begin van de les dat je aan het einde om een samenvatting gaat vragen.\n- Vraag een duo (die naast elkaar zitten) aan het eind van je les om een korte samenvatting van de les.\n- Vraag eventuele aanvullingen aan de klas.\n",
+      "time": [
+        5,
+        10
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "Studenten zullen proberen beter op te letten, zekere degenen die de samenvatting moeten geven. Het achteraf pas willekeurig kiezen wie dat zijn kan positief zijn, maar ook een boel onrust veroorzaken."
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Goal Orientation"
+          ],
+          "explanation": "Het samenvatten van de les helpt studenten om het geleerde te kunnen plaatsen in een groter geheel, maar ook om de link te leggen met voorkennis en kennis die nog komt."
+        },
+        "confidence": {
+          "score": 0
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "D",
+      "phases": [
+        "E"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    },
+    {
+      "title": "Bekend, benieuwd, bewaard",
+      "summary": "Studenten schrijven vooraf op een blaadje wat ze al weten over het onderwerp en waar ze benieuwd naar zijn. Aan het einde schrijven ze erbij wat ze hebben bewaard (geleerd).\n",
+      "description": "- Zorg dat je voordat je begint aan deze opdracht al iets vertelt hebt over het onderwerp van de les.\n- Vraag de studenten een papier te pakken en te verdelen in twee kolomen.\n- Vraag studenten om nu in de linkerkolom bovenaan het woord *Bekend* te schrijven en in het midden *Benieuwd*. In de rechterkolom komt bovenaan het woord *Bewaard* te staan.\n- Laat de studenten nu aan het begin van de les de linkerkolom invullen met wat al bekend is en waar ze benieuwd naar zijn.\n- Laat aan het einde van de les de rechterkolom invullen met wat ze nu geleerd hebben en zullen bewaren (onthouden).\n",
+      "time": [
+        10,
+        20
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Inquiry Arousal"
+          ],
+          "explanation": "De vraag waar studenten benieuwd naar zijn prikkelt automatisch al de nieuwsgierigiheid."
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Goal Orientation"
+          ],
+          "explanation": "De vragen helpen studenten om de relevantie te zien van de les. Zowel vooraf (Wat weet ik al?) als achteraf (Wat heb ik geleerd?)."
+        },
+        "confidence": {
+          "score": 1,
+          "keys": [
+            "Personal Control"
+          ],
+          "explanation": "Studenten krijgen het gevoel dat ze meer invloed hebben op wat ze leren door op te schrijven waar ze benieuwd naar zijn."
+        },
+        "satisfaction": {
+          "score": 0
+        }
+      },
+      "grouping": "S",
+      "phases": [
+        "S",
+        "E"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    },
+    {
+      "title": "Reflecterende samenvatting",
+      "summary": "Aan het einde van de les benoemt de docent een aantal onderdelen van de les met de vraag of studenten dit zinvol vonden. De docent vraagt door op de reacties van de studenten.\n",
+      "description": "- Benoem achtereenvolgens enkele delen van je les (bijvoorbeeld de onderdelen van je plan) en vraag of studenten dat zinvol vonden.\n- Vraag de studenten die *ja* hebben gezegd waarom het zinvol was. Vraag de studenten die *nee* hebben geantwoord waarom het niet zinvol was.\n- Vraag eventueel door naar het waarom van de antwoorden.\n- Vraag eventueel naar wat er dan beter kon aan dat deel.\n",
+      "time": [
+        5,
+        15
+      ],
+      "arcs": {
+        "attention": {
+          "score": 1,
+          "keys": [
+            "Perceptual Arousal"
+          ],
+          "explanation": "Het vragen van de mening van studenten over een les verhoogd de betrokkenheid bij de lessen en je stelt jezelf kwetsbaar op. Iets dat studenten waarderen."
+        },
+        "relevance": {
+          "score": 2,
+          "keys": [
+            "Goal Orientation"
+          ],
+          "explanation": "De vragen helpen studenten om de relevantie te zien van de les. Zowel vooraf (Wat weet ik al?) als achteraf (Wat heb ik geleerd?)."
+        },
+        "confidence": {
+          "score": 2,
+          "keys": [
+            "Personal Control"
+          ],
+          "explanation": "Hiermee geef je studenten de kans om commentaar te geven op je les, de materialen en andere aspecten. Dat is goed voor hun vertrouwen (Keller, 2010, p.162)."
+        },
+        "satisfaction": {
+          "score": 1,
+          "keys": [
+            "Extensic Rewards"
+          ],
+          "explanation": "Het feit dat studenten iets mogen zeggen over hun les is een beloning. Het geeft hen het idee dat ze invloed hebben op de lessen."
+        }
+      },
+      "grouping": "S",
+      "phases": [
+        "S"
+      ],
+      "source": "Stiching Leerplan Ontwikkeling (SLO): [Actieverende werkvormen (SLO 2016)](http://www.slo.nl/downloads/archief/activerende-werkvormen.pdf)"
+    }
+  ]
+}
