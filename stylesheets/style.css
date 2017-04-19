@@ -31,6 +31,12 @@ a {
     color: #00B7FF;
 }
 
+.modal-content iframe{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
 /**
  * Tooltips
  */
